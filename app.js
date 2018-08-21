@@ -39,9 +39,13 @@ app.get('/getTerpelLineamientos', function(req, res){
     {
       res.send('Todos los servicios Web deben protegerse usando HTTPS con certificado EV');
     }
+    else if(name === "INTEGRACION")
+    {
+      res.send('Todas las integraciones con SAP deben pasar a través de SAP-PI');
+    }
     else
      {
-       res.send('Sin documentar el lineamiento');
+       res.send('Lo siento, ese lineamiento todavía no existe, comumícate con la oficina de arquitectura para su actualización');
      }
 });
 
