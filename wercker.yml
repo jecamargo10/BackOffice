@@ -18,6 +18,4 @@ deploy:
         password: $PASSWORD
         tag: latest
         repository: $DOCKER_REPOSITORY
-        registry: https://registry.hub.docker.com
-
-		
+        registry: https://registry.hub.docker.com		
