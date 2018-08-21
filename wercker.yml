@@ -16,7 +16,6 @@ deploy:
     - internal/docker-push:
         username: $USERNAME
         password: $PASSWORD
-        repository: $DOCKER_REPOSITORY
         tag: latest
         repository: $DOCKER_REPOSITORY
         registry: https://registry.hub.docker.com
