@@ -76,6 +76,5 @@ after-steps:
             url: $SLACK_URL
             channel: notifications
             username: werckerbot
-            notify_on: "update"
 
         

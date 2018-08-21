@@ -9,6 +9,7 @@ app.get('/getTerpelMiles', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
     // Query to the DataBase Relation or not relational
+	
     if(name === "123")
     {
       res.send('Tienes 2400 Puntos');
