@@ -7,6 +7,7 @@ app.get('/', function (req, res) {
 
 app.get('/getTerpelMiles', function(req, res){
     console.log(req.query.id);
+	var name = req.query.id;
     // Query to the DataBase Relation or not relational
     if(name === "123")
     {
