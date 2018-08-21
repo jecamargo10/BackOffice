@@ -28,6 +28,7 @@ build:
 deploy:
   steps:
     - internal/docker-push:
+        cmd: /bin/sh
         username: $USERNAME
         password: $PASSWORD
         tag: latest
