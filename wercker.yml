@@ -27,8 +27,11 @@ build:
           echo "npm version $(npm -v) running"
 deploy:
   steps:
+    - internal/docker-build:
+        dockerfile: Dockerfile 
+        image-name: my-new-image
     - internal/docker-push:
-        cmd: /bin/sh
+        image-name: my-new-image
         username: $USERNAME
         password: $PASSWORD
         tag: latest
