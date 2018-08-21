@@ -45,6 +45,26 @@ app.get('/getTerpelLineamientos', function(req, res){
      }
 });
 
+app.get('/getTerpelPrincipios', function(req, res){
+    console.log(req.query.codPrincipio);
+	var name = req.query.codPrincipio;
+    // Query to the DataBase Relation or not relational
+	
+	
+    if(name === "PORTABILIDAD")
+    {
+      res.send('Las aplicaciones desde su ingenieria de software deben estar construidas para ser portables');
+    }
+   else if(name === "INTEGRIDAD")
+    {
+      res.send('TLos desarrollos deben de tener un ciclo de vida CRUD gestionable y administrable');
+    }
+    else
+     {
+       res.send('No hay informacion sobre mas principios');
+     }
+});
+
 
 app.post('/IngresarPQR', function(req, res) {
     var name = req.body.name,
