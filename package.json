@@ -1,0 +1,13 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "This is the boilerPlate for an Application Deployed in Kubernetes",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+	"body-parser": "^1.13.2"
+
+  }
+}
