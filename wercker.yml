@@ -71,10 +71,10 @@ update-deplyoment:
           echo "Try to create new deployment"
           curl -sk -X "POST" -H "Authorization: Bearer ${OCCS_API_KEY}" "${OCCS_BASE_URL}/api/v2/deployments/" -d "${DEPLOYMENT_CONFIG}"
         fi
-after-steps:
+  after-steps:
         - slack-notifier:
             url: $SLACK_URL
-            channel: notifications
+            channel: general
             username: werckerbot
 
         
