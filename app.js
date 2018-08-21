@@ -25,6 +25,27 @@ app.get('/getTerpelMiles', function(req, res){
      }
 });
 
+app.get('/getTerpelLineamientos', function(req, res){
+    console.log(req.query.codLineamiento);
+	var name = req.query.codLineamiento;
+    // Query to the DataBase Relation or not relational
+	
+	
+    if(name === "DATOS")
+    {
+      res.send('Todas las bases de datos deben ser Microsoft SQL Server');
+    }
+   else if(name === "SEGURIDAD")
+    {
+      res.send('Todos los servicios Web deben protegerse usando HTTPS con certificado EV');
+    }
+    else
+     {
+       res.send('Sin documentar el lineamiento');
+     }
+});
+
+
 app.post('/IngresarPQR', function(req, res) {
     var name = req.body.name,
         color = req.body.color;
