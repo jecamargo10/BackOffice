@@ -13,15 +13,15 @@ app.get('/getMyDebt', function(req, res){
 	
     if(name === "123")
     {
-      res.send('$1´500.000');
+      res.send('Tu deuda es de $1´500.000');
     }
    else if(name === "456")
     {
-      res.send('$3´500.000');
+      res.send('Tu deuda es de $3´500.000');
     }
     else
      {
-       res.send('Nope');
+       res.send('No tienes deuda');
      }
 });
 
