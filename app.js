@@ -5,6 +5,35 @@ app.get('/', function (req, res) {
   res.send('Hello Sweet World!');
 });
 
+app.get('/getMyDebt', function(req, res){
+    console.log(req.query.id);
+	var name = req.query.id;
+    // Query to the DataBase Relation or not relational
+	
+	
+    if(name === "123")
+    {
+      res.send('$1´500.000');
+    }
+   else if(name === "456")
+    {
+      res.send('$3´500.000');
+    }
+    else
+     {
+       res.send('Nope');
+     }
+});
+
+
+
+
+
+
+
+
+
+
 app.get('/getTerpelMiles', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
