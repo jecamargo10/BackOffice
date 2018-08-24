@@ -5,6 +5,7 @@ app.get('/', function (req, res) {
   res.send('Hello Sweet World!');
 });
 
+
 app.get('/getMyDebt', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
