@@ -6,7 +6,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/getMyDebt', function(req, res){
+app.get('/getMyDebtMaximo', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
     // Query to the DataBase Relation or not relational
