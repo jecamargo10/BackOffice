@@ -12,7 +12,7 @@ app.get('/getMyDebtMaximo', function(req, res){
     // Query to the DataBase Relation or not relational
 	
 	
-    if(name === "123")
+    if(name === "1234")
     {
       res.send('Tu deuda es de $1´500.000');
     }
