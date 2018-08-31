@@ -14,7 +14,7 @@ app.get('/getMyDebtMaximo', function(req, res){
 	
     if(name === "1234")
     {
-      res.send('Tu deuda es de $1´500.000');
+      res.send('Tu deuda es de $1´750.000');
     }
    else if(name === "456")
     {
