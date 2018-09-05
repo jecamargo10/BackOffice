@@ -14,7 +14,7 @@ app.get('/getMyDebtMaximo', function(req, res){
 	
     if(name === "1234")
     {
-      res.send('Tu deuda es de $1´750.000');
+      res.send('Su cesantia fue pagada en el mes de Junio');
     }
    else if(name === "456")
     {
