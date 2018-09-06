@@ -16,15 +16,15 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
-	else    if(name === "Marcela")
+	else    if(name === "0")
     {
       res.send('Linea');
     }
-		else    if(name === "clarita")
+		else    if(name === "11")
     {
       res.send('Al dia');
     }
-			else    if(name === "javier")
+			else    if(name === "22")
     {
       res.send('Estas en deuda');
     }
