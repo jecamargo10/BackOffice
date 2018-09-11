@@ -24,6 +24,15 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('Al dia');
     }
+		else    if(name === "4")
+    {
+      res.send('Hola Mundo');
+    }
+		else    if(name === "5")
+    {
+      res.send('Mama estoy triunfando');
+    }
+	
 			else    if(name === "22")
     {
       res.send('Estas en deuda');
