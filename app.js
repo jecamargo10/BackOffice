@@ -20,6 +20,10 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('Linea');
     }
+	else    if(name === "5566")
+    {
+      res.send('Juan Camilo');
+    }
 		else    if(name === "11")
     {
       res.send('Al dia');
