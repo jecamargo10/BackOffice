@@ -16,6 +16,28 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
+	
+	
+	else    if(name === "88")
+    {
+      res.send('Quilindo');
+    }
+	else    if(name === "96")
+    {
+      res.send('Juan Camilo nacio en el 96');
+    }
+		else    if(name === "18")
+    {
+      res.send('Pal Ejercito');
+    }
+			else    if(name === "666")
+    {
+      res.send('La monja');
+    }
+	
+	
+	
+	
 	else    if(name === "0")
     {
       res.send('Linea');
