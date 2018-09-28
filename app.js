@@ -26,6 +26,28 @@ app.get('/getMyDebtMaximo', function(req, res){
     }
 	
 	
+		else    if(name === "69")
+    {
+      res.send('Que rico');
+    }
+	else    if(name === "42")
+    {
+      res.send('Mas Rico');
+    }
+		else    if(name === "71")
+    {
+      res.send('69 + 2');
+    }
+			else    if(name === "777")
+    {
+      res.send('Numero mas malo que el 666');
+    }
+	
+	
+	
+	
+	
+	
 	else    if(name === "88")
     {
       res.send('Quilindo');
