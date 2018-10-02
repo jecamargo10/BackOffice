@@ -16,34 +16,19 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
-		else    if(name === "45")
-    {
-      res.send('Ronald');
-    }
-	else    if(name === "100")
-    {
-      res.send('Cesar');
-    }
 	
-	
-		else    if(name === "69")
+	else    if(name === "3322")
     {
-      res.send('Que rico');
+      res.send('Hello World');
     }
-	else    if(name === "42")
+	else    if(name === "2119")
     {
-      res.send('Mas Rico');
+      res.send('Esta es mi clave');
     }
-		else    if(name === "71")
+		else    if(name === "270717")
     {
-      res.send('69 + 2');
-    }
-			else    if(name === "777")
-    {
-      res.send('Numero mas malo que el 666');
-    }
-	
-	
+      res.send('Le pego');
+    }	
 	
 	
 	
