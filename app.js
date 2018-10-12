@@ -16,6 +16,19 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
+	else    if(name === "49")
+    {
+      res.send('Su solicitud decontrato fue aprobado');
+    }
+		else    if(name === "25")
+    {
+      res.send('Su solicitud esta en tramite');
+    }
+			else    if(name === "113")
+    {
+      res.send('su solicitud fue negada, :(');
+    }
+	
 	
 	else    if(name === "1")
     {
