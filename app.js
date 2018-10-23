@@ -22,6 +22,29 @@ app.get('/getMyDebtMaximo', function(req, res){
 	    
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
+	
+	else    if(name === "30")
+    {
+      res.send('BanEcuador 30');
+    }
+		else    if(name === "10")
+    {
+      res.send('Es otra parroquia');
+    }
+			else    if(name === "18")
+    {
+      res.send('Legales');
+    }
+		else    if(name === "7")
+    {
+      res.send('El numero del Gran Cristiano Ronaldo');
+    }
+	
+	
+	
+	
+	
+	
 	else    if(name === "49")
     {
       res.send('Su solicitud decontrato fue aprobado');
