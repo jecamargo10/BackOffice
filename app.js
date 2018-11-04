@@ -10,19 +10,19 @@ app.get('/getMyDebtMaximo', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
     // Query to the DataBase Relation or not relational
-	
-	
+
+
     if(name === "1234")
     {
-	    
-	    
-	    
-	    
 
-	    
+
+
+
+
+
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
-	
+
 	else    if(name === "30")
     {
       res.send('BanEcuador 30');
@@ -39,12 +39,12 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('El numero del Gran Cristiano Ronaldo');
     }
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	else    if(name === "49")
     {
       res.send('Su solicitud decontrato fue aprobado');
@@ -57,8 +57,8 @@ app.get('/getMyDebtMaximo', function(req, res){
     {
       res.send('su solicitud fue negada, :(');
     }
-	
-	
+
+
 	else    if(name === "1")
     {
       res.send('Javier');
@@ -90,8 +90,8 @@ app.get('/getTerpelMiles', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
     // Query to the DataBase Relation or not relational
-	
-	
+
+
     if(name === "123")
     {
       res.send('Tienes 2400 Puntos');
@@ -110,8 +110,8 @@ app.get('/getTerpelLineamientos', function(req, res){
     console.log(req.query.codLineamiento);
 	var name = req.query.codLineamiento;
     // Query to the DataBase Relation or not relational
-	
-	
+
+
     if(name === "DATOS")
     {
       res.send('Todas las bases de datos deben ser Microsoft SQL Server');
@@ -134,8 +134,8 @@ app.get('/getTerpelPrincipios', function(req, res){
     console.log(req.query.codPrincipio);
 	var name = req.query.codPrincipio;
     // Query to the DataBase Relation or not relational
-	
-	
+
+
     if(name === "PORTABILIDAD")
     {
       res.send('Las aplicaciones desde su ingenieria de software deben estar construidas para ser portables');
@@ -157,10 +157,145 @@ app.post('/IngresarPQR', function(req, res) {
     // ...
 });
 
+app.get('/ObligacionesCliente', function(req, res) {
+  var id = req.query.ID_CLIENTE;
+  var tipoCliente = req.query.TIPO_CLIENTE;
+  var result = [];
+
+
+  if(id === "1010226035")
+  {
+    for (var i = 0; i < 2; i++) {
+if (i == 0)
+{
+  result.push({NO_OBLIGACION: "292847577", TIPO_OBLIGACION: "Tarjeta de Crédito",
+DESCRIPCION: "Obligación relacionada con una la tarjeta mastercar XXXX-XXXX-XXXX-3342"
+,VALOR_OBLIGACION: "450000", FECHA_DESEMBOLSO:"12/01/2017" });
+
+}
+if (i == 1)
+{
+  result.push({NO_OBLIGACION: "1523444", TIPO_OBLIGACION: "Crédito Hipotecario",
+  DESCRIPCION: "Deuda Hipotecaria ligada con el bien 000000010034"
+  ,VALOR_OBLIGACION: "1200000", FECHA_DESEMBOLSO:"12/01/2018" });
+
+}
+    }
+
+    }
+ else if(name === "39684753")
+  {
+    for (var i = 0; i < 1; i++) {
+  if (i == 0)
+  {
+  result.push({NO_OBLIGACION: "2223441", TIPO_OBLIGACION: "Crédito Automotriz",
+  DESCRIPCION: "Obligación ligada a la compra del vehículo de placas UUS554"
+  ,VALOR_OBLIGACION: "900000", FECHA_DESEMBOLSO:"10/10/2015" });
+  }
+
+    }  }
+    else if(name === "20180682")
+     {
+       for (var i = 0; i < 3; i++) {
+     if (i == 0)
+     {
+     result.push({NO_OBLIGACION: "661204958", TIPO_OBLIGACION: "Crédito libre inversión",
+     DESCRIPCION: "Crédito libre inversion"
+     ,VALOR_OBLIGACION: "352567", FECHA_DESEMBOLSO:"10/10/2000" });
+     }
+     if (i == 1)
+     {
+     result.push({NO_OBLIGACION: "0549302", TIPO_OBLIGACION: "Crédito Hipotecario",
+     DESCRIPCION: "Deuda Hipotecaria ligada con el bien 223123123123"
+     ,VALOR_OBLIGACION: "2000345", FECHA_DESEMBOLSO:"01/30/2012" });
+     }
+     if (i == 2)
+     {
+     result.push({NO_OBLIGACION: "221312", TIPO_OBLIGACION: "Crédito Automotriz",
+     DESCRIPCION: "Obligación ligada a la compra del vehículo de placas UXX254"
+     ,VALOR_OBLIGACION: "300000", FECHA_DESEMBOLSO:"04/20/2018" });
+     }
+
+       }  }
+
+    res.contentType('application/json');
+    res.send(JSON.stringify(result));
+
+});
 
 
 
 
-app.listen(80, function () {
+app.get('/v2/obligacion/:NoObligacion', function(req, res) {
+
+var obligacion = req.params.NoObligacion;
+  // Query to the DataBase Relation or not relational
+  if(obligacion === "2223441")
+  {
+    let objetoObligacion = {
+      Obligacion:{
+      NoObligacion: obligacion,
+      TipoObligacion: "Crédito Automotriz",
+      DiasMora: "30",
+      ValorMora: "350000",
+      Refinaciamiento: "NO",
+      FechaRefinanciamiento: ""}
+    }
+    res.contentType('application/json');
+res.send(JSON.stringify(objetoObligacion))
+  }
+ else if(obligacion === "661204958")
+  {
+    let objetoObligacion = {
+      Obligacion:{
+      NoObligacion: obligacion,
+      TipoObligacion: "Crédito libre inversión",
+      DiasMora: "50",
+      ValorMora: "1234000",
+      Refinaciamiento: "SI",
+      FechaRefinanciamiento: "05/10/2015"}
+    }
+    res.contentType('application/json');
+res.send(JSON.stringify(objetoObligacion))
+  }
+  else
+   {
+     let objetoObligacion = {
+       Obligacion:{
+       NoObligacion: obligacion,
+       TipoObligacion: "Crédito",
+       DiasMora: "0",
+       ValorMora: "0",
+       Refinaciamiento: "NO",
+       FechaRefinanciamiento: ""}
+     }
+     res.contentType('application/json');
+ res.send(JSON.stringify(objetoObligacion))
+   }
+});
+
+app.get('/getAgente', function(req, res) {
+
+var fecha = req.query.fecha;
+var date = new Date(fecha);
+var n = date.getDate();
+console.log(n);
+
+  if(n%2 === 0)
+  {
+     res.contentType('application/json');
+ res.send(JSON.stringify({agente:"Lisa Jones"}))
+   }
+   else {
+     res.contentType('application/json');
+
+     res.send(JSON.stringify({agente:"John Dunbar"}))
+
+   }
+});
+
+
+
+app.listen(8080, function () {
   console.log('Example app listening on port 3000!');
 });
