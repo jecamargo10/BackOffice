@@ -217,6 +217,16 @@ if (i == 1)
      }
 
        }  }
+       else {
+
+
+         result.push({NO_OBLIGACION: "34322", TIPO_OBLIGACION: "Tarjeta de Crédito",
+       DESCRIPCION: "Obligación relacionada con una la tarjeta mastercar XXXX-XXXX-XXXX-2233"
+       ,VALOR_OBLIGACION: "309450", FECHA_DESEMBOLSO:"06/04/2016" });
+
+
+
+       }
 
     res.contentType('application/json');
     res.send(JSON.stringify(result));
@@ -230,7 +240,7 @@ app.get('/v2/obligacion/:NoObligacion', function(req, res) {
 
 var obligacion = req.params.NoObligacion;
   // Query to the DataBase Relation or not relational
-  if(obligacion === "2223441")
+  if(obligacion === "292847577")
   {
     let objetoObligacion = {
       Obligacion:{
@@ -244,7 +254,7 @@ var obligacion = req.params.NoObligacion;
     res.contentType('application/json');
 res.send(JSON.stringify(objetoObligacion))
   }
- else if(obligacion === "661204958")
+ else if(obligacion === "1523444")
   {
     let objetoObligacion = {
       Obligacion:{
