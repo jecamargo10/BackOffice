@@ -183,7 +183,7 @@ if (i == 1)
     }
 
     }
- else if(name === "39684753")
+ else if(id === "39684753")
   {
     for (var i = 0; i < 1; i++) {
   if (i == 0)
@@ -194,7 +194,7 @@ if (i == 1)
   }
 
     }  }
-    else if(name === "20180682")
+    else if(id === "20180682")
      {
        for (var i = 0; i < 3; i++) {
      if (i == 0)
