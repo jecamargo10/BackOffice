@@ -165,7 +165,7 @@ app.get('/ObligacionesCliente', function(req, res) {
 
   if(id === "1010226035")
   {
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 5; i++) {
 if (i == 0)
 {
   result.push({NO_OBLIGACION: "292847577", TIPO_OBLIGACION: "Tarjeta de Crédito",
@@ -178,6 +178,20 @@ if (i == 1)
   result.push({NO_OBLIGACION: "1523444", TIPO_OBLIGACION: "Crédito Hipotecario",
   DESCRIPCION: "Deuda Hipotecaria ligada con el bien 000000010034"
   ,VALOR_OBLIGACION: "1200000", FECHA_DESEMBOLSO:"12/01/2018" });
+
+}
+	    if (i == 2)
+{
+  result.push({NO_OBLIGACION: "65123121", TIPO_OBLIGACION: "Crédito Libre Inversión",
+  DESCRIPCION: "Crédito libre inversion"
+  ,VALOR_OBLIGACION: "450000", FECHA_DESEMBOLSO:"12/01/2018" });
+
+}
+	    if (i == 3)
+{
+  result.push({NO_OBLIGACION: "18584844", TIPO_OBLIGACION: "Crédito Automtriz",
+  DESCRIPCION: "Obligación ligada a la compra del vehículo de placas UUS554"
+  ,VALOR_OBLIGACION: "1600000", FECHA_DESEMBOLSO:"01/01/2018" });
 
 }
     }
@@ -245,29 +259,71 @@ var obligacion = req.params.NoObligacion;
     let objetoObligacion = {
       Obligacion:{
       NoObligacion: obligacion,
-      TipoObligacion: "Crédito Automotriz",
-      DiasMora: "30",
-      ValorMora: "350000",
+      TipoObligacion: "Tarjeta de Crédito",
+      DiasMora: "0",
+      ValorMora: "0",
       Refinaciamiento: "NO",
       FechaRefinanciamiento: ""}
     }
     res.contentType('application/json');
 res.send(JSON.stringify(objetoObligacion))
   }
- else if(obligacion === "1523444")
+
+
+	
+	 else if(obligacion === "1523444")
+  {
+    let objetoObligacion = {
+      Obligacion:{
+      NoObligacion: obligacion,
+      TipoObligacion: "Crédito Hipotecario",
+      DiasMora: "15",
+      ValorMora: "540490",
+      Refinaciamiento: "NO",
+      FechaRefinanciamiento: ""}
+    }
+    res.contentType('application/json');
+res.send(JSON.stringify(objetoObligacion))
+  }
+
+	
+		 else if(obligacion === "65123121")
   {
     let objetoObligacion = {
       Obligacion:{
       NoObligacion: obligacion,
       TipoObligacion: "Crédito libre inversión",
-      DiasMora: "50",
-      ValorMora: "1234000",
-      Refinaciamiento: "SI",
-      FechaRefinanciamiento: "05/10/2015"}
+      DiasMora: "100",
+      ValorMora: "50490",
+      Refinaciamiento: "NO",
+      FechaRefinanciamiento: ""}
     }
     res.contentType('application/json');
 res.send(JSON.stringify(objetoObligacion))
   }
+	
+else if(obligacion === "18584844")
+  {
+    let objetoObligacion = {
+      Obligacion:{
+      NoObligacion: obligacion,
+      TipoObligacion: "Crédito Automtriz",
+      DiasMora: "30",
+      ValorMora: "345980",
+      Refinaciamiento: "NO",
+      FechaRefinanciamiento: ""}
+    }
+    res.contentType('application/json');
+res.send(JSON.stringify(objetoObligacion))
+  }
+	
+	
+	
+	
+	
+	
+	
+	
   else
    {
      let objetoObligacion = {
