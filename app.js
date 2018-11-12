@@ -170,28 +170,28 @@ if (i == 0)
 {
   result.push({NO_OBLIGACION: "292847577", TIPO_OBLIGACION: "Tarjeta de Crédito",
 DESCRIPCION: "Obligación relacionada con una la tarjeta mastercar XXXX-XXXX-XXXX-3342"
-,VALOR_OBLIGACION: "450000", FECHA_DESEMBOLSO:"12/01/2017" });
+,VALOR_OBLIGACION: "450000", FECHA_DESEMBOLSO:"2017-01-12" });
 
 }
 if (i == 1)
 {
   result.push({NO_OBLIGACION: "1523444", TIPO_OBLIGACION: "Crédito Hipotecario",
   DESCRIPCION: "Deuda Hipotecaria ligada con el bien 000000010034"
-  ,VALOR_OBLIGACION: "1200000", FECHA_DESEMBOLSO:"12/01/2018" });
+  ,VALOR_OBLIGACION: "1200000", FECHA_DESEMBOLSO:"2018-01-12" });
 
 }
 	    if (i == 2)
 {
   result.push({NO_OBLIGACION: "65123121", TIPO_OBLIGACION: "Crédito Libre Inversión",
   DESCRIPCION: "Crédito libre inversion"
-  ,VALOR_OBLIGACION: "450000", FECHA_DESEMBOLSO:"12/01/2018" });
+  ,VALOR_OBLIGACION: "450000", FECHA_DESEMBOLSO:"2018-01-01" });
 
 }
 	    if (i == 3)
 {
   result.push({NO_OBLIGACION: "18584844", TIPO_OBLIGACION: "Crédito Automtriz",
   DESCRIPCION: "Obligación ligada a la compra del vehículo de placas UUS554"
-  ,VALOR_OBLIGACION: "1600000", FECHA_DESEMBOLSO:"01/01/2018" });
+  ,VALOR_OBLIGACION: "1600000", FECHA_DESEMBOLSO:"2018-01-01" });
 
 }
     }
@@ -204,7 +204,7 @@ if (i == 1)
   {
   result.push({NO_OBLIGACION: "2223441", TIPO_OBLIGACION: "Crédito Automotriz",
   DESCRIPCION: "Obligación ligada a la compra del vehículo de placas UUS554"
-  ,VALOR_OBLIGACION: "900000", FECHA_DESEMBOLSO:"10/10/2015" });
+  ,VALOR_OBLIGACION: "900000", FECHA_DESEMBOLSO:"2015-01-01" });
   }
 
     }  }
