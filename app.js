@@ -14,18 +14,12 @@ app.get('/getMyDebtMaximo', function(req, res){
 
     if(name === "1234")
     {
-
-
-
-
-
-
       res.send('Su cesantia fue pagada en el mes de Agosto ');
     }
 
-	else    if(name === "30")
+	else    if(name === "40")
     {
-      res.send('BanEcuador 30');
+      res.send('BanEcuador 40');
     }
 		else    if(name === "10")
     {
