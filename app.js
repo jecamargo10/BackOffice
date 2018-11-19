@@ -151,6 +151,7 @@ app.post('/IngresarPQR', function(req, res) {
     // ...
 });
 
+
 app.get('/ObligacionesCliente', function(req, res) {
   var id = req.query.ID_CLIENTE;
   var tipoCliente = req.query.TIPO_CLIENTE;
