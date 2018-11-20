@@ -5,7 +5,6 @@ app.get('/', function (req, res) {
   res.send('Cualquier CosaX2');
 });
 
-
 app.get('/getMyDebtMaximo', function(req, res){
     console.log(req.query.id);
 	var name = req.query.id;
