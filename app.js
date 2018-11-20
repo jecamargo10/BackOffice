@@ -2,7 +2,15 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Cualquier CosaX2');
+  res.send('<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Metadata goes here -->
+  </head>
+  <body>
+    Holaaaaaa
+  </body>
+</html>');
 });
 
 app.get('/getMyDebtMaximo', function(req, res){
