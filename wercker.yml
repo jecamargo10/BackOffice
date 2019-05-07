@@ -42,8 +42,7 @@ update-deplyoment:
   steps:
     - kubectl:
       server: $KUBERNETES_MASTER
-      username: $KUBERNETES_USERNAME
-      password: $KUBERNETES_PASSWORD
+      token: $KUBERNETES_TOKEN
       insecure-skip-tls-verify: true
       command: rolling-update autofacil
       image: docker.io//javier22ca/backofficeterpel
