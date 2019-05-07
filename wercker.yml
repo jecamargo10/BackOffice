@@ -44,5 +44,6 @@ update-deplyoment:
       server: $KUBERNETES_MASTER
       token: $KUBERNETES_TOKEN
       insecure-skip-tls-verify: true
-      command: kubectl replace --force 
+      command:  replace --force 
+
       image: docker.io//javier22ca/backofficeterpel
