@@ -13,7 +13,7 @@ app.get('/getMyDebtMaximo', function(req, res){
     // Query to the DataBase Relation or not relational
 
 
-	
+
     if(name === "1234")
     {
       res.send('Su cesantia fue pagada en el mes de Agosto ');
@@ -267,7 +267,7 @@ res.send(JSON.stringify(objetoObligacion))
   }
 
 
-	
+
 	 else if(obligacion === "1523444")
   {
     let objetoObligacion = {
@@ -283,7 +283,7 @@ res.send(JSON.stringify(objetoObligacion))
 res.send(JSON.stringify(objetoObligacion))
   }
 
-	
+
 		 else if(obligacion === "65123121")
   {
     let objetoObligacion = {
@@ -298,7 +298,7 @@ res.send(JSON.stringify(objetoObligacion))
     res.contentType('application/json');
 res.send(JSON.stringify(objetoObligacion))
   }
-	
+
 else if(obligacion === "18584844")
   {
     let objetoObligacion = {
@@ -313,14 +313,14 @@ else if(obligacion === "18584844")
     res.contentType('application/json');
 res.send(JSON.stringify(objetoObligacion))
   }
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
   else
    {
      let objetoObligacion = {
@@ -359,6 +359,6 @@ console.log(n);
 
 
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(80, function () {
+  console.log('Example app listening on port 80!');
 });
