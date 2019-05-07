@@ -44,4 +44,4 @@ update-deplyoment:
       server: $KUBERNETES_MASTER
       token: $KUBERNETES_TOKEN
       insecure-skip-tls-verify: true
-      command:  edit deployment autofacil
+      command:  rolling-update autofacil
