@@ -44,6 +44,6 @@ update-deplyoment:
       server: $KUBERNETES_MASTER
       token: $KUBERNETES_TOKEN
       insecure-skip-tls-verify: true
-      command:  replace --force 
+      command:  rolling-update autofacil-58cf4d86ff-vmghv
 
       image: docker.io//javier22ca/backofficeterpel
