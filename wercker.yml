@@ -45,3 +45,4 @@ update-deplyoment:
       token: $KUBERNETES_TOKEN
       insecure-skip-tls-verify: true
       command:  edit deployment autofacil
+      image: docker.io/javier22ca/backofficeterpel
