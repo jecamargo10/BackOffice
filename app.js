@@ -5,6 +5,7 @@ app.use(express.static('dist'))
 
 var port = 80;
 
+var path = require("path");
 
 
 app.get('/', function(req, res){
