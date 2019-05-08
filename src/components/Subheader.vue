@@ -2,10 +2,10 @@
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div v-if="firstMessage !== undefined" class="col-12 m-0 bg-secondary-ligth">
+        <div v-if="firstMessage !== null" class="col-12 m-0 bg-secondary-ligth">
           <p class="my-2 font-size-larger" v-text="firstMessage"></p>
         </div>
-        <div v-if="currentStage !== undefined" class="col-12 m-0">
+        <div v-if="currentStage !== null" class="col-12 m-0">
           <div class="d-flex justify-content-center my-2 container-stages">
             <div class="stages d-flex justify-content-between">
               <div :class="{ 'stage-active': currentStage === 1 }" class="d-flex align-items-center mr-3">
@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div v-if="secondMessage !== undefined" class="col-12 m-0 bg-secondary-ligth">
+        <div v-if="secondMessage !== null" class="col-12 m-0 bg-secondary-ligth">
           <p class="my-3" v-text="secondMessage"></p>
         </div>
       </div>
@@ -59,6 +59,8 @@ export default {
     };
   },
   created() {
+    console.log(secondMessage);
+    
     //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
   },
   mounted() {
