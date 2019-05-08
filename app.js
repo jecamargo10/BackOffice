@@ -9,8 +9,9 @@ var path = require("path");
 
 
 app.get('/', function(req, res){
-  const index = path.join(__dirname, 'dist', 'index.html');
-  res.sendFile(index);
+//  const index = path.join(__dirname, 'dist', 'index.html');
+//  res.sendFile(index);
+res.sendFile(__dirname + '/dist/index.html'); 
 
 });
 
