@@ -2,11 +2,7 @@ var express = require('express');
 app = express();
 
 const testFolder = './tests/';
-const fs = require('fs');
 
-fs.readdirSync(testFolder).forEach(file => {
-  console.log(file);
-});
 //app.use(express.static('dist'))
 
   //server.use('/media', express.static(__dirname + '/media'));
