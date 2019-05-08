@@ -44,5 +44,5 @@ update-deplyoment:
       server: $KUBERNETES_MASTER
       token: $KUBERNETES_TOKEN
       insecure-skip-tls-verify: true
-      command:  rolling-update wildfly-service
+      command:  rolling-update wildfly-rc
       image: docker.io/javier22ca/backofficeterpel
