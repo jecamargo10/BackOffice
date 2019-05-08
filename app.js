@@ -8,9 +8,10 @@ var port = 80;
 
 
 app.get('/', function(req, res){
-  res.sendfile( './dist/index.html');
-});
+  const index = path.join(__dirname, 'dist', 'index.html');
+  res.sendFile(index);
 
+});
 
 
 app.listen(port, function(){
