@@ -15,7 +15,7 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <br>
+
             <h1 class="text-center">
               <strong>US $25.000</strong>
             </h1>
@@ -23,18 +23,17 @@
         </div>
         <div class="row mt-0 pt-0">
           <div class="col">
-            <br>
             <h5 class="text-center">
               60 cuaotas
               <strong>US $500 mensual</strong>
             </h5>
           </div>
         </div>
-        <div class="row mt-0">
+        <div class="row mt-3">
           <div class="col">
-            <br>
+
             <a href>
-              <h5 class="text-center text-primary">Personalizar crédito</h5>
+              <h5 class="text-center text-primary"><u>Simular crédito</u></h5>
             </a>
           </div>
         </div>
@@ -65,20 +64,18 @@
         </form>
         <div class="row mt-4">
           <div class="col">
-            <h5 class="text-center">Este crédito aplica para el 75% del costo de tu carro.</h5>
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col">
-            <a href>
-              <h6 class="text-center text-primary">Ver condiciones del crédito</h6>
-            </a>
+            <h5 class="text-center">Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
           </div>
         </div>
         <div class="row mt-3 mb-5">
           <div class="col">
+<<<<<<< HEAD
             <router-link to='/carselection'>
               <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
+=======
+            <router-link to='/setting'>
+              <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
+>>>>>>> a4e33c688b7babcd3a79a527b8c1217c62b4e45f
             </router-link>
             
           </div>

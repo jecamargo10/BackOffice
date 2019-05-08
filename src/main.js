@@ -24,6 +24,7 @@ const routes = [
   { path: '/result', component: ResultPage },
   { path: '/carselection', component: CarSelection },
   { path: '/fail', component: FailCasePage },
+  { path: '/lobby', component: LobbyPage },
   { path: '/options', component: OptionsPage },
   { path: '/setting', component: SettingPage }
 ]

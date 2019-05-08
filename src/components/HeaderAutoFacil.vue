@@ -15,10 +15,13 @@
 
               <b-collapse id="nav-text-collapse" is-nav>
                 <b-navbar-nav>
-                  <b-nav-text>Option 1</b-nav-text>
+                  <b-nav-text>Solicitar</b-nav-text>
                 </b-navbar-nav>
                 <b-navbar-nav>
-                  <b-nav-text>Option 2</b-nav-text>
+                  <b-nav-text>Estado de mi crédito</b-nav-text>
+                </b-navbar-nav>
+                <b-navbar-nav>
+                  <b-nav-text>Preguntas frecuentes</b-nav-text>
                 </b-navbar-nav>
               </b-collapse>
             </b-navbar>
