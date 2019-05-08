@@ -1,20 +1,87 @@
 <template>
   <section>
     <div class="row">
+      <div class="col-1"></div>
       <div class="col">
-        <img src="../assets/happy.png" alt>
+        <div class="row mt-3">
+          <div class="col">
+            <img src="../assets/happy.png" alt>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <h2>Buenas noticias Santiago tienes un crédito aprobado por</h2>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <br>
+            <h1 class="text-center">
+              <strong>US $25.000</strong>
+            </h1>
+          </div>
+        </div>
+        <div class="row mt-0 pt-0">
+          <div class="col">
+            <br>
+            <h5 class="text-center">
+              60 cuaotas
+              <strong>US $500 mensual</strong>
+            </h5>
+          </div>
+        </div>
+        <div class="row mt-0">
+          <div class="col">
+            <br>
+            <a href>
+              <h5 class="text-center text-primary">Personalizar crédito</h5>
+            </a>
+          </div>
+        </div>
+        <form>
+          <div class="form-row mt-4">
+            <div class="row">
+              <div class="col">
+                <div class="input-group mb-1">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Email"
+                    aria-label="Email"
+                    aria-describedby="button-addon2"
+                  >
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Enviar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mx-auto pb-4 border-bottom">
+                <div class="col">
+                  <small class="mt-0">Escribe tu correo para enviarte la información.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="row mt-4">
+          <div class="col">
+            <h5 class="text-center">Este crédito aplica para el 75% del costo de tu carro.</h5>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col">
+            <a href>
+              <h6 class="text-center text-primary">Ver condiciones del crédito</h6>
+            </a>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <h2>Buenas noticias Santiago tienes un crédito aprobado por</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <br>
-        <h1 class="text-center"><strong> US $25.000</strong></h1>
-      </div>
+      <div class="col-1"></div>
     </div>
   </section>
 </template>
