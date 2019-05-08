@@ -10,12 +10,17 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <h2>Ooops, lo sentimos no tienes créditos aprobados aún.</h2>
+            <h2>Uuups, aún no tienes creditos aprobados.</h2>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col">
-            <h6>No te preocupes, contacta a un asesor para continuar tu validación</h6>
+            <h2>Uuups, no se pudo completar el proceso.</h2>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <h6>Pero no te preocupes, dejanos tus datos y pronto te contactará un asesor para más información.</h6>
           </div>
         </div>
         <form>
@@ -41,7 +46,10 @@
             <div class="col">
               <div class="form-row form-check">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Lsed leo faucibus sollicitudim?</label>
+                <label
+                  class="custom-control-label"
+                  for="customCheck1"
+                >Lsed leo faucibus sollicitudim?</label>
               </div>
             </div>
           </div>
@@ -50,9 +58,9 @@
       <div class="col-1"></div>
     </div>
     <div class="row mt-4">
-       <div class="col">
-          <button type="submit" class="btn btn-outline-primary btn-lg"> Enviar </button>
-       </div>
+      <div class="col">
+        <button type="submit" class="btn btn-outline-primary btn-lg">Enviar</button>
+      </div>
     </div>
   </section>
 </template>
