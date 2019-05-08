@@ -4,6 +4,7 @@ app = express();
 app.use(express.static('dist'))
 
 var port = 8080;
+console.log("Stuff");
 
 var path = require("path");
 console.log(__dirname);
