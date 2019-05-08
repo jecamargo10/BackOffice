@@ -49,7 +49,7 @@
             <br>
             <br>
           </div>
-          <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
+          <button type="submit" @click="routeResult" class="btn btn-outline-primary btn-lg">Continuar</button>
         </form>
       </div>
       <div class="col-1"></div>
@@ -60,7 +60,7 @@
 <script>
 export default {
   name: "LobbyPage", //nombre con el cual se usa el componente
-  props: ["asasda"], //propiedades requeridas(o no) para el uso del componente
+  props: [], //propiedades requeridas(o no) para el uso del componente
   data() {
     //data reactiva del componente
     return {};
@@ -72,7 +72,9 @@ export default {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
-    //metodos
+    routeResult(){
+      this.$router.push({ path: '/result' })
+    }
   }
 };
 </script>

@@ -35,7 +35,7 @@
     </div>
     <div class="row">
        <div class="col">
-          <button type="button" class="btn btn-outline-primary btn-lg">Empecemos</button>
+          <button type="button" @click="routeRegistry" class="btn btn-outline-primary btn-lg">Empecemos</button>
        </div>
     </div>
   </section>
@@ -56,7 +56,9 @@ export default {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
-    //metodos
+    routeRegistry(){
+      this.$router.push({ path: '/registry' })
+    }
   }
 };
 </script>

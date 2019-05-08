@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <header-auto-facil></header-auto-facil>
-    <router-link to="/s">Go to Foo</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -12,7 +11,7 @@ import HeaderAutoFacil from './components/HeaderAutoFacil.vue'
 export default {
   name: 'app',
   components: {
-    HeaderAutoFacil
+    HeaderAutoFacil,
   }
 }
 </script>
@@ -24,5 +23,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.bg-secondary-ligth{
+  background-color: #e2e2e2;
+}
+.font-size-larger{
+  font-size: larger;
+}
+.font-size-x-large{
+  font-size: x-large;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>
