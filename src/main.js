@@ -10,6 +10,7 @@ import LobbyPage from './pages/Lobby.vue'
 import RegistryPage from './pages/Registry.vue'
 import ResultPage from './pages/Result.vue'
 import SettingPage from './pages/Setting.vue'
+import FailCasePage from './pages/FailCase.vue'
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -21,6 +22,7 @@ const routes = [
   { path: '/lobby', component: LobbyPage},
   { path: '/registry', component: RegistryPage },
   { path: '/result', component: ResultPage },
+  { path: '/fail', component: FailCasePage },
   { path: '/setting', component: SettingPage }
 ]
 

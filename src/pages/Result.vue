@@ -44,7 +44,7 @@
               <div class="col">
                 <div class="input-group mb-1">
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
                     placeholder="Email"
                     aria-label="Email"
