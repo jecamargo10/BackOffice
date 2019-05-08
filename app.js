@@ -3,7 +3,7 @@ app = express();
 
 app.use(express.static('dist'))
 
-var port = 80;
+var port = 8080;
 console.log("Stuff");
 
 var path = require("path");
@@ -12,12 +12,12 @@ if (!__dirname)
 {
   __dirname = path.resolve(path.dirname(''));
 
-}
+  }
 
 app.get('/', function(req, res){
 //  const index = path.join(__dirname, 'dist', 'index.html');
 //  res.sendFile(index);
-res.sendFile(__dirname + '/dist/index.html');
+res.sendFile('./dist/index.html');
 
 });
 
