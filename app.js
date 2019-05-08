@@ -3,7 +3,7 @@ app = express();
 
 app.use(express.static('dist'))
 
-var port = 8080;
+var port = 80;
 console.log("Stuff");
 
 var path = require("path");
