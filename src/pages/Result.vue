@@ -69,13 +69,8 @@
         </div>
         <div class="row mt-3 mb-5">
           <div class="col">
-<<<<<<< HEAD
-            <router-link to='/carselection'>
-              <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
-=======
-            <router-link to='/setting'>
+            <router-link to='/options'>
               <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
->>>>>>> a4e33c688b7babcd3a79a527b8c1217c62b4e45f
             </router-link>
             
           </div>
