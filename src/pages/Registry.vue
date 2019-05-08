@@ -39,12 +39,14 @@
           <div class="form-row form-check">
             <br>
             <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <h5 class="custom-control-label" for="customCheck1">Lsed leo faucibus sollicitudim?</h5>
+            <label class="custom-control-label" for="customCheck1">Lsed leo faucibus sollicitudim?</label>
             <br>
           </div>
           <div class="form-row ">
             <a href="" class="mx-auto">
-              <h6 class="text-primary text-center">Ya estoy registrado</h6>
+              <router-link to='/fail'>
+                <h6 class="text-primary text-center">Ya estoy registrado</h6>
+              </router-link>
             </a>
             <br>
             <br>
