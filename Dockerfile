@@ -2,8 +2,7 @@ FROM node:6
 
 ADD app.js ./
 ADD package.json ./
-
-WORKDIR /app
+ADD . / dist ./
 
 RUN npm install
 
