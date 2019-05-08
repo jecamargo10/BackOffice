@@ -17,7 +17,9 @@ if (!__dirname)
 app.get('/', function(req, res){
 //  const index = path.join(__dirname, 'dist', 'index.html');
 //  res.sendFile(index);
-res.sendFile('./dist/index.html');
+//res.sendFile('./dist/index.html');
+res.sendFile('dist/index.html', { root: __dirname });
+
 
 });
 
