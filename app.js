@@ -3,9 +3,9 @@ app = express();
 
 //app.use(express.static('dist'))
 
-server.configure(function(){
+app.configure(function(){
   //server.use('/media', express.static(__dirname + '/media'));
-  server.use(express.static(__dirname + '/dist'));
+  app.use(express.static(__dirname + '/dist'));
 //  app.use(express.static('dist'))
 });
 
