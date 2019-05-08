@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <section class="container-fluid">
     <div class="row">
       <div class="col-1"></div>
       <div class="col">
-        <div class="row mt-3">
+        <div class="row mt-4">
           <div class="col">
             <img src="../assets/happy.png" alt>
           </div>
@@ -75,9 +75,9 @@
             </a>
           </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-3 mb-5">
           <div class="col">
-            <router-link to='/setting'>
+            <router-link to='/carselection'>
               <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
             </router-link>
             

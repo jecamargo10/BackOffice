@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <section class="container-fluid">
     <div class="row">
-      <div class="col pb-3 pt-3" style="background-color:#eee">
-        <h5>Personaliza mi crédito</h5>
+      <div class="col p-0">
+        <Subheader :firstMessage="'Simular mi credito'" :currentStage="null" :secondMessage="null"></Subheader>
       </div>
     </div>
     <div class="row">
@@ -93,37 +93,6 @@
     <div class="row">
       <div class="col-1"></div>
       <div class="col">
-        <div class="row mt-4">
-          <div class="col">
-            <h4>Cuota de entrada disponible</h4>
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col">
-            <div class="input-group mb-1">
-              <div class="input-group-prepend">
-                <span class="input-group-text">$</span>
-              </div>
-              <input
-                type="number"
-                class="form-control"
-                placeholder
-                aria-label
-                aria-describedby="button-addon2"
-              >
-              <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" id="button-addon2">Enviar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col">
-            <a href>
-              <h6 class="text-center text-primary"><u>Ver condiciones del crédito</u></h6>
-            </a>
-          </div>
-        </div>
         <div class="row mt-3">
           <div class="col">
              <button type="submit" class="btn btn-outline-primary btn-lg">Aplicar</button>
@@ -131,9 +100,7 @@
         </div>
         <div class="row mt-4">
           <div class="col">
-            <a href>
-              <h5 class="text-center text-primary"><u>Cancelar</u></h5>
-            </a>
+            <h5 class="text-center text-primary"><u>Cancelar</u></h5>
           </div>
         </div>
       </div>
@@ -144,9 +111,13 @@
 
 
 <script>
+import Subheader from '../components/Subheader.vue'
 export default {
   name: "SettingPage", //nombre con el cual se usa el componente
   props: ["asasda"], //propiedades requeridas(o no) para el uso del componente
+  components: {
+    Subheader
+  },
   data() {
     //data reactiva del componente
     return {};
