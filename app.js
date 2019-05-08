@@ -1,7 +1,14 @@
 var express = require('express');
 app = express();
 
-app.use(express.static('dist'))
+//app.use(express.static('dist'))
+
+server.configure(function(){
+  //server.use('/media', express.static(__dirname + '/media'));
+  server.use(express.static(__dirname + '/dist'));
+//  app.use(express.static('dist'))
+});
+
 
 var port = 80;
 console.log("Stuff");
