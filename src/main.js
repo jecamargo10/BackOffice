@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueRouter from 'vue-router'
 
-import LoginPage from './pages/Login.vue'
 import LobbyPage from './pages/Lobby.vue'
 import RegistryPage from './pages/Registry.vue'
 import ResultPage from './pages/Result.vue'
+import CarSelection from './pages/CarSelection.vue'
 import SettingPage from './pages/Setting.vue'
 import FailCasePage from './pages/FailCase.vue'
 import OptionsPage from './pages/Options.vue'
@@ -19,10 +19,10 @@ import OptionsPage from './pages/Options.vue'
 // `Vue.extend()`, or just a component options object.
 // We'll talk about nested routes later.
 const routes = [
-  { path: '/', component: LoginPage},
-  { path: '/lobby', component: LobbyPage},
+  { path: '/', component: LobbyPage},
   { path: '/registry', component: RegistryPage },
   { path: '/result', component: ResultPage },
+  { path: '/carselection', component: CarSelection },
   { path: '/fail', component: FailCasePage },
   { path: '/options', component: OptionsPage },
   { path: '/setting', component: SettingPage }

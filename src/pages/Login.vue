@@ -7,7 +7,7 @@
 <script>
 export default {
     name: 'login-page', //nombre con el cual se usa el componente
-    props: ['asasda'], //propiedades requeridas(o no) para el uso del componente
+    props: [], //propiedades requeridas(o no) para el uso del componente
     data () {//data reactiva del componente
         return {
 

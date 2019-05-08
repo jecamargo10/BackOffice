@@ -77,7 +77,10 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
+            <router-link to='/setting'>
+              <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
+            </router-link>
+            
           </div>
         </div>
       </div>
