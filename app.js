@@ -12,8 +12,39 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 app.use('/api/v1', router)
 app.use(express.static('dist'))
+const testFolder = './tests/';
+
+//app.use(express.static('dist'))
+
+//server.use('/media', express.static(__dirname + '/media'));
+app.use(express.static(__dirname + '/dist'));
+
 
 var port = 80;
+console.log("Stuff");
+
+var path = require("path");
+console.log(__dirname);
+if (!__dirname)
+{
+  __dirname = path.resolve(path.dirname(''));
+
+  }
+  app.get('*', function (req, res) {
+  const index = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(index);
+});
+/**
+
+app.get('/', function(req, res){
+//  const index = path.join(__dirname, 'dist', 'index.html');
+//  res.sendFile(index);
+//res.sendFile('./dist/index.html');
+res.sendFile('dist/index.html', { root: __dirname });
+
+
+});*/
+
 
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOmNoYXJtZWRTcGFuXjk='};
 
