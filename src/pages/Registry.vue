@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div class="row mt-4">
+      <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col p-0">
           <form @submit.prevent="routeResult">
@@ -140,14 +140,12 @@ export default {
   border-color: #174b86;
 }
 .botBlue:hover {
-  background-color: #174b86;
-  color: white;
-  border-color: white;
+  color: #C71066;
+  border-color: #C71066;
 }
 .botBlue:active {
-  background-color: #174b86;
-  color: white;
-  border-color: white;
+  color: #C71066;
+  border-color: #C71066;
 }
 .backBlue {
   background-color: #174b86;
@@ -155,25 +153,32 @@ export default {
 .textBlue {
   color: #174b86;
 }
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
 .botPink{
   background-color: white;
   color: #C71066;
   border-color: #C71066;
 }
 .botPink:hover {
-  background-color: #C71066;
-  color: white;
-  border-color: white;
+  color: #174b86;
+  border-color: #174b86;
 }
 .botPink:active {
-  background-color: #C71066;
-  color: white;
-  border-color: white;
+  color: #174b86;
+  border-color: #174b86;
 }
 .backPink {
   background-color: #C71066;
 }
 .textPink {
   color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
 }
 </style>

@@ -6,24 +6,24 @@
             </div>
         </div>
         <div class="row">
-            <div class="col p-0 pt-3 bg-secondary-ligth">
-                <p class="font-size-x-large">Tu crédito ha sido aplicado con éxito</p>
-                <div class="bg-secondary w-50 mx-auto">
-                    <p class="text-success p-2">
+            <div class="col p-0 pt-3 backBlue">
+                <p class="font-size-x-large text-light">Tu crédito ha sido aplicado con éxito</p>
+                <div class="bg-light w-50 mx-auto">
+                    <p class="text-secondary p-2">
                         Credito <br>
                         # {{credit}}
                     </p>
                 </div>
-                <p>Presenta este código al concesionario.</p>
-                <p><small>Valido hasta el 31/08/2019</small></p>
+                <p class="text-light">Presenta este código al concesionario.</p>
+                <p class="text-light"><small>Valido hasta el 31/08/2019</small></p>
             </div>
         </div>
         <div class="row">
             <div class="col mt-3">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col">
-                            <p>Tu carro esta disponible en:</p>
+                        <div class="col mb-3 mt-3">
+                            <h4>Tu carro esta disponible en:</h4>
                         </div>
                     </div>
                     <div v-for="i in 3" :key="i" class="row">
@@ -40,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <button @click="completeCredit" class="btn btn-primary">Completar</button>
+                <button @click="completeCredit" class="btn botBlue">Completar</button>
             </div>
         </div>
     </section>
@@ -80,5 +80,52 @@ export default {
 </script>
 
 <style scoped>
+    
+.botBlue {
+  background-color: white;
+  color: #174b86;
+  border-color: #174b86;
+}
+.botBlue:hover {
+  color: #C71066;
+  border-color: #C71066;
+}
+.botBlue:active {
+  color: #C71066;
+  border-color: #C71066;
+}
+.backBlue {
+  background-color: #174b86;
+}
+.textBlue {
+  color: #174b86;
+}
 
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink{
+  background-color: white;
+  color: #C71066;
+  border-color: #C71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #C71066;
+}
+.textPink {
+  color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
+}
 </style>
