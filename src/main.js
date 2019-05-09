@@ -12,7 +12,9 @@ import CarSelection from './pages/CarSelection.vue'
 import SettingPage from './pages/Setting.vue'
 import FailCasePage from './pages/FailCase.vue'
 import OptionsPage from './pages/Options.vue'
+import DetailPage from './pages/Details.vue'
 import CreditInfo from './pages/CreditInfo.vue'
+import CreditComplete from './pages/CreditComplete.vue'
 // 2. Define some routes
 // Each route should map to a component. The "component" can
 // either be an actual component constructor created via
@@ -26,8 +28,10 @@ const routes = [
   { path: '/fail', component: FailCasePage },
   { path: '/lobby', component: LobbyPage },
   { path: '/options', component: OptionsPage },
+  { path: '/details', component: DetailPage },
   { path: '/setting', component: SettingPage },
-  { path: '/credit', component: CreditInfo }
+  { path: '/credit', component: CreditInfo },
+  { path: '/CreditComplete', component: CreditComplete },
 ]
 
 // 3. Create the router instance and pass the `routes` option

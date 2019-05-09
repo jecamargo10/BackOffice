@@ -19,14 +19,21 @@
         <div class="col-1"></div>
         <div class="col p-0">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item text-left outBorder">1. Elige tu auto</li>
-            <li class="list-group-item text-left outBorder">2. Solicita tu crédito</li>
+            <li class="list-group-item text-left outBorder"><strong>1. Solicita tu crédito</strong></li>
+            <li class="list-group-item text-left outBorder"><strong>2. Elige tu auto</strong></li>
             <li
               class="list-group-item text-left outBorder"
-            >3. Recoge tu carro en el consesionario más cercano</li>
+            ><strong>3. Paga y listo</strong></li>
           </ul>
         </div>
         <div class="col-1"></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col p-4" style="background-color: #eee">
+          <h5>¡Tú auto te espera en el consesionario más cercano!</h5>
+        </div>
       </div>
     </div>
 
@@ -38,7 +45,7 @@
             type="button"
             @click="routeRegistry"
             class="btn btn-outline-primary btn-lg"
-          >Empecemos</button>
+          >¿Empezamos?</button>
         </div>
       </div>
     </div>

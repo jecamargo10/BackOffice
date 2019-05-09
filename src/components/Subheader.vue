@@ -12,19 +12,19 @@
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   1
                 </div>
-                Elegir
+                Solicitar
               </div>
               <div :class="{ 'stage-active': currentStage === 2 }" class="d-flex align-items-center mr-3">
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   2
                 </div>
-                Solicitar
+                Elegir
               </div>
               <div :class="{ 'stage-active': currentStage === 3 }" class="d-flex align-items-center mr-3">
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   3
                 </div>
-                Recoger carro
+                Pagar
               </div>
             </div>
           </div>
@@ -59,6 +59,7 @@ export default {
     };
   },
   created() {
+    
     //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
   },
   mounted() {
