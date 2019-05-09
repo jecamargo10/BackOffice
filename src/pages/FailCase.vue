@@ -5,7 +5,7 @@
       <div class="col">
         <div class="row mt-4">
           <div class="col">
-            <img src="../assets/sad.png" alt="sad">
+            <img src="../assets/sad.png" alt="sad" width="100em" height="100em">
           </div>
         </div>
         <div class="row mt-3">
