@@ -17,9 +17,9 @@ function filterVehicles(amount, brand, category, callback){
     })
 }
 
-function crearCredito(usuario, monto, plazo, cuota, tipo, callback){
+function crearCredito(usuario, monto, plazo, cuota, tipo, vehiculo, callback){
     let body = {
-        usuario, monto, plazo, cuota, tipo
+        usuario, monto, plazo, cuota, tipo, vehiculo
     }
     axios.post(`${config.host}/crearCredito`, body).then(response => {
         return callback(false, response)
@@ -29,5 +29,5 @@ function crearCredito(usuario, monto, plazo, cuota, tipo, callback){
 }
 
 export default  {
-    verifyUser, filterVehicles
+    verifyUser, filterVehicles, crearCredito
 }
