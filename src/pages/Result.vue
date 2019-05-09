@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <section class="container-fluid">
     <div class="row">
       <div class="col-1"></div>
       <div class="col">
-        <div class="row mt-3">
+        <div class="row mt-4">
           <div class="col">
             <img src="../assets/happy.png" alt>
           </div>
@@ -15,7 +15,7 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <br>
+
             <h1 class="text-center">
               <strong>US $25.000</strong>
             </h1>
@@ -23,18 +23,19 @@
         </div>
         <div class="row mt-0 pt-0">
           <div class="col">
-            <br>
             <h5 class="text-center">
               60 cuaotas
               <strong>US $500 mensual</strong>
             </h5>
           </div>
         </div>
-        <div class="row mt-0">
+        <div class="row mt-3">
           <div class="col">
-            <br>
+
             <a href>
-              <h5 class="text-center text-primary">Personalizar crédito</h5>
+              <h5 class="text-center text-primary">
+                <u><router-link to="/setting">Simular crédito</router-link></u>
+              </h5>
             </a>
           </div>
         </div>
@@ -65,20 +66,13 @@
         </form>
         <div class="row mt-4">
           <div class="col">
-            <h5 class="text-center">Este crédito aplica para el 75% del costo de tu carro.</h5>
+            <h5 class="text-center">Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
           </div>
         </div>
-        <div class="row mt-2">
+        <div class="row mt-3 mb-5">
           <div class="col">
-            <a href>
-              <h6 class="text-center text-primary">Ver condiciones del crédito</h6>
-            </a>
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col">
-            <router-link to='/setting'>
-              <button type="submit" class="btn btn-outline-primary btn-lg">Elige tu carro</button>
+            <router-link to='/options'>
+              <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
             </router-link>
             
           </div>
@@ -92,7 +86,7 @@
 <script>
 export default {
   name: "ResultPage", //nombre con el cual se usa el componente
-  props: ["asasda"], //propiedades requeridas(o no) para el uso del componente
+  props: [], //propiedades requeridas(o no) para el uso del componente
   data() {
     //data reactiva del componente
     return {};

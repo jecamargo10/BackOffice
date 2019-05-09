@@ -59,8 +59,6 @@ export default {
     };
   },
   created() {
-    console.log(secondMessage);
-    
     //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
   },
   mounted() {

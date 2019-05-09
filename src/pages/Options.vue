@@ -1,16 +1,38 @@
 
 <template>
   <section>
-    <div class="row">
-      <div class="col">
-        <Subheader :currentStage="1" :firstMessage="'¿Qué quieres hacer?'" :secondMessage="null"></Subheader>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <i class="material-icons text-primary">arrow_forward</i>
-      </div>
-    </div>
+     <div class="container-fluid">
+        <div class="row">
+           <div class="col p-0">
+               <Subheader :currentStage="1" :firstMessage="'¿Qué quieres hacer?'" :secondMessage="null"></Subheader>
+           </div>
+        </div>
+     </div>
+     <div class="container-fluid">
+        <div class="row border border-primary dimFr d-flex align-items-center">
+           <div class="col-1"></div>
+           <div class="col p-0">
+               <h6  class="text-primary"><strong>Ya se que carro quiero comprar</strong></h6>
+           </div>
+           <div class="col p-0">
+               <i class="material-icons text-primary">arrow_forward</i>
+           </div>
+           <div class="col-1"></div>
+        </div>
+     </div>
+     <div class="container-fluid">
+        <div class="row border border-primary dimFr d-flex align-items-center">
+           <div class="col-1"></div>
+           <div class="col p-0">
+               <h6 class="text-primary"><strong>Quiero ver opciones según mi capacidad</strong></h6>
+           </div>
+           <div class="col p-0">
+               <i class="material-icons text-primary">arrow_forward</i>
+           </div>
+           <div class="col-1"></div>
+        </div>
+     </div>
+
   </section>
 </template>
 
@@ -42,5 +64,9 @@ export default {
 <style scoped>
 i {
   font-size: 500%;
+}
+
+.dimFr{
+   height: 35vh;
 }
 </style>

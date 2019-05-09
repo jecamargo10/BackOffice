@@ -8,17 +8,20 @@
               <b-navbar-toggle class="toggleButton" target="nav-text-collapse"></b-navbar-toggle>
 
               <b-navbar-brand class="">
-                <div>
+                <div class="imageBancoDiv">
                   <img :src="logoBancoSCR" alt="Logo Banco Guayaquil">
                 </div>
               </b-navbar-brand>
 
               <b-collapse id="nav-text-collapse" is-nav>
                 <b-navbar-nav>
-                  <b-nav-text>Option 1</b-nav-text>
+                  <b-nav-text>Solicitar</b-nav-text>
                 </b-navbar-nav>
                 <b-navbar-nav>
-                  <b-nav-text>Option 2</b-nav-text>
+                  <b-nav-text>Estado de mi crédito</b-nav-text>
+                </b-navbar-nav>
+                <b-navbar-nav>
+                  <b-nav-text>Preguntas frecuentes</b-nav-text>
                 </b-navbar-nav>
               </b-collapse>
             </b-navbar>
@@ -56,5 +59,12 @@ export default {
 .toggleButton{
   left: 1em;
   position: absolute;
+}
+.imageBancoDiv{
+  width: 8em;
+}
+.imageBancoDiv img{
+  width: 100%;
+  height: auto;
 }
 </style>

@@ -1,42 +1,46 @@
 <template>
   <section>
-    <div class="row" style="background-color: black;">
-      <div class="col pl-0 pr-0">
-        <div class="contenedor">
-          <h2 class="texto-arriba">Financiamos tu carro en 3 pasos y sin documentos.</h2>
-          <img src="../assets/image--light.png" style="width:100vw; height:auto" alt="Fondo">
-          <h5
-            class="texto-abajo"
-          >Es muy fácil, obtendrás un crédito en minutos para el auto que quieres.</h5>
+    <div class="container-fluid">
+      <div class="row" style="background-color: black;">
+        <div class="col p-0">
+          <div class="contenedor">
+            <h2 class="texto-arriba mt-2">Financiamos tu carro en 3 pasos y sin documentos.</h2>
+            <img src="../assets/image--light.png" style="width:100vw; height:auto" alt="Fondo">
+            <h5
+              class="texto-abajo mb-4"
+            >Con AutoFácil, obtendrás un crédito en minutos para el carro que quieres.</h5>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-       <div class="col">
-          <br>
-          <br>
-       </div>
-    </div>
-    <div class="row">
-       <div class="col-1"></div>
-      <div class="col">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item text-left outBorder">1. Elige tu auto</li>
-          <li class="list-group-item text-left outBorder">2. Solicita tu crédito</li>
-          <li class="list-group-item text-left outBorder">3. Recoge tu carro en el consesionario más cercano</li>
-        </ul>
+
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col-1"></div>
+        <div class="col p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-left outBorder">1. Elige tu auto</li>
+            <li class="list-group-item text-left outBorder">2. Solicita tu crédito</li>
+            <li
+              class="list-group-item text-left outBorder"
+            >3. Recoge tu carro en el consesionario más cercano</li>
+          </ul>
+        </div>
+        <div class="col-1"></div>
       </div>
-      <div class="col-1"></div>
     </div>
-        <div class="row">
-       <div class="col">
-          <br>
-       </div>
-    </div>
-    <div class="row">
-       <div class="col">
-          <button type="button" @click="routeRegistry" class="btn btn-outline-primary btn-lg">Empecemos</button>
-       </div>
+
+
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col p-0">
+          <button
+            type="button"
+            @click="routeRegistry"
+            class="btn btn-outline-primary btn-lg"
+          >Empecemos</button>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -56,8 +60,8 @@ export default {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
-    routeRegistry(){
-      this.$router.push({ path: '/registry' })
+    routeRegistry() {
+      this.$router.push({ path: "/registry" });
     }
   }
 };
@@ -84,7 +88,7 @@ export default {
   left: 20px;
 }
 
-.outBorder{
-   border:0 !important
+.outBorder {
+  border: 0 !important;
 }
 </style>
