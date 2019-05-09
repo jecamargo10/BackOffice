@@ -5,9 +5,8 @@
       <div class="row">
         <div class="col p-0">
           <Subheader
-            :currentStage="1"
+            :currentStage="2"
             :firstMessage="null"
-            :secondMessage="'Crédito aprobado: US $24.500'"
           ></Subheader>
         </div>
       </div>
@@ -17,7 +16,7 @@
         <div class="col-1"></div>
         <div class="col p-0 text-left">
           <h6>
-            <strong>KIA SOUL</strong>
+            <strong v-text="car.CATEGORIA+' '+car.MARCA+' '+car.MODELO+' '+car.LINEA"></strong>
           </h6>
         </div>
         <div class="col-1"></div>
@@ -38,15 +37,18 @@
       <div class="row mt-4">
         <div class="col"></div>
         <div class="col d-flex justify-content-center d-1 m-1">
-          <button type="button" class="btn btn-outline-primary rounded-circle circular p-2 m-1"></button>
-
+          <!--<button type="button" class="btn btn-outline-primary rounded-circle circular p-2 m-1"></button>
           <button type="button" class="btn btn-outline-secondary rounded-circle circular p-2 m-1"></button>
-
           <button type="button" class="btn btn-outline-danger rounded-circle circular p-2 m-1"></button>
-
           <button type="button" class="btn btn-outline-success rounded-circle circular p-2 m-1"></button>
-
-          <button type="button" class="btn btn-outline-dark rounded-circle circular p-2 m-1"></button>
+          <button type="button" class="btn btn-outline-dark rounded-circle circular p-2 m-1"></button>-->
+          <button 
+            v-for="(color, colorIndex) in car.COLOR.cars" :key="'color'+colorIndex" 
+            @click="changeCarImage(color.url)"
+            type="button" 
+            :style="'border-color: black'+'; background:'+color.color" 
+            class="btn rounded-circle circular p-2 m-1">
+          </button>
         </div>
         <div class="col"></div>
       </div>
@@ -55,7 +57,7 @@
       <div class="row">
         <div class="col-1"></div>
         <div class="col">
-          <img class="card-img-top" src="../assets/model-car.jpg" alt="carro">
+          <img class="card-img-top" :src="urlCar" alt="carro">
         </div>
         <div class="col-1"></div>
       </div>
@@ -76,10 +78,10 @@
               </div>
             </div>
             <b-collapse id="collapse-a" class="mt-2">
-              <b-card>Marca: KIA</b-card>
+              <b-card>Marca: <span v-text="car.MARCA"></span></b-card>
             </b-collapse>
             <b-collapse id="collapse-b" class="mt-2">
-              <b-card>Tipo: SOUL</b-card>
+              <b-card>Tipo: <span v-text="car.TIPO"></span></b-card>
             </b-collapse>
           </div>
         </div>
@@ -92,24 +94,20 @@
         <div class="col">
           <div class="row mt-4">
             <div class="col">
-              <h2><strong>US $35.000</strong></h2>
+              <h2><strong>US $<span v-text="car.COSTO"></span></strong></h2>
             </div>
           </div>
           <div class="row mt-3">
-            <div class="col">Cuota de entrada: Us $10.500</div>
+            <div class="col">Cuota de entrada: US $<span v-text="car.COSTO * 0.25"></span></div>
           </div>
           <div class="row mt-3">
             <div class="col">
-              <a href>
-                <h6 class="text-center textBlue">Cambiar cuota de entrada</h6>
-              </a>
+              <h6 class="text-center textBlue">Cambiar cuota de entrada</h6>
             </div>
           </div>
           <div class="row mt-2">
             <div class="col">
-              <a href>
-                <h6 class="text-center textBlue">Ver condiciones del crédito</h6>
-              </a>
+              <h6 class="text-center textBlue">Ver condiciones del crédito</h6>
             </div>
           </div>
         </div>
@@ -120,6 +118,7 @@
       <div class="row mt-4">
         <div class="col p-0">
           <button
+            @click="createCredit"
             type="button"
             class="btn btn-outline botBlue btn-lg"
           >Aplicar mi crédito</button>
@@ -131,6 +130,7 @@
 
 <script>
 import Subheader from "../components/Subheader.vue";
+//import providerServices from "../providerServices/providerServices.js"
 
 export default {
   name: "DetailPage", //nombre con el cual se usa el componente
@@ -145,17 +145,34 @@ export default {
         { value: null, text: "Por favor seleciona una opción" },
         { value: "a", text: "Básico" },
         { value: "b", text: "Full equipo" }
-      ]
+      ],
+      car: undefined,
+      urlCar: ''
     };
   },
   created() {
-    //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
+    if (
+      this.$store.state.monthlyPayment === undefined ||
+      this.$store.state.monthlyPayment === null
+    ) {
+      return this.$router.push({
+        path: "/registry"
+      });
+    }
+    this.car =  this.$route.params.car
+    this.urlCar = this.car.COLOR.cars[0].url
   },
   mounted() {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
-    //metodos
+    changeCarImage(url){
+      this.urlCar = url
+    },
+    createCredit(){
+      this.$router.push({ path: '/credit'})
+      //providerServices.crearCredito()
+    }
   }
 };
 </script>

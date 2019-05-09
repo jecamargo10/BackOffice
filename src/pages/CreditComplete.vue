@@ -52,11 +52,7 @@
                     <p>Mensage</p>
                     <p>Cuota de entrada</p>
                 </div>
-            </div>
-        </div>
-        <div class="row m-4">
-            <div class="col">
-                <button class="btn btn-outline botBlue">Reserva tu carro</button>
+                <button @click="pushPay" class="btn btn-outline botBlue">Reserva tu carro</button>
             </div>
         </div>
         <div class="row">
@@ -93,7 +89,11 @@ export default {
 
     },
     methods: {//metodos
-
+        pushPay(){
+            this.$router.push({
+                path: '/pay'
+            })
+        }
     }
 }
 </script>

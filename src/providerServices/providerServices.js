@@ -9,6 +9,25 @@ function verifyUser(id, cc, cellphone, callback){
     })
 }
 
+function filterVehicles(amount, brand, category, callback){
+    axios.get(`${config.host}/filtrarAutos?presupuesto=${amount}&marca=${brand}&categoria=[${category}]`).then(response => {
+        return callback(false, response)
+    }).catch(err => {
+        return callback(true, 'Internal Error' + err.toString())
+    })
+}
+
+function crearCredito(usuario, monto, plazo, cuota, tipo, callback){
+    let body = {
+        usuario, monto, plazo, cuota, tipo
+    }
+    axios.post(`${config.host}/crearCredito`, body).then(response => {
+        return callback(false, response)
+    }).catch(err => {
+        return callback(true, 'Internal Error' + err.toString())
+    })
+}
+
 export default  {
-    verifyUser
+    verifyUser, filterVehicles
 }

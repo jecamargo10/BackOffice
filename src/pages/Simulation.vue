@@ -89,10 +89,10 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row pt-5">
           <div class="col">
             <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <input value="true" type="checkbox" class="custom-control-input" id="customSwitch1">
               <label class="custom-control-label" for="customSwitch1">Cambiar a Alemana</label>
             </div>
           </div>
@@ -129,13 +129,13 @@
       <div class="col">
         <div class="row mt-3">
           <div class="col">
-            <button type="submit" class="btn btn-outline-primary btn-lg">Aplicar</button>
+            <button @click="saveConfig" class="btn btn-outline-primary btn-lg">Aplicar</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col">
-            <h5 class="text-center text-primary">
-              <u>Cancelar</u>
+            <h5 @click="$router.go(-1)" class="text-center text-primary">
+                <u>Cancelar</u>
             </h5>
           </div>
         </div>
@@ -148,6 +148,8 @@
 
 <script>
 import Subheader from "../components/Subheader.vue";
+import utilities from "../utilities.js"
+
 export default {
   name: "SettingPage", //nombre con el cual se usa el componente
   props: {}, //propiedades requeridas(o no) para el uso del componente
@@ -163,8 +165,8 @@ export default {
         min: 0
       },
       monthlyPayment: {
-        current: 500,
-        max: 500,
+        current: 1,
+        max: 280,
         min: 280
       },
       monthlyPaymentQuantity: {
@@ -173,35 +175,50 @@ export default {
         min: 12
       },
       tasa: 0.1665,
+      creditType: false
     };
   },
   created() {
-    this.amount.min = this.calculateAmount(this.monthlyPayment.min,this.monthlyPaymentQuantity.min);
+    if (this.$store.state.monthlyPayment === undefined || this.$store.state.monthlyPayment === null) {
+      return this.$router.push({
+        path: '/registry'
+      })
+    }
+    this.monthlyPayment.current = this.$store.state.monthlyPayment
+    this.amount.current = this.$store.state.amount
+    this.monthlyPaymentQuantity.current = this.$store.state.monthlyPaymentQuantity
+    this.monthlyPayment.max = this.$store.state.monthlyPaymentMax
     this.amount.max = this.calculateAmount(this.monthlyPayment.max,this.monthlyPaymentQuantity.max);
-    this.amount.current = this.amount.max;
+    this.amount.min = this.calculateAmount(this.monthlyPayment.min,this.monthlyPaymentQuantity.min);
+    this.creditType = this.$store.state.creditType
+    
   },
   mounted() {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
     calculateAmount(c,p) {
-      let a = this.tasa/12
-      let b = Math.pow((1 + (a)), p)
-      return Math.ceil((c * ((b - 1) / (a * b)))/100)*100
+      return utilities.calculateAmount(c,p, this.tasa)
     },
     calculatePayment(am,p) {
-      let a = this.tasa/12
-      let b = Math.pow((1 + (a)), p)
-      return Math.ceil(a * ((am * b) / (b - 1))*100)/100
+      return utilities.calculatePayment(am,p, this.tasa)
+    },
+    saveConfig(){
+      this.$store.commit('setAmount', this.amount.current)
+      this.$store.commit('setMonthlyPayment', this.monthlyPayment.current)
+      this.$store.commit('setMonthlyPaymentQuantity', this.monthlyPaymentQuantity.current)
+      this.$store.commit('setMonthlyPaymentQuantity', this.monthlyPaymentQuantity.current)
+      this.$store.commit('setCreditType', this.creditType)
+      this.$router.go(-1)
     }
   },
   watch: {
     'amount.current': function(nuevo,previo) {
       let nuevaCuota = this.calculatePayment(nuevo, this.monthlyPaymentQuantity.current)
       if(nuevaCuota>this.monthlyPayment.max){
-        this.amount.current = previo
+        //this.amount.current = previo
       }else if(nuevaCuota<this.monthlyPayment.min){
-        this.amount.current = previo
+        //this.amount.current = previo
       }else{
         this.monthlyPayment.current = nuevaCuota
       }

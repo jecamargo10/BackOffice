@@ -3,13 +3,17 @@ import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'es6-promise/auto'
 import VueRouter from 'vue-router'
+import { store } from './store/store'
+
 
 import LobbyPage from './pages/Lobby.vue'
 import RegistryPage from './pages/Registry.vue'
 import ResultPage from './pages/Result.vue'
 import CarSelection from './pages/CarSelection.vue'
 import Simulation from './pages/Simulation.vue'
+import AuxComponent from './pages/AuxComponent.vue'
 import FailCasePage from './pages/FailCase.vue'
 import OptionsPage from './pages/Options.vue'
 import DetailPage from './pages/Details.vue'
@@ -25,17 +29,18 @@ import PayPage from './pages/Pay.vue'
 const routes = [
   { path: '/', component: LobbyPage},
   { path: '/registry', component: RegistryPage },
-  { path: '/result', name: 'Result', component: ResultPage },
+  { path: '/result', component: ResultPage },
   { path: '/carselection', component: CarSelection },
   { path: '/fail', component: FailCasePage },
   { path: '/lobby', component: LobbyPage },
   { path: '/options', component: OptionsPage },
-  { path: '/details', component: DetailPage },
+  { path: '/details', name: 'Detail', component: DetailPage },
   { path: '/setting', component: Simulation },
   { path: '/credit', component: CreditInfo },
   { path: '/pay', component: PayPage },
   { path: '/final', component: FinalPage },
-  { path: '/CreditComplete', component: CreditComplete }
+  { path: '/CreditComplete', component: CreditComplete },
+  { path: '/aux', component: AuxComponent }
 ]
 
 // 3. Create the router instance and pass the `routes` option
@@ -52,5 +57,6 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
