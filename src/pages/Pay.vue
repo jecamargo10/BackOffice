@@ -53,7 +53,15 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <router-link to="/">
+            <button class="btn btn-success">Regresar</button>
+          </router-link>
+        </div>
+      </div>
     </div>
+
   </section>
 </template>
 
