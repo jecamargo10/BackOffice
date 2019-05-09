@@ -10,9 +10,13 @@ export const store = new Vuex.Store({
     amount: undefined,
     monthlyPaymentQuantity: 60,
     userId: undefined,
-    creditType: undefined
+    creditType: undefined,
+    credit: undefined
   },
   mutations: {
+    setCredit(state, value) {
+      state.credit = value
+  },
     setMonthlyPayment(state, value) {
         state.monthlyPayment = value
     },
@@ -39,5 +43,6 @@ export const store = new Vuex.Store({
     monthlyPaymentMax: state => state.monthlyPaymentMax,
     userId: state => state.userId,
     creditType: state => state.creditType,
+    credit: state => state.credit,
   }
 })

@@ -17,7 +17,7 @@
         <div class="row border-bottom">
             <div class="col-12 py-2">
                 <div class="text-left">
-                    <p class="font-weight-bold">Credito #5655</p>
+                    <p class="font-weight-bold">Credito #{{credit}}</p>
                     <p>Monto</p>
                     <p>Info nro cuotas, monto mensual</p>
                 </div>
@@ -74,11 +74,12 @@ export default {
     props: [], //propiedades requeridas(o no) para el uso del componente
     data () {//data reactiva del componente
         return {
-            imgCar: imgCar
+            imgCar: imgCar,
+            credit: undefined
         }
     },
     created(){//lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
-
+        this.credit = this.$store.state.credit
     },
     mounted (){//lo que pasa cuando se monta el HTML al browser
 

@@ -11,7 +11,7 @@
                 <div class="bg-secondary w-50 mx-auto">
                     <p class="text-success p-2">
                         Credito <br>
-                        # 123457
+                        # {{credit}}
                     </p>
                 </div>
                 <p>Presenta este código al concesionario.</p>
@@ -59,11 +59,12 @@ export default {
     },
     data () {//data reactiva del componente
         return {
-            currentConcessionaire: ''
+            currentConcessionaire: '',
+            credit: undefined
         }
     },
     created(){//lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
-
+        this.credit = this.$store.state.credit
     },
     mounted (){//lo que pasa cuando se monta el HTML al browser
 

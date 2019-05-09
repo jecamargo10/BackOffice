@@ -130,7 +130,7 @@
 
 <script>
 import Subheader from "../components/Subheader.vue";
-//import providerServices from "../providerServices/providerServices.js"
+import providerServices from "../providerServices/providerServices.js"
 
 export default {
   name: "DetailPage", //nombre con el cual se usa el componente
@@ -170,8 +170,11 @@ export default {
       this.urlCar = url
     },
     createCredit(){
-      this.$router.push({ path: '/credit'})
-      //providerServices.crearCredito()
+      let _self = this
+      providerServices.crearCredito(this.$store.state.userId, this.$store.state.amount, this.$store.state.monthlyPaymentQuantity, this.$store.state.monthlyPayment, 27, this.car.id, function(err, res){
+        _self.$store.commit('setCredit', res.data.id)
+        _self.$router.push({ path: '/credit'})
+      })
     }
   }
 };

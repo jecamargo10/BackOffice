@@ -107,7 +107,6 @@ router.get("/filtrarAutos", function(require,response){
 router.get("/obtenerConcesionarios", function(require,response){
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/BG.CONCESIONARIO?q=MARCA='${require.query.marca}'&fields=DIRECCION,LATITUD,LONGITUD,NOMBRE`
     axios.get(url,{headers: HEADERS}).then(data => {
-        console.log(data.data)
         if(data.data.items.length == 0){
             response.status(200).send({
                 'message':'No hay disponibilidad en ningún concesionario',
@@ -144,13 +143,14 @@ router.post("/crearCredito", function(require,response){
         },
         "customFields": {
             "c": {
-                "monto": require.body.monto,
+                "monto": require.body.monto.toString(),
                 "numero_cuotas": require.body.plazo,
                 "valor_cuota": require.body.cuota,
                 "tipo_credito": {
                     "id": require.body.tipo //28 - Alemán, 27 - Frances
                 },
                 "fecha_vigencia": "2019-01-01",
+                "valor_entrada": "5135123"
             },
             "BG": {
                 "VEHICULO": {
@@ -159,10 +159,13 @@ router.post("/crearCredito", function(require,response){
             }
         }
     }
+    console.log("--------------------------------------");
+    
+    //console.log(JSON.parse(JSON.stringify(body)));
     
     axios.post(url, body
     ,{headers: HEADERS}).then(data => {
-        console.log(data.response.status)
+        response.send(data.data)
         }).catch(error => {
             console.log(error)
             response.status(500).send({
