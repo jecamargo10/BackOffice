@@ -59,7 +59,10 @@ export default {
     };
   },
   created() {
+<<<<<<< HEAD
     
+=======
+>>>>>>> 03cc131896960532c7ce7d0f9985b5a00ce7084f
     //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
   },
   mounted() {

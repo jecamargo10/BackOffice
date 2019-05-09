@@ -8,7 +8,7 @@
               <b-navbar-toggle class="toggleButton" target="nav-text-collapse"></b-navbar-toggle>
 
               <b-navbar-brand class="">
-                <div>
+                <div class="imageBancoDiv">
                   <img :src="logoBancoSCR" alt="Logo Banco Guayaquil">
                 </div>
               </b-navbar-brand>
@@ -59,5 +59,12 @@ export default {
 .toggleButton{
   left: 1em;
   position: absolute;
+}
+.imageBancoDiv{
+  width: 8em;
+}
+.imageBancoDiv img{
+  width: 100%;
+  height: auto;
 }
 </style>

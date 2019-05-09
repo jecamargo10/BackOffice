@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <section class="container-fluid">
     <div class="row">
       <div class="col-1"></div>
       <div class="col">
-        <div class="row mt-3">
+        <div class="row mt-4">
           <div class="col">
             <img src="../assets/happy.png" alt>
           </div>
@@ -32,7 +32,11 @@
           <div class="col">
             <a href>
               <h5 class="text-center text-primary">
+<<<<<<< HEAD
                 <u>Simular crédito</u>
+=======
+                <u><router-link to="/setting">Simular crédito</router-link></u>
+>>>>>>> 03cc131896960532c7ce7d0f9985b5a00ce7084f
               </h5>
             </a>
           </div>
@@ -65,9 +69,13 @@
             <h5 class="text-center">Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
           </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-3 mb-5">
           <div class="col">
+<<<<<<< HEAD
             <router-link to="/setting">
+=======
+            <router-link to='/options'>
+>>>>>>> 03cc131896960532c7ce7d0f9985b5a00ce7084f
               <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
             </router-link>
           </div>
@@ -81,7 +89,7 @@
 <script>
 export default {
   name: "ResultPage", //nombre con el cual se usa el componente
-  props: ["asasda"], //propiedades requeridas(o no) para el uso del componente
+  props: [], //propiedades requeridas(o no) para el uso del componente
   data() {
     //data reactiva del componente
     return {};

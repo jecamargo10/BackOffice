@@ -2,6 +2,11 @@
   <section>
     <div class="container-fluid">
       <div class="row">
+        <div class="col p-0">
+          <Subheader :firstMessage="undefined" :currentStage='1'></Subheader>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-12 container-filters">
           <p class="text-center mt-4 font-size-x-large">Elige tu carro</p>
           <div class="form-group d-flex">
@@ -54,11 +59,12 @@
 
 <script>
 import CardCar from "../components/CardCar.vue";
+import Subheader from '../components/Subheader.vue'
 
 export default {
   name: "login-page", //nombre con el cual se usa el componente
   components: {
-    CardCar
+    CardCar, Subheader
   },
   props: [], //propiedades requeridas(o no) para el uso del componente
   data() {
