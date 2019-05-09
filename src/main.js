@@ -24,7 +24,7 @@ import CreditComplete from './pages/CreditComplete.vue'
 const routes = [
   { path: '/', component: LobbyPage},
   { path: '/registry', component: RegistryPage },
-  { path: '/result', component: ResultPage },
+  { path: '/result', name: 'Result', component: ResultPage },
   { path: '/carselection', component: CarSelection },
   { path: '/fail', component: FailCasePage },
   { path: '/lobby', component: LobbyPage },

@@ -1,13 +1,14 @@
 var axios = require('axios');
 var express = require('express');
 app = express();
+var router = express.Router();
 
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
-
+app.use('/api/v1', router)
 app.use(express.static('dist'))
 
 var port = 8080;
@@ -15,7 +16,7 @@ var port = 8080;
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOmNoYXJtZWRTcGFuXjk='};
 
 //recibe cc, id, telefono
-app.get("/verificarUsuario", function(require,response){
+router.get("/verificarUsuario", function(require,response){
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/contacts?q=customFields.c.numero_identificacion='${require.query.cc}'`
     axios.get(url,{headers: HEADERS}).then(data => {
         if(data.data.items.length == 0){
@@ -61,7 +62,7 @@ app.get("/verificarUsuario", function(require,response){
 })
 
 //recibe presupuesto, marca, categoria
-app.get("/filtrarAutos", function(require,response){
+router.get("/filtrarAutos", function(require,response){
     let presupuesto = require.query.presupuesto
     let marca = require.query.marca
     let categoria = require.query.categoria
@@ -99,7 +100,7 @@ app.get("/filtrarAutos", function(require,response){
 })
 
 //recibe marca
-app.get("/obtenerConcesionarios", function(require,response){
+router.get("/obtenerConcesionarios", function(require,response){
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/BG.CONCESIONARIO?q=MARCA='${require.query.marca}'&fields=DIRECCION,LATITUD,LONGITUD,NOMBRE`
     axios.get(url,{headers: HEADERS}).then(data => {
         console.log(data.data)
@@ -125,7 +126,7 @@ app.get("/obtenerConcesionarios", function(require,response){
 //incidents son los créditos
 
 //
-app.post("/crearCredito", function(require,response){
+router.post("/crearCredito", function(require,response){
     let url = 'https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/incidents'
     //FALTA: campo marca en concesionario (se había hablado sobre disponibilidad en todos los concesionarios)
     
