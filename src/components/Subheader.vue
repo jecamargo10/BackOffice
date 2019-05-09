@@ -24,7 +24,7 @@
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   3
                 </div>
-                Pagar
+                Reservar
               </div>
             </div>
           </div>

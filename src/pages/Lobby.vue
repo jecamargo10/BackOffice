@@ -23,7 +23,7 @@
             <li class="list-group-item text-left outBorder"><strong>2. Elige tu auto</strong></li>
             <li
               class="list-group-item text-left outBorder"
-            ><strong>3. Paga y listo</strong></li>
+            ><strong>3. Reserva y listo</strong></li>
           </ul>
         </div>
         <div class="col-1"></div>
