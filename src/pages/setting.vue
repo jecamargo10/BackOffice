@@ -40,7 +40,7 @@
                 class="custom-range"
                 :min="amount.min"
                 :max="amount.max"
-                step="1"
+                step="100"
               >
               <div class="input-group-append">
                 <span class="input-group-text" v-text="'$ '+amount.max"></span>
@@ -208,23 +208,42 @@ export default {
     calculateAmount(c,p) {
       let a = this.tasa/12
       let b = Math.pow((1 + (a)), p)
-      return Math.ceil(c * ((b - 1) / (a * b)))
+      return Math.ceil((c * ((b - 1) / (a * b)))/100)*100
     },
-    calculateValues(c,p) {
+    calculatePayment(am,p) {
       let a = this.tasa/12
       let b = Math.pow((1 + (a)), p)
-      return Math.ceil(c * ((b - 1) / (a * b)))
-    },
-    changeAmount() {
-      this.amount.current = this.calculateAmount(this.monthlyPayment.current,this.monthlyPaymentQuantity.current)
+      return Math.ceil(a * ((am * b) / (b - 1))*100)/100
     }
   },
   watch: {
-    'monthlyPayment.current': function() {
-      this.changeAmount();
+    'amount.current': function(nuevo,previo) {
+      let nuevaCuota = this.calculatePayment(nuevo, this.monthlyPaymentQuantity.current)
+      if(nuevaCuota>this.monthlyPayment.max){
+        this.amount.current = previo
+      }else if(nuevaCuota<this.monthlyPayment.min){
+        this.amount.current = previo
+      }else{
+        this.monthlyPayment.current = nuevaCuota
+      }
     },
-    'monthlyPaymentQuantity.current': function() {
-      this.changeAmount();
+    'monthlyPaymentQuantity.current': function(nuevo,previo) {
+      let step = (this.monthlyPayment.max-this.monthlyPayment.min)/5
+      if(nuevo>previo){
+        let lim = this.monthlyPayment.min + (step*(nuevo-12)/12)
+        this.amount.current = this.calculateAmount(lim,nuevo)
+      }else{
+        let lim = this.monthlyPayment.min + (step*(previo-12)/12)
+        this.amount.current = this.calculateAmount(lim,nuevo)
+      }
+      /*let nuevaCuota = this.calculatePayment(this.amount.current, nuevo)
+      if(nuevaCuota>this.monthlyPayment.max){
+        this.monthlyPaymentQuantity.current = previo
+      }else if(nuevaCuota<this.monthlyPayment.min){
+        this.monthlyPaymentQuantity.current = previo
+      }else{
+        this.monthlyPayment.current = nuevaCuota
+      }*/
     }
   }
 };

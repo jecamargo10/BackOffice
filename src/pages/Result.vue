@@ -33,7 +33,9 @@
           <div class="col">
 
             <a href>
-              <h5 class="text-center text-primary"><u>Simular crédito</u></h5>
+              <h5 class="text-center text-primary">
+                <u><router-link to="/setting">Simular crédito</router-link></u>
+              </h5>
             </a>
           </div>
         </div>
@@ -84,7 +86,7 @@
 <script>
 export default {
   name: "ResultPage", //nombre con el cual se usa el componente
-  props: ["asasda"], //propiedades requeridas(o no) para el uso del componente
+  props: [], //propiedades requeridas(o no) para el uso del componente
   data() {
     //data reactiva del componente
     return {};
