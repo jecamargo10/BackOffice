@@ -10,12 +10,11 @@
         </div>
         <div class="row mt-4">
           <div class="col">
-            <h2>Buenas noticias Santiago tienes un crédito aprobado por</h2>
+            <h2>Buenas noticias Santiago, tienes un crédito aprobado por</h2>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col">
-
             <h1 class="text-center">
               <strong>US $25.000</strong>
             </h1>
@@ -31,34 +30,33 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-
             <a href>
-              <h5 class="text-center text-primary"><u>Simular crédito</u></h5>
+              <h5 class="text-center text-primary">
+                <u>Simular crédito</u>
+              </h5>
             </a>
           </div>
         </div>
         <form>
           <div class="form-row mt-4">
-            <div class="row">
-              <div class="col">
-                <div class="input-group mb-1">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                    aria-label="Email"
-                    aria-describedby="button-addon2"
-                  >
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Enviar</button>
-                  </div>
+            <div class="col">
+              <div class="input-group mb-1">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  aria-label="Email"
+                  aria-describedby="button-addon2"
+                >
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary" type="button" id="button-addon2">Enviar</button>
                 </div>
               </div>
-              <div class="row mx-auto pb-4 border-bottom">
-                <div class="col">
-                  <small class="mt-0">Escribe tu correo para enviarte la información.</small>
-                </div>
-              </div>
+            </div>
+          </div>
+          <div class="form-row mx-auto pb-4 border-bottom">
+            <div class="col">
+              <small class="mt-0">Escribe tu correo para enviarte la información.</small>
             </div>
           </div>
         </form>
@@ -69,10 +67,9 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <router-link to='/setting'>
+            <router-link to="/setting">
               <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
             </router-link>
-            
           </div>
         </div>
       </div>
