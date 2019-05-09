@@ -127,9 +127,7 @@ router.get("/obtenerConcesionarios", function(require,response){
         })})
 })
 
-//incidents son los créditos
-
-//
+//recibe usuario,monto,plazo,cuota,tipo,entrada,vehiculo,montoUsuario
 router.post("/crearCredito", function(require,response){
     let url = 'https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/incidents'
     //FALTA: campo marca en concesionario (se había hablado sobre disponibilidad en todos los concesionarios)
@@ -153,6 +151,11 @@ router.post("/crearCredito", function(require,response){
                     "id": require.body.tipo //28 - Alemán, 27 - Frances
                 },
                 "fecha_vigencia": "2019-01-01",
+            },
+            "BG": {
+                "VEHICULO": {
+                    "id": require.body.vehiculo
+                }
             }
         }
     }
