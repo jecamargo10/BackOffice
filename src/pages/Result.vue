@@ -15,12 +15,7 @@
         </div>
         <div class="row mt-3 d-flex align-items-center">
           <div class="col">
-            <img src="../assets/y.png" width="40em" height="40em">
-          </div>
-        </div>
-        <div class="row mt-3 d-flex align-items-center">
-          <div class="col">
-            <h1 class="text-center textPink">
+            <h1 class="text-center textBlue">
               <strong>US ${{this.$store.state.amount}}</strong>
             </h1>
           </div>
