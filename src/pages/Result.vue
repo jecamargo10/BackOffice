@@ -5,7 +5,7 @@
       <div class="col">
         <div class="row mt-4">
           <div class="col">
-            <img src="../assets/happy.png" alt>
+            <img src="../assets/happy.png" width="100em" height="100em">
           </div>
         </div>
         <div class="row mt-4">
@@ -13,9 +13,9 @@
             <h2>Buenas noticias Santiago, tienes un crédito aprobado por</h2>
           </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-3 d-flex align-items-center">
           <div class="col">
-            <h1 class="text-center">
+            <h1 class="text-center textBlue">
               <strong>US ${{this.$store.state.amount}}</strong>
             </h1>
           </div>
@@ -30,11 +30,11 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-              <h5 class="text-center text-primary">
-                <u>
-                  <div @click="pushSetting">Simular crédito</div>
-                </u>
-              </h5>
+            <h5 class="text-center textBlue">
+              <u>
+                <div @click="pushSetting">Simular crédito</div>
+              </u>
+            </h5>
           </div>
         </div>
         <form @submit.prevent="nextStage">
@@ -70,7 +70,7 @@
           </div>
           <div class="row mt-3 mb-5">
             <div class="col">
-              <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
+              <button type="submit" class="btn btn-outline botBlue btn-lg">Continuar</button>
             </div>
           </div>
         </form>
@@ -87,7 +87,7 @@ export default {
   data() {
     //data reactiva del componente
     return {
-      emailInput: 'auto@facil.com'
+      emailInput: "auto@facil.com"
     };
   },
   created() {
@@ -104,14 +104,14 @@ export default {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
-    nextStage(){
+    nextStage() {
       this.$router.push({
         path: "/options"
       });
     },
-    pushSetting(){
-      console.log('entra');
-      
+    pushSetting() {
+      console.log("entra");
+
       this.$router.push({
         path: "/setting"
       });
@@ -121,4 +121,50 @@ export default {
 </script>
 
 <style scoped>
+.botBlue {
+  background-color: white;
+  color: #174b86;
+  border-color: #174b86;
+}
+.botBlue:hover {
+  color: #c71066;
+  border-color: #c71066;
+}
+.botBlue:active {
+  color: #c71066;
+  border-color: #c71066;
+}
+.backBlue {
+  background-color: #174b86;
+}
+.textBlue {
+  color: #174b86;
+}
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink {
+  background-color: white;
+  color: #c71066;
+  border-color: #c71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #c71066;
+}
+.textPink {
+  color: #c71066;
+}
+.borderPink {
+  border-color: #c71066 !important;
+}
 </style>

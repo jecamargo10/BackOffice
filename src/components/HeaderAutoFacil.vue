@@ -15,7 +15,7 @@
 
               <b-collapse id="nav-text-collapse" is-nav>
                 <b-navbar-nav>
-                  <b-nav-text>Solicitar</b-nav-text>
+                  <b-nav-text><router-link to="/">Solicitar</router-link></b-nav-text>
                 </b-navbar-nav>
                 <b-navbar-nav>
                   <b-nav-text>Estado de mi crédito</b-nav-text>

@@ -125,25 +125,51 @@ export default {
   border: 0 !important;
 }
 
-.botBlue{
+.botBlue {
   background-color: white;
-  color: #174B86;
-  border-color: #174B86;
+  color: #174b86;
+  border-color: #174b86;
 }
-.botBlue:hover{
-  background-color: #174B86;
-  color: white;
-  border-color:white;
+.botBlue:hover {
+  color: #C71066;
+  border-color: #C71066;
 }
-.botBlue:active{
-  background-color: #174B86;
-  color: white;
-  border-color:white;
+.botBlue:active {
+  color: #C71066;
+  border-color: #C71066;
 }
-.backBlue{
-  background-color: #174B86;
+.backBlue {
+  background-color: #174b86;
 }
-.textBlue{
-  color: #174B86;
+.textBlue {
+  color: #174b86;
+}
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink{
+  background-color: white;
+  color: #C71066;
+  border-color: #C71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #C71066;
+}
+.textPink {
+  color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
 }
 </style>
