@@ -215,14 +215,6 @@ export default {
         let lim = this.monthlyPayment.min + (step*(previo-12)/12)
         this.amount.current = this.calculateAmount(lim,nuevo)
       }
-      /*let nuevaCuota = this.calculatePayment(this.amount.current, nuevo)
-      if(nuevaCuota>this.monthlyPayment.max){
-        this.monthlyPaymentQuantity.current = previo
-      }else if(nuevaCuota<this.monthlyPayment.min){
-        this.monthlyPaymentQuantity.current = previo
-      }else{
-        this.monthlyPayment.current = nuevaCuota
-      }*/
     }
   }
 };

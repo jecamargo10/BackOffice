@@ -9,7 +9,7 @@ import LobbyPage from './pages/Lobby.vue'
 import RegistryPage from './pages/Registry.vue'
 import ResultPage from './pages/Result.vue'
 import CarSelection from './pages/CarSelection.vue'
-import SettingPage from './pages/Setting.vue'
+import Simulation from './pages/Simulation.vue'
 import FailCasePage from './pages/FailCase.vue'
 import OptionsPage from './pages/Options.vue'
 import DetailPage from './pages/Details.vue'
@@ -30,7 +30,7 @@ const routes = [
   { path: '/lobby', component: LobbyPage },
   { path: '/options', component: OptionsPage },
   { path: '/details', component: DetailPage },
-  { path: '/setting', component: SettingPage },
+  { path: '/setting', component: Simulation },
   { path: '/credit', component: CreditInfo },
   { path: '/final', component: FinalPage },
   { path: '/CreditComplete', component: CreditComplete }
