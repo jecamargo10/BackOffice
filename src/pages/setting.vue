@@ -15,9 +15,8 @@
                 <span class="input-group-text" id="inputGroup-credit">Credito:</span>
               </div>
               <input
-                :value="amount.current"
+                v-model="amount.current"
                 type="number"
-                readonly
                 :min="amount.min"
                 :max="amount.max"
                 class="form-control"
@@ -35,7 +34,6 @@
               </div>
               <input
                 type="range"
-                readonly
                 v-model="amount.current"
                 class="custom-range"
                 :min="amount.min"
@@ -113,32 +111,13 @@
               <input
                 v-model="monthlyPayment.current"
                 type="number"
+                readonly
                 :min="monthlyPayment.min"
                 :max="monthlyPayment.max"
                 class="form-control"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-credit"
               >
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" v-text="'$ '+monthlyPayment.min"></span>
-              </div>
-              <input
-                type="range"
-                v-model="monthlyPayment.current"
-                class="custom-range"
-                :min="monthlyPayment.min"
-                :max="monthlyPayment.max"
-                step="0.05"
-              >
-              <div class="input-group-append">
-                <span class="input-group-text" v-text="'$ '+monthlyPayment.max"></span>
-              </div>
             </div>
           </div>
         </div>
@@ -179,9 +158,9 @@ export default {
     //data reactiva del componente
     return {
       amount: {
-        current: undefined,
-        max: undefined,
-        min: undefined
+        current: 1,
+        max: 1,
+        min: 0
       },
       monthlyPayment: {
         current: 500,
