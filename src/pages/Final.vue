@@ -72,14 +72,14 @@
       <div class="row mt-4">
         <div class="col p-0">
           <input type="checkbox" class="custom-control-input" id="customCheck1">
-          <label class="custom-control-label" for="customCheck1">Al realizar la reserva, aceptas el crédito</label>
+          <label class="custom-control-label" for="customCheck1">Aceptar términos y condiciones.</label>
         </div>
       </div>
     </div>
     <div class="container-fluid">
       <div class="row mt-4">
         <div class="col p-0">
-          <button type="button" class="btn btn-outline-primary btn-lg">Reservar Auto</button>
+          <button type="button" class="btn btn-outline-primary btn-lg">Confirmar crédito</button>
         </div>
       </div>
     </div>
