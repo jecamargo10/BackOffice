@@ -2,9 +2,15 @@ var axios = require('axios');
 var express = require('express');
 app = express();
 
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
 app.use(express.static('dist'))
 
-var port = 80;
+var port = 8080;
 
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOmNoYXJtZWRTcGFuXjk='};
 
@@ -116,6 +122,46 @@ app.get("/obtenerConcesionarios", function(require,response){
         })})
 })
 
+//incidents son los créditos
+
+//
+app.post("/crearCredito", function(require,response){
+    let url = 'https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/incidents'
+    //FALTA: campo marca en concesionario (se había hablado sobre disponibilidad en todos los concesionarios)
+    
+    let body = {
+        "subject": "Credito Aprobado",
+        "primaryContact": {
+            "id": require.body.usuario //ID del contacto
+        },
+        "statusWithType": {
+            "status": {
+                "id": 1 //1 - Pre-aprobado 2 - Aprobado
+            }
+        },
+        "customFields": {
+            "c": {
+                "monto": require.body.monto,
+                "numero_cuotas": require.body.plazo,
+                "valor_cuota": require.body.cuota,
+                "tipo_credito": {
+                    "id": require.body.tipo //28 - Alemán, 27 - Frances
+                },
+                "fecha_vigencia": "2019-01-01",
+            }
+        }
+    }
+    
+    axios.post(url, body
+    ,{headers: HEADERS}).then(data => {
+        console.log(data.response.status)
+        }).catch(error => {
+            console.log(error)
+            response.status(500).send({
+            'message':'Hay un error en el servidor',
+            'data': []
+        })})
+})
 
 app.listen(port, function(){
     console.log('server started '+ port);
