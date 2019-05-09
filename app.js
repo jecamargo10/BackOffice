@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use('/api/v1', router)
 app.use(express.static('dist'))
 
-var port = 8080;
+var port = 80;
 
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOmNoYXJtZWRTcGFuXjk='};
 
