@@ -175,8 +175,8 @@ router.post("/crearCredito", function(require,response){
         "customFields": {
             "c": {
                 "monto": require.body.monto.toString(),
-                "numero_cuotas": require.body.plazo,
-                "valor_cuota": require.body.cuota,
+                "numero_cuotas": parseInt(require.body.plazo),
+                "valor_cuota": require.body.cuota.toString(),
                 "tipo_credito": {
                     "id": require.body.tipo //28 - Alemán, 27 - Frances
                 },
