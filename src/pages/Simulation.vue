@@ -191,6 +191,7 @@ export default {
     this.amount.max = this.calculateAmount(this.monthlyPayment.max,this.monthlyPaymentQuantity.max);
     this.amount.min = this.calculateAmount(this.monthlyPayment.min,this.monthlyPaymentQuantity.min);
     this.creditType = this.$store.state.creditType
+    
   },
   mounted() {
     //lo que pasa cuando se monta el HTML al browser
@@ -215,9 +216,9 @@ export default {
     'amount.current': function(nuevo,previo) {
       let nuevaCuota = this.calculatePayment(nuevo, this.monthlyPaymentQuantity.current)
       if(nuevaCuota>this.monthlyPayment.max){
-        this.amount.current = previo
+        //this.amount.current = previo
       }else if(nuevaCuota<this.monthlyPayment.min){
-        this.amount.current = previo
+        //this.amount.current = previo
       }else{
         this.monthlyPayment.current = nuevaCuota
       }

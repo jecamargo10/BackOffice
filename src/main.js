@@ -13,6 +13,7 @@ import RegistryPage from './pages/Registry.vue'
 import ResultPage from './pages/Result.vue'
 import CarSelection from './pages/CarSelection.vue'
 import Simulation from './pages/Simulation.vue'
+import AuxComponent from './pages/AuxComponent.vue'
 import FailCasePage from './pages/FailCase.vue'
 import OptionsPage from './pages/Options.vue'
 import DetailPage from './pages/Details.vue'
@@ -38,7 +39,8 @@ const routes = [
   { path: '/credit', component: CreditInfo },
   { path: '/pay', component: PayPage },
   { path: '/final', component: FinalPage },
-  { path: '/CreditComplete', component: CreditComplete }
+  { path: '/CreditComplete', component: CreditComplete },
+  { path: '/aux', component: AuxComponent }
 ]
 
 // 3. Create the router instance and pass the `routes` option

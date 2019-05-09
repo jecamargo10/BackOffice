@@ -118,11 +118,6 @@ export default {
             _self.error = res.data.message;
             return;
           }
-          _self.$router.push({
-            name: "Result",
-            params: { amount: res.data.data }
-          });
-        }
         _self.$store.commit('setUserId', res.data.user.id)
         _self.$store.commit('setMonthlyPayment', res.data.data)
         _self.$store.commit('setmonthlyPaymentMax', res.data.data)

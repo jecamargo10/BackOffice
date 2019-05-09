@@ -2,8 +2,10 @@ var axios = require('axios');
 var express = require('express');
 app = express();
 var router = express.Router();
-
+var cors =  require('cors')
 var bodyParser = require('body-parser')
+
+app.use(cors())
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -40,10 +42,10 @@ router.get("/verificarUsuario", function(require,response){
                             'data': "-1"
                         })
                     }else{
-                        console.log(data.data.phones[0].number)
                         response.status(200).send({
                             'message':'La información del usuario fue correctamente validada',
-                            'data': data.data.customFields.c.monto //Monto es string
+                            'data': data.data.customFields.c.monto,
+                            'user': data.data //Monto es string
                         })
                     }
                 } //FALTA: comprobar si el teléfono se guarda en caso que no se tenga (no bancarizados) PATCH
@@ -78,7 +80,9 @@ router.get("/filtrarAutos", function(require,response){
     }else{
         categoria = categoria.replace("[", " and (CATEGORIA='");
         categoria = categoria.replace("]", "')");
-        categoria = categoria.replace(",", "' or CATEGORIA='");
+        while(categoria.indexOf(',') > 0){
+            categoria = categoria.replace(",", "' or CATEGORIA='");
+        }
     }
     
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/BG.VEHICULO?q=COSTO<=${presupuesto}${marca}${categoria}&fields=CATEGORIA,COLOR,COSTO,DESCRIPCION,LINEA,MARCA,MODELO`

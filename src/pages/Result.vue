@@ -30,13 +30,11 @@
         </div>
         <div class="row mt-3">
           <div class="col">
-            <a href>
               <h5 class="text-center text-primary">
                 <u>
-                  <router-link to="/setting">Simular crédito</router-link>
+                  <div @click="pushSetting">Simular crédito</div>
                 </u>
               </h5>
-            </a>
           </div>
         </div>
         <form @submit.prevent="nextStage">
@@ -109,6 +107,13 @@ export default {
     nextStage(){
       this.$router.push({
         path: "/options"
+      });
+    },
+    pushSetting(){
+      console.log('entra');
+      
+      this.$router.push({
+        path: "/setting"
       });
     }
   }
