@@ -216,9 +216,9 @@ export default {
     'amount.current': function(nuevo,previo) {
       let nuevaCuota = this.calculatePayment(nuevo, this.monthlyPaymentQuantity.current)
       if(nuevaCuota>this.monthlyPayment.max){
-        //this.amount.current = previo
+        this.amount.current = previo
       }else if(nuevaCuota<this.monthlyPayment.min){
-        //this.amount.current = previo
+        this.amount.current = previo
       }else{
         this.monthlyPayment.current = nuevaCuota
       }
