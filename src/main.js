@@ -14,6 +14,7 @@ import FailCasePage from './pages/FailCase.vue'
 import OptionsPage from './pages/Options.vue'
 import DetailPage from './pages/Details.vue'
 import CreditInfo from './pages/CreditInfo.vue'
+import FinalPage from './pages/Final.vue'
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -30,7 +31,8 @@ const routes = [
   { path: '/options', component: OptionsPage },
   { path: '/details', component: DetailPage },
   { path: '/setting', component: SettingPage },
-  { path: '/credit', component: CreditInfo }
+  { path: '/credit', component: CreditInfo },
+  { path: '/final', component: FinalPage }
 ]
 
 // 3. Create the router instance and pass the `routes` option

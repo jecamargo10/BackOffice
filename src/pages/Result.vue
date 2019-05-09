@@ -32,11 +32,7 @@
           <div class="col">
             <a href>
               <h5 class="text-center text-primary">
-<<<<<<< HEAD
-                <u>Simular crédito</u>
-=======
                 <u><router-link to="/setting">Simular crédito</router-link></u>
->>>>>>> 03cc131896960532c7ce7d0f9985b5a00ce7084f
               </h5>
             </a>
           </div>
@@ -71,11 +67,7 @@
         </div>
         <div class="row mt-3 mb-5">
           <div class="col">
-<<<<<<< HEAD
-            <router-link to="/setting">
-=======
             <router-link to='/options'>
->>>>>>> 03cc131896960532c7ce7d0f9985b5a00ce7084f
               <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
             </router-link>
           </div>
