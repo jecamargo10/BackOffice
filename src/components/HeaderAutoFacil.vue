@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-12 p-0">
           <div>
-            <b-navbar class="justify-content-center" toggleable="md" type="light" variant="light">
-              <b-navbar-toggle class="toggleButton" target="nav-text-collapse"></b-navbar-toggle>
+            <b-navbar class="justify-content-center" toggleable="md " type="light" variant="light">
+              <b-navbar-toggle class="toggleButton"  target="nav-text-collapse"></b-navbar-toggle>
 
-              <b-navbar-brand class="">
+              <b-navbar-brand>
                 <div class="imageBancoDiv">
                   <img :src="logoBancoSCR" alt="Logo Banco Guayaquil">
                 </div>

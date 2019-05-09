@@ -8,26 +8,26 @@
            </div>
         </div>
      </div>
-     <div class="container-fluid">
-        <div class="row border border-primary dimFr d-flex align-items-center">
+     <div class="container-fluid mt-4">
+        <div class="row border borderPink dimFr d-flex align-items-center">
            <div class="col-1"></div>
            <div class="col p-0">
-               <h6  class="text-primary"><strong>Ya se que carro quiero comprar</strong></h6>
+               <h6  class="textPink botPink"><strong>Ya se que carro quiero comprar</strong></h6>
            </div>
            <div class="col p-0">
-               <i class="material-icons text-primary">arrow_forward</i>
+               <i class="material-icons textPink botPink">arrow_forward</i>
            </div>
            <div class="col-1"></div>
         </div>
      </div>
-     <div class="container-fluid">
-        <div class="row border border-primary dimFr d-flex align-items-center">
+     <div class="container-fluid mt-4 ">
+        <div class="row border borderBlue dimFr d-flex align-items-center botBlue">
            <div class="col-1"></div>
-           <div class="col p-0">
-               <h6 class="text-primary"><strong>Quiero ver opciones según mi capacidad</strong></h6>
+           <div class="col p-0 ">
+               <h6 class="textBlue botBlue"><strong>Quiero ver opciones según mi capacidad</strong></h6>
            </div>
            <div class="col p-0">
-               <i class="material-icons text-primary">arrow_forward</i>
+               <i class="material-icons textBlue botBlue">arrow_forward</i>
            </div>
            <div class="col-1"></div>
         </div>
@@ -68,5 +68,53 @@ i {
 
 .dimFr{
    height: 35vh;
+}
+
+.botBlue {
+  background-color: white;
+  color: #174b86;
+  border-color: #174b86;
+}
+.botBlue:hover {
+  color: #C71066;
+  border-color: #C71066;
+}
+.botBlue:active {
+  color: #C71066;
+  border-color: #C71066;
+}
+.backBlue {
+  background-color: #174b86;
+}
+.textBlue {
+  color: #174b86;
+}
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink{
+  background-color: white;
+  color: #C71066;
+  border-color: #C71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #C71066;
+}
+.textPink {
+  color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
 }
 </style>
