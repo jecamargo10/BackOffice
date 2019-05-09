@@ -24,7 +24,7 @@
           <div class="col">
             <h5 class="text-center">
               60 cuaotas
-              <strong>US $500 mensual</strong>
+              <strong>US ${{amount}} mensual</strong>
             </h5>
           </div>
         </div>
@@ -84,12 +84,21 @@ export default {
   props: [], //propiedades requeridas(o no) para el uso del componente
   data() {
     //data reactiva del componente
-    return {};
+    return {
+      amount: ''
+    };
   },
-  created() {
-    //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
+  created(){
+    if (this.$route.params.amount === undefined || this.$route.params.amount === null) {
+      return this.$router.push({
+        path: '/registry'
+      })
+    }
+    this.amount = this.$route.params.amount
   },
   mounted() {
+    
+    
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {

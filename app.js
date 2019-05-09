@@ -1,15 +1,22 @@
 var axios = require('axios');
 var express = require('express');
 app = express();
+var router = express.Router();
 
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+app.use('/api/v1', router)
 app.use(express.static('dist'))
 
-var port = 80;
+var port = 8080;
 
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOmNoYXJtZWRTcGFuXjk='};
 
 //recibe cc, id, telefono
-app.get("/verificarUsuario", function(require,response){
+router.get("/verificarUsuario", function(require,response){
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/contacts?q=customFields.c.numero_identificacion='${require.query.cc}'`
     axios.get(url,{headers: HEADERS}).then(data => {
         if(data.data.items.length == 0){
@@ -55,7 +62,7 @@ app.get("/verificarUsuario", function(require,response){
 })
 
 //recibe presupuesto, marca, categoria
-app.get("/filtrarAutos", function(require,response){
+router.get("/filtrarAutos", function(require,response){
     let presupuesto = require.query.presupuesto
     let marca = require.query.marca
     let categoria = require.query.categoria
@@ -93,7 +100,7 @@ app.get("/filtrarAutos", function(require,response){
 })
 
 //recibe marca
-app.get("/obtenerConcesionarios", function(require,response){
+router.get("/obtenerConcesionarios", function(require,response){
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/BG.CONCESIONARIO?q=MARCA='${require.query.marca}'&fields=DIRECCION,LATITUD,LONGITUD,NOMBRE`
     axios.get(url,{headers: HEADERS}).then(data => {
         console.log(data.data)
@@ -116,6 +123,46 @@ app.get("/obtenerConcesionarios", function(require,response){
         })})
 })
 
+//incidents son los créditos
+
+//
+router.post("/crearCredito", function(require,response){
+    let url = 'https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/incidents'
+    //FALTA: campo marca en concesionario (se había hablado sobre disponibilidad en todos los concesionarios)
+    
+    let body = {
+        "subject": "Credito Aprobado",
+        "primaryContact": {
+            "id": require.body.usuario //ID del contacto
+        },
+        "statusWithType": {
+            "status": {
+                "id": 1 //1 - Pre-aprobado 2 - Aprobado
+            }
+        },
+        "customFields": {
+            "c": {
+                "monto": require.body.monto,
+                "numero_cuotas": require.body.plazo,
+                "valor_cuota": require.body.cuota,
+                "tipo_credito": {
+                    "id": require.body.tipo //28 - Alemán, 27 - Frances
+                },
+                "fecha_vigencia": "2019-01-01",
+            }
+        }
+    }
+    
+    axios.post(url, body
+    ,{headers: HEADERS}).then(data => {
+        console.log(data.response.status)
+        }).catch(error => {
+            console.log(error)
+            response.status(500).send({
+            'message':'Hay un error en el servidor',
+            'data': []
+        })})
+})
 
 app.listen(port, function(){
     console.log('server started '+ port);
