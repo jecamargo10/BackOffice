@@ -4,7 +4,7 @@
      <div class="container-fluid">
         <div class="row">
            <div class="col p-0">
-               <Subheader :currentStage="1" :firstMessage="'¿Qué quieres hacer?'" :secondMessage="null"></Subheader>
+               <Subheader :currentStage="2" :firstMessage="'¿Qué quieres hacer?'" :secondMessage="null"></Subheader>
            </div>
         </div>
      </div>
@@ -20,7 +20,7 @@
            <div class="col-1"></div>
         </div>
      </div>
-     <div class="container-fluid">
+     <div @click="$router.push({ path: 'carselection' })" class="container-fluid">
         <div class="row border border-primary dimFr d-flex align-items-center">
            <div class="col-1"></div>
            <div class="col p-0">
@@ -50,7 +50,11 @@ export default {
     return {};
   },
   created() {
-    //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
+    if (this.$store.state.monthlyPayment === undefined || this.$store.state.monthlyPayment === null) {
+      return this.$router.push({
+        path: '/registry'
+      })
+    }
   },
   mounted() {
     //lo que pasa cuando se monta el HTML al browser

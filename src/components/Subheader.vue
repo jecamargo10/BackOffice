@@ -45,7 +45,9 @@ export default {
       default: 'Personalizar mi crédito'
     }, 
     secondMessage: {
-      default: 'Crédito aprobado: US $24.500'
+      default(){
+        return `Crédito aprobado: US $${this.$store.state.amount}`
+      } 
     }, 
     currentStage: {
       default: 3

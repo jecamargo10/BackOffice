@@ -16,15 +16,15 @@
         <div class="row mt-3">
           <div class="col">
             <h1 class="text-center">
-              <strong>US $25.000</strong>
+              <strong>US ${{this.$store.state.amount}}</strong>
             </h1>
           </div>
         </div>
         <div class="row mt-0 pt-0">
           <div class="col">
             <h5 class="text-center">
-              60 cuaotas
-              <strong>US ${{amount}} mensual</strong>
+              {{$store.state.monthlyPaymentQuantity}} cuaotas
+              <strong>US ${{this.$store.state.monthlyPayment}} mensual</strong>
             </h5>
           </div>
         </div>
@@ -32,25 +32,29 @@
           <div class="col">
             <a href>
               <h5 class="text-center text-primary">
-                <u><router-link to="/setting">Simular crédito</router-link></u>
+                <u>
+                  <router-link to="/setting">Simular crédito</router-link>
+                </u>
               </h5>
             </a>
           </div>
         </div>
-        <form>
+        <form @submit.prevent="nextStage">
           <div class="form-row mt-4">
             <div class="col">
               <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-emailInput">@</span>
+                </div>
                 <input
+                  v-model="emailInput"
                   type="email"
+                  required
                   class="form-control"
                   placeholder="Email"
                   aria-label="Email"
-                  aria-describedby="button-addon2"
+                  aria-describedby="addon-emailInput"
                 >
-                <div class="input-group-append">
-                  <button class="btn btn-outline-primary" type="button" id="button-addon2">Enviar</button>
-                </div>
               </div>
             </div>
           </div>
@@ -59,19 +63,19 @@
               <small class="mt-0">Escribe tu correo para enviarte la información.</small>
             </div>
           </div>
-        </form>
-        <div class="row mt-4">
-          <div class="col">
-            <h5 class="text-center">Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
+          <div class="row mt-4">
+            <div class="col">
+              <h5
+                class="text-center"
+              >Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
+            </div>
           </div>
-        </div>
-        <div class="row mt-3 mb-5">
-          <div class="col">
-            <router-link to='/options'>
+          <div class="row mt-3 mb-5">
+            <div class="col">
               <button type="submit" class="btn btn-outline-primary btn-lg">Continuar</button>
-            </router-link>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
       <div class="col-1"></div>
     </div>
@@ -85,24 +89,28 @@ export default {
   data() {
     //data reactiva del componente
     return {
-      amount: ''
+      emailInput: 'auto@facil.com'
     };
   },
-  created(){
-    if (this.$route.params.amount === undefined || this.$route.params.amount === null) {
+  created() {
+    if (
+      this.$store.state.monthlyPayment === undefined ||
+      this.$store.state.monthlyPayment === null
+    ) {
       return this.$router.push({
-        path: '/registry'
-      })
+        path: "/registry"
+      });
     }
-    this.amount = this.$route.params.amount
   },
   mounted() {
-    
-    
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
-    //metodos
+    nextStage(){
+      this.$router.push({
+        path: "/options"
+      });
+    }
   }
 };
 </script>
