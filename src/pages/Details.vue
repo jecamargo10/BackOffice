@@ -71,7 +71,7 @@
                   <h4>Detalles del carro</h4>
                 </div>
                 <div class="col-2 pl-0">
-                  <i class="material-icons text-primary">add</i>
+                  <i class="material-icons botBlue">add</i>
                 </div>
               </div>
             </div>
@@ -101,14 +101,14 @@
           <div class="row mt-3">
             <div class="col">
               <a href>
-                <h6 class="text-center text-primary">Cambiar cuota de entrada</h6>
+                <h6 class="text-center textBlue">Cambiar cuota de entrada</h6>
               </a>
             </div>
           </div>
           <div class="row mt-2">
             <div class="col">
               <a href>
-                <h6 class="text-center text-primary">Ver condiciones del crédito</h6>
+                <h6 class="text-center textBlue">Ver condiciones del crédito</h6>
               </a>
             </div>
           </div>
@@ -121,7 +121,7 @@
         <div class="col p-0">
           <button
             type="button"
-            class="btn btn-outline-primary btn-lg"
+            class="btn btn-outline botBlue btn-lg"
           >Aplicar mi crédito</button>
         </div>
       </div>
@@ -171,5 +171,53 @@ i {
 .circular {
   height: 1.5em;
   width: 1.5em;
+}
+
+.botBlue {
+  background-color: white;
+  color: #174b86;
+  border-color: #174b86;
+}
+.botBlue:hover {
+  color: #C71066;
+  border-color: #C71066;
+}
+.botBlue:active {
+  color: #C71066;
+  border-color: #C71066;
+}
+.backBlue {
+  background-color: #174b86;
+}
+.textBlue {
+  color: #174b86;
+}
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink{
+  background-color: white;
+  color: #C71066;
+  border-color: #C71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #C71066;
+}
+.textPink {
+  color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
 }
 </style>

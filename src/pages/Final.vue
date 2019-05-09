@@ -79,7 +79,7 @@
     <div class="container-fluid">
       <div class="row mt-4">
         <div class="col p-0">
-          <button type="button" class="btn btn-outline-primary btn-lg">Confirmar crédito</button>
+          <button type="button" class="btn btn-outline botBlue btn-lg">Confirmar crédito</button>
         </div>
       </div>
     </div>
@@ -111,4 +111,51 @@ export default {
 </script>
 
 <style scoped>
+.botBlue {
+  background-color: white;
+  color: #174b86;
+  border-color: #174b86;
+}
+.botBlue:hover {
+  color: #C71066;
+  border-color: #C71066;
+}
+.botBlue:active {
+  color: #C71066;
+  border-color: #C71066;
+}
+.backBlue {
+  background-color: #174b86;
+}
+.textBlue {
+  color: #174b86;
+}
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink{
+  background-color: white;
+  color: #C71066;
+  border-color: #C71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #C71066;
+}
+.textPink {
+  color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
+}
 </style>

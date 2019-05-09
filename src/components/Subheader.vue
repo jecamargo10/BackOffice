@@ -2,25 +2,25 @@
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div v-if="firstMessage !== null" class="col-12 m-0 bg-secondary-ligth">
+        <div v-if="firstMessage !== null" class="col-12 m-0 backBlue text-light">
           <p class="my-2 font-size-larger" v-text="firstMessage"></p>
         </div>
         <div v-if="currentStage !== null" class="col-12 m-0">
           <div class="d-flex justify-content-center my-2 container-stages">
             <div class="stages d-flex justify-content-between">
-              <div :class="{ 'stage-active': currentStage === 1 }" class="d-flex align-items-center mr-3">
+              <div :class="{ 'botPink': currentStage === 1 }" class="d-flex align-items-center mr-3">
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   1
                 </div>
                 Solicitar
               </div>
-              <div :class="{ 'stage-active': currentStage === 2 }" class="d-flex align-items-center mr-3">
+              <div :class="{ 'botPink': currentStage === 2 }" class="d-flex align-items-center mr-3">
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   2
                 </div>
                 Elegir
               </div>
-              <div :class="{ 'stage-active': currentStage === 3 }" class="d-flex align-items-center mr-3">
+              <div :class="{ 'botPink': currentStage === 3 }" class="d-flex align-items-center mr-3">
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   3
                 </div>
@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div v-if="secondMessage !== null" class="col-12 m-0 bg-secondary-ligth">
+        <div v-if="secondMessage !== null" class="col-12 m-0 backBlue text-light">
           <p class="my-3" v-text="secondMessage"></p>
         </div>
       </div>
@@ -92,5 +92,53 @@ export default {
   border-width: .7em .7em 0;
   border-style: solid;
   border-color: #fff transparent transparent;
+}
+
+.botBlue {
+  background-color: white;
+  color: #174b86;
+  border-color: #174b86;
+}
+.botBlue:hover {
+  color: #C71066;
+  border-color: #C71066;
+}
+.botBlue:active {
+  color: #C71066;
+  border-color: #C71066;
+}
+.backBlue {
+  background-color: #174b86;
+}
+.textBlue {
+  color: #174b86;
+}
+
+.borderBlue {
+  border-color: #174b86 !important;
+}
+
+.botPink{
+  background-color: white;
+  color: #C71066;
+  border-color: #C71066;
+}
+.botPink:hover {
+  color: #174b86;
+  border-color: #174b86;
+}
+.botPink:active {
+  color: #174b86;
+  border-color: #174b86;
+}
+.backPink {
+  background-color: #C71066;
+}
+.textPink {
+  color: #C71066;
+}
+.borderPink {
+
+  border-color: #C71066 !important;
 }
 </style>
