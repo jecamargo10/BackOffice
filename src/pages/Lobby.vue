@@ -4,10 +4,12 @@
       <div class="row" style="background-color: black;">
         <div class="col p-0">
           <div class="contenedor">
-            <h2 class="texto-arriba mt-2">Financiamos tu carro en 3 pasos y sin documentos.</h2>
+            <h2
+              class="texto-arriba mt-2 text-light"
+            >Financiamos tu carro en 3 pasos y sin documentos.</h2>
             <img src="../assets/image--light.png" style="width:100vw; height:auto" alt="Fondo">
             <h5
-              class="texto-abajo mb-4"
+              class="texto-abajo mb-4 text-light"
             >Con AutoFácil, obtendrás un crédito en minutos para el carro que quieres.</h5>
           </div>
         </div>
@@ -19,11 +21,36 @@
         <div class="col-1"></div>
         <div class="col p-0">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item text-left outBorder"><strong>1. Solicita tu crédito</strong></li>
-            <li class="list-group-item text-left outBorder"><strong>2. Elige tu auto</strong></li>
-            <li
-              class="list-group-item text-left outBorder"
-            ><strong>3. Reserva y listo</strong></li>
+            <li class="list-group-item text-left outBorder">
+              <div class="row d-flex align-items-center">
+                <div class="col-2 mr-5">
+                  <img src="../assets/Solicitar.png" alt width="75em" height="auto">
+                </div>
+                <div class="col">
+                  <strong>1. Solicita tu crédito</strong>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item text-left outBorder">
+              <div class="row d-flex align-items-center">
+                <div class="col-2 mr-5">
+                  <img src="../assets/Elegir.png" alt width="75em" height="auto">
+                </div>
+                <div class="col">
+                  <strong>2. Elige tú auto</strong>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item text-left outBorder">
+              <div class="row d-flex align-items-center">
+                <div class="col-2 mr-5">
+                  <img src="../assets/Pagar.png" alt width="75em" height="auto">
+                </div>
+                <div class="col">
+                  <strong>3. Paga almenos el 25% y listo</strong>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="col-1"></div>
@@ -31,12 +58,11 @@
     </div>
     <div class="container-fluid">
       <div class="row mt-4">
-        <div class="col p-4" style="background-color: #eee">
-          <h5>¡Tú auto te espera en el consesionario más cercano!</h5>
+        <div class="col p-4 backBlue">
+          <h5 class="text-light">¡Tú auto te espera en el consesionario más cercano!</h5>
         </div>
       </div>
     </div>
-
 
     <div class="container-fluid">
       <div class="row mt-4">
@@ -44,7 +70,7 @@
           <button
             type="button"
             @click="routeRegistry"
-            class="btn btn-outline-primary btn-lg"
+            class="btn btn-outline btn-lg botBlue"
           >¿Empezamos?</button>
         </div>
       </div>
@@ -97,5 +123,27 @@ export default {
 
 .outBorder {
   border: 0 !important;
+}
+
+.botBlue{
+  background-color: white;
+  color: #174B86;
+  border-color: #174B86;
+}
+.botBlue:hover{
+  background-color: #174B86;
+  color: white;
+  border-color:white;
+}
+.botBlue:active{
+  background-color: #174B86;
+  color: white;
+  border-color:white;
+}
+.backBlue{
+  background-color: #174B86;
+}
+.textBlue{
+  color: #174B86;
 }
 </style>
