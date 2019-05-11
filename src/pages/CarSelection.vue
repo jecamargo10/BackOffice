@@ -155,11 +155,9 @@ export default {
       );
     },
     selectCar(car){
+      this.$store.commit('setCarSelected', car)
       this.$router.push({
-        name: 'Detail',
-        params: {
-          car
-        }
+        name: 'Detail'
       })
     },
     closeError() {

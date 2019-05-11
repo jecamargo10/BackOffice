@@ -66,12 +66,10 @@
 </template>
 
 <script>
-import Subheader from "../components/Subheader.vue";
 
 export default {
   name: "PayPage", //nombre con el cual se usa el componente
   components: {
-    Subheader
   },
   props: [""], //propiedades requeridas(o no) para el uso del componente
   data() {

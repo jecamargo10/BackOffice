@@ -110,8 +110,6 @@ export default {
       });
     },
     pushSetting() {
-      console.log("entra");
-
       this.$router.push({
         path: "/setting"
       });

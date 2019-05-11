@@ -159,7 +159,12 @@ export default {
         path: "/registry"
       });
     }
-    this.car =  this.$route.params.car
+    this.car =  this.$store.state.carSelected
+    if (this.car === undefined) {
+      return this.$router.push({
+        path: "/carselection"
+      });
+    }
     this.urlCar = this.car.COLOR.cars[0].url
   },
   mounted() {

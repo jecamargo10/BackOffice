@@ -1,3 +1,3 @@
 module.exports = {
-    host: '/api/v1'
+    host: 'http://localhost/api/v1'
 }
