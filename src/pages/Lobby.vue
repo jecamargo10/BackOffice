@@ -1,78 +1,53 @@
 <template>
   <section>
     <div class="container-fluid">
-      <div class="row" style="background-color: black;">
+      <div class="row">
         <div class="col p-0">
           <div class="contenedor">
-            <h2
-              class="texto-arriba mt-2 text-light"
-            >Financiamos tu carro en 3 pasos y sin documentos.</h2>
-            <img src="../assets/image--light.png" style="width:100vw; height:auto" alt="Fondo">
-            <h5
-              class="texto-abajo mb-4 text-light"
-            >Con AutoFácil, obtendrás un crédito en minutos para el carro que quieres.</h5>
+            <img src="../assets/carP1.png" style="width:100vw; height:auto" alt="Fondo">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row mt-4">
+    <div class="container-fluid textColor">
+      <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col p-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item text-left outBorder">
-              <div class="row d-flex align-items-center">
-                <div class="col-2 mr-5">
-                  <img src="../assets/Solicitar.png" alt width="75em" height="auto">
-                </div>
-                <div class="col">
-                  <strong>1. Solicita tu crédito</strong>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item text-left outBorder">
-              <div class="row d-flex align-items-center">
-                <div class="col-2 mr-5">
-                  <img src="../assets/Elegir.png" alt width="75em" height="auto">
-                </div>
-                <div class="col">
-                  <strong>2. Elige tú auto</strong>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item text-left outBorder">
-              <div class="row d-flex align-items-center">
-                <div class="col-2 mr-5">
-                  <img src="../assets/Pagar.png" alt width="75em" height="auto">
-                </div>
-                <div class="col">
-                  <strong>3. Paga almenos el 25% y listo</strong>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <div class="row mb-4">
+            <div class="col-1"></div>
+            <div class="col p-0"><h6>1. Solicita tu crédito</h6></div>
+            <div class="col p-0"><h6>2. Elige tu auto</h6></div>
+            <div class="col p-0"><h6>3. Paga y listo</h6></div>
+            <div class="col-1"></div>
+          </div>
+          <div class="row mt-3 mb-3">
+            <div class="col">
+              <h5>¡Tú auto te espera en el consesionario más cercano!</h5>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <img src="../assets/pointsCar.png" alt="" width="45%">
+            </div>
+          </div>
+
         </div>
         <div class="col-1"></div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row mt-4">
-        <div class="col p-4 backBlue">
-          <h5 class="text-light">¡Tú auto te espera en el consesionario más cercano!</h5>
-        </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row mt-4">
+      <div class="row mt-2 mb-5">
+        <div class="col-2"></div>
         <div class="col p-0">
           <button
             type="button"
             @click="routeRegistry"
-            class="btn btn-outline btn-lg botBlue"
+            class="btn btn-lg btn-block botBlue rounded-pill"
           >¿Empezamos?</button>
         </div>
+        <div class="col-2"></div>
       </div>
     </div>
   </section>
@@ -126,50 +101,31 @@ export default {
 }
 
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
-}
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
-}
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
-}
-.backPink {
-  background-color: #C71066;
-}
-.textPink {
-  color: #C71066;
-}
-.borderPink {
-
-  border-color: #C71066 !important;
+.textColor {
+  color: #004b8c;
 }
 </style>

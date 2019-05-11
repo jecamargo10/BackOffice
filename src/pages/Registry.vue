@@ -1,43 +1,83 @@
 <template>
   <section>
-    <div class="container-fluid mt-4">
-      <div class="row d-flex align-items-center">
-        <div class="col-1 mr-1 ml-3">
-          <img src="../assets/123.png" width="60em" height="auto">
-        </div>
-        <div class="col mr-3 ml-1">
-          <h4 class="textBlue text-right">En
-            <strong> AutoFácil </strong>podemos aprobar tu crédito con solo tres datos.
-          </h4>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col p-0">
+          <img src="../assets/ondas.png" width="100%" height="auto">
         </div>
       </div>
     </div>
+    <div class="container-fluid">
+      <div class="row d-flex align-items-center mb-2">
+        <div class="col">
+          <img src="../assets/key.png" width="50em" height="auto">
+        </div>
+      </div>
+      <div class="row d-flex align-items-center">
+        <div class="col">
+          <h5 class="textColor text-center">
+            En
+            <strong>AutoFácil</strong> podemos aprobar tu crédito con solo tres datos.
+          </h5>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid">
       <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col p-0">
           <form @submit.prevent="routeResult">
-            <div class="form-row">
-              <h5 class="text-left">Digita tu cédula</h5>
-              <input
-                v-model="ccInput"
-                required
-                type="number"
-                class="form-control"
-                aria-describedby="emailHelp"
-              >
+            <div class="form-row border-bottom borderR textColor">
+              <div class="col-2">
+                <img src="../assets/license.png" width="30em" height="auto">
+              </div>
+              <div class="col-8">
+                <input
+                  v-model="ccInput"
+                  required
+                  type="number"
+                  class="form-control border-0 textColor"
+                  aria-describedby="emailHelp"
+                  placeholder="Número de cédula"
+                >
+              </div>
             </div>
-            <div class="form-row mt-3">
-              <h5 class="text-left">Tu celular</h5>
-              <input v-model="phoneInput" required type="number" class="form-control">
-            </div>
-            <div class="form-row mt-3">
-              <div class="col">
-                <h5 class="text-left">Código dactilar</h5>
-                <input v-model="huellaInput" required type="text" class="form-control">
+            <div class="form-row border-bottom borderR textColor mt-3">
+              <div class="col-2">
+                <img src="../assets/mobile.png" width="20em" height="auto">
               </div>
               <div class="col">
-                <img src="../assets/actilar.png" alt="ejemploHuella">
+                <input
+                  v-model="phoneInput"
+                  required
+                  type="number"
+                  class="form-control border-0 textColor"
+                  placeholder="Número de teléfono"
+                >
+              </div>
+            </div>
+            <div class="form-row mt-3">
+              <div class="col-7 p-0 mr-2">
+                <div class="row border-bottom borderR textColor p-0 m-0">
+                  <div class="col-4 pl-1 mr-2">
+                    <img src="../assets/fingerprint.png" width="20em" height="auto">
+                  </div>
+                  <div class="col p-0 m-0">
+                    <input
+                      v-model="huellaInput"
+                      required
+                      type="text"
+                      class="form-control border-0 textColor p-0 m-0"
+                      placeholder="Código dactilar"
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 p-0 d-flex align-items-top">
+                <img src="../assets/actilar.png" alt="ejemploHuella" width="170%">
+              </div>
+              <div class="col-2">
               </div>
             </div>
             <div class="form-row form-check mt-3">
@@ -48,12 +88,12 @@
                 class="custom-control-input"
                 id="customCheck1"
               >
-              <label class="custom-control-label" for="customCheck1">Lsed leo faucibus sollicitudim?</label>
+              <label class="custom-control-label" for="customCheck1">Acepto política de privacidad</label>
             </div>
-            <div class="form-row mt-3">
+            <div class="form-row mt-4">
               <a href class="mx-auto">
                 <router-link to="/fail">
-                  <h6 class="textBlue text-center">Ya estoy registrado</h6>
+                  <h6 class="textBlue text-center">Tengo un crédito en proceso</h6>
                 </router-link>
               </a>
             </div>
@@ -65,10 +105,12 @@
                 </div>
               </div>
             </div>
-            <div class="form-row mt-4">
-              <div class="col">
-                <button type="submit" class="btn btn-outline btn-lg botBlue">Solicitar</button>
+            <div class="form-row mt-4 mb-5">
+              <div class="col-2"></div>
+              <div class="col p-0">
+                <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Solicitar</button>
               </div>
+              <div class="col-2"></div>
             </div>
           </form>
         </div>
@@ -79,8 +121,8 @@
 </template>
 
 <script>
-import providerServices from '../providerServices/providerServices.js'
-import utilities from "../utilities.js"
+import providerServices from "../providerServices/providerServices.js";
+import utilities from "../utilities.js";
 
 export default {
   name: "LobbyPage", //nombre con el cual se usa el componente
@@ -118,13 +160,17 @@ export default {
             _self.error = res.data.message;
             return;
           }
-        _self.$store.commit('setUserId', res.data.user.id)
-        _self.$store.commit('setMonthlyPayment', res.data.data)
-        _self.$store.commit('setmonthlyPaymentMax', res.data.data)
-        _self.$store.commit('setAmount', utilities.calculateAmount(res.data.data, 60, 0.1665))
-        _self.$store.commit('setCreditType', false)
-        _self.$router.push({ path: '/result' })
-      })
+          _self.$store.commit("setUserId", res.data.user.id);
+          _self.$store.commit("setMonthlyPayment", res.data.data);
+          _self.$store.commit("setmonthlyPaymentMax", res.data.data);
+          _self.$store.commit(
+            "setAmount",
+            utilities.calculateAmount(res.data.data, 60, 0.1665)
+          );
+          _self.$store.commit("setCreditType", false);
+          _self.$router.push({ path: "/result" });
+        }
+      );
     },
     closeError() {
       this.error = null;
@@ -135,50 +181,50 @@ export default {
 
 <style scoped>
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
-}
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
-}
-.backPink {
-  background-color: #C71066;
-}
-.textPink {
-  color: #C71066;
-}
-.borderPink {
 
-  border-color: #C71066 !important;
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
   <div id="app">
+    <!-- Compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <header-auto-facil></header-auto-facil>
     <router-view></router-view>
   </div>
 </template>
+
 
 <script>
 import HeaderAutoFacil from "./components/HeaderAutoFacil.vue";

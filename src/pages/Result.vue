@@ -1,33 +1,46 @@
 <template>
   <section class="container-fluid">
     <div class="row">
-      <div class="col-1"></div>
       <div class="col">
-        <div class="row mt-4">
+        <div class="row mt-4 textColor">
           <div class="col">
-            <img src="../assets/happy.png" width="100em" height="100em">
+            <h5>!Buenas noticias Santiago¡</h5>
           </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-3">
           <div class="col">
-            <h2>Buenas noticias Santiago, tienes un crédito aprobado por</h2>
+            <div class="contenedor">
+              <img src="../assets/card.png" class="sombra" width="100%">
+              <h3 class="text-light texto-abajo-izq">
+                <strong>US ${{this.$store.state.amount}}</strong>
+              </h3>
+            </div>
           </div>
         </div>
-        <div class="row mt-3 d-flex align-items-center">
+        <div class="row mt-4 mb-4 pt-0">
           <div class="col">
-            <h1 class="text-center textBlue">
-              <strong>US ${{this.$store.state.amount}}</strong>
-            </h1>
+            <div class="contenedor">
+              <img src="../assets/plazo.png" class="sombra cardB" alt width="100%">
+              <h4 class="texto-abajo-izq textColor">{{$store.state.monthlyPaymentQuantity}}</h4>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="contenedor">
+              <img src="../assets/cuota.png" class="sombra cardB" alt width="100%">
+              <h4 class="texto-abajo-izq textColor">${{this.$store.state.monthlyPayment}}</h4>
+            </div>
           </div>
         </div>
-        <div class="row mt-0 pt-0">
+
+        <div class="row">
+          <div class="col-1"></div>
           <div class="col">
-            <h5 class="text-center">
-              {{$store.state.monthlyPaymentQuantity}} cuaotas
-              <strong>US ${{this.$store.state.monthlyPayment}} mensual</strong>
-            </h5>
+
           </div>
+          <div class="col-1"></div>
         </div>
+
         <div class="row mt-3">
           <div class="col">
             <h5 class="text-center textBlue">
@@ -68,14 +81,15 @@
               >Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
             </div>
           </div>
-          <div class="row mt-3 mb-5">
-            <div class="col">
-              <button type="submit" class="btn btn-outline botBlue btn-lg">Continuar</button>
-            </div>
-          </div>
         </form>
       </div>
-      <div class="col-1"></div>
+    </div>
+    <div class="row mt-3 mb-5">
+      <div class="col-2"></div>
+      <div class="col">
+        <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Continuar</button>
+      </div>
+      <div class="col-2"></div>
     </div>
   </section>
 </template>
@@ -119,50 +133,60 @@ export default {
 </script>
 
 <style scoped>
+.contenedor {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.texto-arriba {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  left: 20px;
+}
+.texto-abajo-izq {
+  position: absolute;
+  text-align: center;
+  bottom: 18px;
+  right: 110px;
+  left: 20px;
+}
+
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #c71066;
-  border-color: #c71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #c71066;
-  border-color: #c71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink {
-  background-color: white;
-  color: #c71066;
-  border-color: #c71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
+.sombra {
+  -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
 }
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
-}
-.backPink {
-  background-color: #c71066;
-}
-.textPink {
-  color: #c71066;
-}
-.borderPink {
-  border-color: #c71066 !important;
+.cardB {
+  border-radius: 10px;
 }
 </style>
