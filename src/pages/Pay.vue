@@ -3,73 +3,70 @@
     <div class="container-fluid">
       <div class="row mt-5 ml-4 mr-4">
         <div class="col">
-          <h3>Reserva tu carro con $500</h3>
+          <h3 class="textColor">Reserva tu carro con $500</h3>
         </div>
       </div>
     </div>
     <div class="container-fluid mt-5">
-      <div class="row border borderPink botPink dimFr d-flex align-items-center m-4">
+      <div class="row">
         <div class="col-1"></div>
         <div class="col">
-          <h6 class="textPink botPink">
-            <strong>Tarjeta de Crédito</strong>
-          </h6>
-        </div>
-        <div class="col m-2">
-          <i class="material-icons textPink botPink">arrow_forward</i>
+          <img src="../assets/credit.png" alt width="100%">
         </div>
         <div class="col-1"></div>
       </div>
     </div>
     <div class="container-fluid mt-3">
-      <div class="row border borderBlue dimFr d-flex align-items-center m-4 botBlue">
+      <div class="row">
         <div class="col-1"></div>
-        <div class="col p-0">
-          <h6 class="textBlue botBlue">
-            <strong>Tarjeta de Débito</strong>
-          </h6>
-        </div>
-        <div class="col p-0">
-          <i class="material-icons textBlue botBlue">arrow_forward</i>
+        <div class="col">
+          <img src="../assets/debit.png" alt width="100%">
         </div>
         <div class="col-1"></div>
       </div>
     </div>
+
     <div class="container-fluid mt-5">
       <div class="row ml-4 mr-4">
         <div class="col">
-          <h5>O si prefieres, acercate al concesionario para reservar tú carro.</h5>
+          <h5 class="textColor">Ó si prefieres, acercate al concesionario para reservar tu carro</h5>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col mt-4">
-          <div class="col">
-              <h6 class="font-weight-bold">Nombre Concesionario</h6>
-              <p>Direccion concesinario</p>
+      <div class="row mt-4">
+        <div class="col-2"></div>
+        <div class="col">
+          <div class="row">
+            <div class="col-1 mr-0 pr-0 pl-0">
+              <img src="../assets/place.png" width="130%">
+            </div>
+              <div class="col">
+                <h6 class="font-weight-bold textColor text-justify pb-0 mb-0">Intercar</h6>
+                <p class="textColor text-left pt-0">Tr Fermin, Guayaquil 0904</p>
+              </div>
           </div>
         </div>
+        <div class="col-1"></div>
       </div>
-      <div class="row">
+      <div class="row mt-3 mb-5">
+        <div class="col-2"></div>
         <div class="col">
           <router-link to="/">
-            <button class="btn btn-success">Regresar</button>
+            <button class="btn btn-outline btn-block botBlue rounded-pill">Regresar</button>
           </router-link>
         </div>
+        <div class="col-2"></div>
       </div>
     </div>
-
   </section>
 </template>
 
 <script>
-
 export default {
   name: "PayPage", //nombre con el cual se usa el componente
-  components: {
-  },
+  components: {},
   props: [""], //propiedades requeridas(o no) para el uso del componente
   data() {
     //data reactiva del componente
@@ -97,50 +94,50 @@ i {
 }
 
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
-}
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
-}
-.backPink {
-  background-color: #C71066;
-}
-.textPink {
-  color: #C71066;
-}
-.borderPink {
 
-  border-color: #C71066 !important;
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
 }
 </style>
