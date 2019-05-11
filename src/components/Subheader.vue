@@ -28,9 +28,10 @@
               </div>
             </div>
           </div>
+          <hr>
         </div>
-        <div v-if="secondMessage !== null" class="col-12 m-0 backBlue text-light">
-          <p class="my-3" v-text="secondMessage"></p>
+        <div v-if="secondMessage !== null" class="col-12 m-0">
+          <button class="btn-autofacil bg-blue-ligth font-weight-bold" v-text="secondMessage"></button>
         </div>
       </div>
     </div>
@@ -142,5 +143,13 @@ export default {
 .borderPink {
 
   border-color: #C71066 !important;
+}
+
+.btn-autofacil{
+  padding: .5em;
+  color: #fff;
+  border: none;
+  width: 90%;
+  border-radius: 1em;
 }
 </style>

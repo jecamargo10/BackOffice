@@ -10,8 +10,7 @@
         <div class="col-12 container-filters">
           <p class="text-center mt-4 font-size-x-large">Elige tu carro</p>
           <div class="form-group d-flex">
-            <label class="mr-2" for="carBrandInput">Marca:</label>
-            <select v-model="currentBrand" class="form-control" id="carBrandInput" @change="changeFilter">
+            <select v-model="currentBrand" class="form-control text-blue-strong" id="carBrandInput" @change="changeFilter">
               <option value="KIA">KIA</option>
               <option value="todas">Todas</option>
             </select>
@@ -168,7 +167,4 @@ export default {
 </script>
 
 <style scoped>
-#carBrandInput {
-  max-width: 10em;
-}
 </style>

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col p-0">
           <div class="contenedor">
-            <img src="../assets/carP1.png" style="width:100vw; height:auto" alt="Fondo">
+            <img src="../assets/carP1.png" style="width:100vw; height:auto; top: -1px; position: relative;" alt="Fondo">
           </div>
         </div>
       </div>
