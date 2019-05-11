@@ -44,7 +44,7 @@
           <button
             type="button"
             @click="routeRegistry"
-            class="btn btn-lg btn-block botBlue rounded-pill"
+            class="btn btn-block botBlue rounded-pill"
           >¿Empezamos?</button>
         </div>
         <div class="col-2"></div>

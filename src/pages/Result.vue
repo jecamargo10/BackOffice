@@ -36,60 +36,62 @@
         <div class="row">
           <div class="col-1"></div>
           <div class="col">
-
+            <h6 class="textColor">*Este crédito aplica en el 75% o menos para el costo de tu carro.</h6>
           </div>
           <div class="col-1"></div>
         </div>
 
-        <div class="row mt-3">
+        <div class="row mt-3 mb-4">
+          <div class="col-3"></div>
           <div class="col">
-            <h5 class="text-center textBlue">
-              <u>
-                <div @click="pushSetting">Simular crédito</div>
-              </u>
-            </h5>
+            <button
+              type="submit"
+              @click="pushSetting"
+              class="btn btn-outline btn-block btn-sm botBlueBord rounded-pill"
+            >Simular crédito</button>
+          </div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col backLight p-0">
+        <div class="form-row mx-auto pb-4">
+          <div class="col">
+            <h6
+              class="textColor mr-5 ml-5 pt-4"
+            >Déjanos tu email para confirmar esta aprobación y poder continuar</h6>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row mx-auto mt-4">
+      <div class="col">
         <form @submit.prevent="nextStage">
-          <div class="form-row mt-4">
-            <div class="col">
-              <div class="input-group mb-1">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="addon-emailInput">@</span>
-                </div>
-                <input
-                  v-model="emailInput"
-                  type="email"
-                  required
-                  class="form-control"
-                  placeholder="Email"
-                  aria-label="Email"
-                  aria-describedby="addon-emailInput"
-                >
-              </div>
+          <div class="form-row border-bottom borderR textColor mr-4 ml-4">
+            <div class="col-4 pl-5">
+              <img src="../assets/send.png" width="30em" height="auto">
+            </div>
+            <div class="col-8">
+              <input
+                v-model="emailInput"
+                required
+                type="email"
+                class="form-control border-0 textColor"
+                aria-describedby="addon-emailInput"
+                placeholder="Email"
+              >
             </div>
           </div>
-          <div class="form-row mx-auto pb-4 border-bottom">
+          <div class="row mt-5 mb-5">
+            <div class="col-2"></div>
             <div class="col">
-              <small class="mt-0">Escribe tu correo para enviarte la información.</small>
+              <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Continuar</button>
             </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col">
-              <h5
-                class="text-center"
-              >Este crédito aplica en el 75% o menos para el costo de tu carro.</h5>
-            </div>
+            <div class="col-2"></div>
           </div>
         </form>
       </div>
-    </div>
-    <div class="row mt-3 mb-5">
-      <div class="col-2"></div>
-      <div class="col">
-        <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Continuar</button>
-      </div>
-      <div class="col-2"></div>
     </div>
   </section>
 </template>
@@ -167,6 +169,23 @@ export default {
   color: #e91c72;
   border-color: #e91c72;
 }
+
+.botBlueBord {
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
+}
+.botBlueBord:hover {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+.botBlueBord:active {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+
 .backBlue {
   background-color: #e91c72;
 }
@@ -188,5 +207,29 @@ export default {
 }
 .cardB {
   border-radius: 10px;
+}
+
+.backLight {
+  background-color: #f2fbff;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
+}
+
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
 }
 </style>
