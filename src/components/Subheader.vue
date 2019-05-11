@@ -24,20 +24,14 @@
                 <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
                   3
                 </div>
-                Reservar
+                Pagar
               </div>
             </div>
           </div>
-          <hr>
         </div>
-<<<<<<< HEAD
         <div class="col-1"></div>
         <div v-if="secondMessage !== null" class="col-10 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
           <p class="m-2" v-text="secondMessage"></p>
-=======
-        <div v-if="secondMessage !== null" class="col-12 m-0">
-          <button class="btn-autofacil bg-blue-ligth font-weight-bold" v-text="secondMessage"></button>
->>>>>>> 921790bb85a6786206243edb591f46d297357fb6
         </div>
         <div class="col-1"></div>
       </div>
