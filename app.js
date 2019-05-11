@@ -46,7 +46,7 @@ res.sendFile('dist/index.html', { root: __dirname });
 });*/
 
 
-const HEADERS = {'Authorization': 'Basic QWRtaW4xOmNoYXJtZWRTcGFuXjk='};
+const HEADERS = {'Authorization': 'Basic QWRtaW4xOnNsZWF6eUNyZXN0KzI='};
 
 //recibe cc, id, telefono
 router.get("/verificarUsuario", function(require,response){

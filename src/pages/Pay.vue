@@ -1,10 +1,9 @@
-
 <template>
   <section>
     <div class="container-fluid">
       <div class="row mt-5 ml-4 mr-4">
         <div class="col">
-          <h2>Reserva tu carro con US $500</h2>
+          <h3>Reserva tu carro con $500</h3>
         </div>
       </div>
     </div>
