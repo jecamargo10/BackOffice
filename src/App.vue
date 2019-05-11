@@ -45,4 +45,10 @@ export default {
 .top-0{
   top: 0;
 }
+.text-blue-strong{
+  color: #004b8c;
+}
+.bg-blue-ligth{
+  background-color: #00ace4;
+}
 </style>
