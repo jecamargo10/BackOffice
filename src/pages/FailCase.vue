@@ -1,50 +1,84 @@
 <template>
-  <section>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col p-0">
+        <img src="../assets/ondas.png" width="100%" height="auto">
+      </div>
+    </div>
     <div class="row">
       <div class="col-1"></div>
       <div class="col">
-        <div class="row mt-4">
+        <div class="row mt-0">
           <div class="col">
-            <img src="../assets/sad.png" alt="sad" width="100em" height="100em">
+            <img src="../assets/sad.png" alt="sad" width="60em" height="60em">
           </div>
         </div>
         <div class="row mt-3">
-          <div class="col textBlue">
-            <h2>Uuups, no se pudo completar el proceso.</h2>
+          <div class="col textColor">
+            <h3>Uuups, no se pudo completar el proceso</h3>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col">
-            <h6>Pero no te preocupes, dejanos tus datos y pronto te contactará un asesor para más información.</h6>
+            <h6
+              class="textColor"
+            >Pero no te preocupes, dejanos tus datos y pronto te contactará un asesor para más información.</h6>
           </div>
         </div>
         <form>
-          <div class="form-row mt-4">
-            <h5 class="text-left">Nombres</h5>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-row mt-3">
-            <h5 class="text-left">Apellidos</h5>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-row mt-3">
-            <h5 class="text-left">Tu email</h5>
-            <input type="email" class="form-control">
-          </div>
-          <div class="form-row mt-3">
+          <div class="form-row border-bottom borderR textColor mt-4">
             <div class="col">
-              <h5 class="text-left">Celular</h5>
-              <input type="number" class="form-control">
+              <input
+                v-model="ccInput"
+                required
+                type="text"
+                class="form-control border-0 textColor"
+                aria-describedby="emailHelp"
+                placeholder="Nombres"
+              >
             </div>
           </div>
-          <div class="form-row mt-3 mb-4">
+          <div class="form-row border-bottom borderR textColor mt-3">
+            <div class="col">
+              <input
+                v-model="ccInput"
+                required
+                type="text"
+                class="form-control border-0 textColor"
+                aria-describedby="emailHelp"
+                placeholder="Apellidos"
+              >
+            </div>
+          </div>
+          <div class="form-row border-bottom borderR textColor mt-3">
+            <div class="col">
+              <input
+                v-model="ccInput"
+                required
+                type="email"
+                class="form-control border-0 textColor"
+                aria-describedby="emailHelp"
+                placeholder="Email"
+              >
+            </div>
+          </div>
+          <div class="form-row border-bottom borderR textColor mt-3">
+            <div class="col">
+              <input
+                v-model="ccInput"
+                required
+                type="number"
+                class="form-control border-0 textColor"
+                aria-describedby="emailHelp"
+                placeholder="Teléfono"
+              >
+            </div>
+          </div>
+          <div class="form-row mt-4 mb-4">
             <div class="col">
               <div class="form-row form-check">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label
-                  class="custom-control-label"
-                  for="customCheck1"
-                >Lsed leo faucibus sollicitudim?</label>
+                <label class="custom-control-label textColor" for="customCheck1">Acepto política de privacidad</label>
               </div>
             </div>
           </div>
@@ -52,10 +86,12 @@
       </div>
       <div class="col-1"></div>
     </div>
-    <div class="row mt-4">
-      <div class="col">
-        <button type="submit" class="btn btn-outline botBlue btn-lg">Enviar</button>
+    <div class="row mt-4 mb-5">
+      <div class="col-2"></div>
+      <div class="col p-0">
+        <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Enviar</button>
       </div>
+      <div class="col-2"></div>
     </div>
   </section>
 </template>
@@ -82,50 +118,50 @@ export default {
 
 <style scoped>
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
-}
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
-}
-.backPink {
-  background-color: #C71066;
-}
-.textPink {
-  color: #C71066;
-}
-.borderPink {
 
-  border-color: #C71066 !important;
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
 }
 </style>
