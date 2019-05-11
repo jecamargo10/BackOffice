@@ -205,6 +205,7 @@ export default {
   -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
   box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
 }
+
 .cardB {
   border-radius: 10px;
 }

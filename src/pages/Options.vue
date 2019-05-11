@@ -1,38 +1,40 @@
 
 <template>
   <section>
-     <div class="container-fluid">
-        <div class="row">
-           <div class="col p-0">
-               <Subheader :currentStage="2" :firstMessage="'¿Qué quieres hacer?'" :secondMessage="null"></Subheader>
-           </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col p-0">
+          <Subheader :currentStage="1" :firstMessage="null"></Subheader>
         </div>
-     </div>
-     <div class="container-fluid mt-4">
-        <div class="row border borderPink dimFr d-flex align-items-center">
-           <div class="col-1"></div>
-           <div class="col p-0">
-               <h6  class="textPink botPink"><strong>Ya se que carro quiero comprar</strong></h6>
-           </div>
-           <div class="col p-0">
-               <i class="material-icons textPink botPink">arrow_forward</i>
-           </div>
-           <div class="col-1"></div>
+      </div>
+    </div>
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col p-0">
+          <h4 class="textColor">¿Qué quieres hacer?</h4>
         </div>
-     </div>
-     <div @click="$router.push({ path: 'carselection' })" class="container-fluid">
-        <div class="row border border-primary dimFr d-flex align-items-center">
-           <div class="col-1"></div>
-           <div class="col p-0 ">
-               <h6 class="textBlue botBlue"><strong>Quiero ver opciones según mi capacidad</strong></h6>
-           </div>
-           <div class="col p-0">
-               <i class="material-icons textBlue botBlue">arrow_forward</i>
-           </div>
-           <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col p-0">
+          <img src="../assets/iknow.png" class="cardB sombra" width="100%">
         </div>
-     </div>
-
+        <div class="col-1"></div>
+      </div>
+    </div>
+    <div @click="$router.push({ path: 'carselection' })" class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col p-0">
+          <img src="../assets/idknow.png" class="cardB sombra" width="100%">
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -50,10 +52,13 @@ export default {
     return {};
   },
   created() {
-    if (this.$store.state.monthlyPayment === undefined || this.$store.state.monthlyPayment === null) {
+    if (
+      this.$store.state.monthlyPayment === undefined ||
+      this.$store.state.monthlyPayment === null
+    ) {
       return this.$router.push({
-        path: '/registry'
-      })
+        path: "/registry"
+      });
     }
   },
   mounted() {
@@ -70,55 +75,98 @@ i {
   font-size: 500%;
 }
 
-.dimFr{
-   height: 35vh;
+.dimFr {
+  height: 35vh;
 }
 
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
+
+.botBlueBord {
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
+}
+.botBlueBord:hover {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+.botBlueBord:active {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
+.sombra {
+  -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
 }
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
+.sombra:active {
+  -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0);
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0);
 }
-.backPink {
-  background-color: #C71066;
+.cardB {
+  border-radius: 10px;
 }
-.textPink {
-  color: #C71066;
+.cardB:active{
+  border-radius: 10px;
+  width: 99%;
 }
-.borderPink {
+.cardB:hover{
+  border-radius: 10px;
+  width: 99%;
+}
 
-  border-color: #C71066 !important;
+.backLight {
+  background-color: #f2fbff;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
+}
+
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
 }
 </style>

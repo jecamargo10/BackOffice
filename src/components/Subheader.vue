@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row ">
         <div v-if="firstMessage !== null" class="col-12 m-0 backBlue text-light">
           <p class="my-2 font-size-larger" v-text="firstMessage"></p>
         </div>
@@ -29,9 +29,11 @@
             </div>
           </div>
         </div>
-        <div v-if="secondMessage !== null" class="col-12 m-0 backBlue text-light">
-          <p class="my-3" v-text="secondMessage"></p>
+        <div class="col-1"></div>
+        <div v-if="secondMessage !== null" class="col-10 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
+          <p class="m-2" v-text="secondMessage"></p>
         </div>
+        <div class="col-1"></div>
       </div>
     </div>
   </section>
@@ -96,51 +98,83 @@ export default {
   border-color: #fff transparent transparent;
 }
 
-.botBlue {
+
+.botPink {
   background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  color: #e91c72;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
 }
+
+.botBlueBord {
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
+}
+.botBlueBord:hover {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+.botBlueBord:active {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
+.sombra {
+  -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
 }
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
-}
-.backPink {
-  background-color: #C71066;
-}
-.textPink {
-  color: #C71066;
-}
-.borderPink {
 
-  border-color: #C71066 !important;
+.cardB {
+  border-radius: 10px;
+}
+
+.backLight {
+  background-color: #f2fbff;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
+}
+
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
 }
 </style>
