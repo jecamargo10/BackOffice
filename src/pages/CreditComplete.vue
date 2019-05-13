@@ -49,7 +49,7 @@
 
                     </div>
                     <p class="font-size-larger font-weight-bold pr-5">Estado: </p>
-                    <p>Mensage</p>
+                    <p>Mensaje</p>
                     <p>Cuota de entrada</p>
                 </div>
                 <button @click="pushPay" class="btn btn-outline botBlue">Reserva tu carro</button>

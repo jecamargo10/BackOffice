@@ -21,6 +21,7 @@ import CreditInfo from './pages/CreditInfo.vue'
 import FinalPage from './pages/Final.vue'
 import CreditComplete from './pages/CreditComplete.vue'
 import PayPage from './pages/Pay.vue'
+import Entrada from './pages/Entrada.vue'
 // 2. Define some routes
 // Each route should map to a component. The "component" can
 // either be an actual component constructor created via
@@ -40,7 +41,8 @@ const routes = [
   { path: '/pay', component: PayPage },
   { path: '/final', component: FinalPage },
   { path: '/CreditComplete', component: CreditComplete },
-  { path: '/aux', component: AuxComponent }
+  { path: '/aux', component: AuxComponent },
+  { path: '/entry', component: Entrada }
 ]
 
 // 3. Create the router instance and pass the `routes` option

@@ -12,7 +12,8 @@ export const store = new Vuex.Store({
     userId: undefined,
     creditType: undefined,
     credit: undefined,
-    carSelected: undefined
+    carSelected: undefined,
+    entryValue: null,
   },
   mutations: {
     setCredit(state, value) {
@@ -39,6 +40,9 @@ export const store = new Vuex.Store({
     setCreditType(state, value) {
         state.creditType = value
     },
+    setEntryValue(state, value) {
+        state.entryValue = value
+    },
   },
   getters: {
     amount: state => state.amount,
@@ -49,5 +53,6 @@ export const store = new Vuex.Store({
     creditType: state => state.creditType,
     credit: state => state.credit,
     carSelected: state => state.carSelected,
+    entryValue: state => state.entryValue,
   }
 })
