@@ -29,15 +29,12 @@
             </div>
           </div>
         </div>
-        <div class="col-1"></div>
-        <div v-if="secondMessage !== null" class="col-10 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
+        <div v-if="secondMessage !== null" class="col-12 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
           <p class="m-2" v-text="secondMessage"></p>
         </div>
-        <div class="col-1"></div>
-        <div v-if="entryValue !== null" class="col-10 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
+        <div v-if="entryValue !== null" class="col-12 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
           <p class="m-2" v-text="thirdMessage"></p>
         </div>
-        <div class="col-1"></div>
       </div>
     </div>
   </section>
