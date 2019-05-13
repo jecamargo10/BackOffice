@@ -14,10 +14,10 @@
     <div class="container-fluid">
       <div class="row mt-4">
         <div class="col-1"></div>
-        <div class="col p-0 text-left">
-          <h6>
+        <div class="col p-0 text-center">
+          <h5 class="textColor" >
             <strong v-text="car.CATEGORIA+' '+car.MARCA+' '+car.MODELO+' '+car.LINEA"></strong>
-          </h6>
+          </h5>
         </div>
         <div class="col-1"></div>
       </div>
@@ -27,7 +27,7 @@
         <div class="col-1"></div>
         <div class="col p-0">
           <div>
-            <b-form-select v-model="selected" :options="options"></b-form-select>
+            <b-form-select class="textColor" v-model="selected" :options="options"></b-form-select>
           </div>
         </div>
         <div class="col-1"></div>
@@ -63,42 +63,21 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div class="row border broder-secondary">
-        <div class="col-1"></div>
-        <div class="col">
-          <div>
-            <div v-b-toggle.collapse-a.collapse-b>
-              <div class="row mt-2 d-flex align-items-center">
-                <div class="col pr-0">
-                  <h4>Detalles del carro</h4>
-                </div>
-                <div class="col-2 pl-0">
-                  <i class="material-icons botBlue">add</i>
-                </div>
-              </div>
-            </div>
-            <b-collapse id="collapse-a" class="mt-2">
-              <b-card>Marca: <span v-text="car.MARCA"></span></b-card>
-            </b-collapse>
-            <b-collapse id="collapse-b" class="mt-2">
-              <b-card>Tipo: <span v-text="car.TIPO"></span></b-card>
-            </b-collapse>
-          </div>
-        </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row mt-4">
+      <div class="row pt-4 pb-4 border-top border-bot backLight ">
         <div class="col-1"></div>
         <div class="col">
           <div class="row mt-4">
-            <div class="col">
-              <h2><strong>US $<span v-text="car.COSTO"></span></strong></h2>
+            <div class="col-1"></div>
+            <div class="col-3 p-0 m-2">
+              <img src="../assets/car.png" alt="" width="80%">
             </div>
+            <div class="col-4 p-0 m-0  borderBlue border-bottom">
+              <h2 class="text-left textColor"><strong>$<span v-text="car.COSTO"></span></strong></h2>
+            </div>
+            <div class="col-1"></div>
           </div>
           <div class="row mt-3">
-            <div class="col">Cuota de entrada: US $<span v-text="car.COSTO * 0.25"></span></div>
+            <div class="col textColor">Cuota de entrada: US $<span v-text="car.COSTO * 0.25"></span></div>
           </div>
           <div class="row mt-3">
             <div class="col">
@@ -114,15 +93,43 @@
         <div class="col-1"></div>
       </div>
     </div>
+        <div class="container-fluid ">
+      <div class="row border broder-secondary">
+        <div class="col-1"></div>
+        <div class="col">
+          <div>
+            <div v-b-toggle.collapse-a.collapse-b>
+              <div class="row mt-2 d-flex align-items-center">
+                <div class="col pr-0">
+                  <h4 class="textColor">Detalles del carro</h4>
+                </div>
+                <div class="col-2 pl-0 "> 
+                  <i class="material-icons textColor border borderRe rounded-circle">add</i>
+                </div>
+              </div>
+            </div>
+            <b-collapse id="collapse-a" class="mt-2">
+              <b-card class="textColor">Marca: <span v-text="car.MARCA"></span></b-card>
+            </b-collapse>
+            <b-collapse id="collapse-b" class="mt-2">
+              <b-card class="textColor">Tipo: <span v-text="car.TIPO"></span></b-card>
+            </b-collapse>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
     <div class="container-fluid">
-      <div class="row mt-4">
+      <div class="row mt-4 mb-5">
+        <div class="col-2"></div>
         <div class="col p-0">
           <button
             @click="createCredit"
             type="button"
-            class="btn btn-outline botBlue btn-lg"
+            class="btn btn-block botBlue rounded-pill"
           >Aplicar mi crédito</button>
         </div>
+        <div class="col-2"></div>
       </div>
     </div>
   </section>
@@ -197,52 +204,108 @@ i {
   height: 1.5em;
   width: 1.5em;
 }
+.backLight {
+  background-color: #f2fbff;
+}
+.textLight {
+  color: #f2fbff;
+}
 
 .botBlue {
-  background-color: white;
-  color: #174b86;
-  border-color: #174b86;
+  background-color: #e91c72;
+  color: white;
 }
 .botBlue:hover {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
 .botBlue:active {
-  color: #C71066;
-  border-color: #C71066;
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
 }
+
+.botBlueBord {
+  background-color: white;
+  color: #e91c72;
+  border-color: #e91c72;
+}
+.botBlueBord:hover {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+.botBlueBord:active {
+  background-color: #e91c72;
+  color: white;
+  border-color: white;
+}
+
 .backBlue {
-  background-color: #174b86;
+  background-color: #e91c72;
 }
 .textBlue {
-  color: #174b86;
+  color: #e91c72;
 }
 
 .borderBlue {
-  border-color: #174b86 !important;
+  border-color: #e91c72 !important;
+  border-bottom-width: 4.5px !important;
+  border-radius: 5px !important;
 }
 
-.botPink{
-  background-color: white;
-  color: #C71066;
-  border-color: #C71066;
+.textColor {
+  color: #004b8c;
 }
-.botPink:hover {
-  color: #174b86;
-  border-color: #174b86;
+.sombra {
+  -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0.22);
 }
-.botPink:active {
-  color: #174b86;
-  border-color: #174b86;
+.sombra:active {
+  -webkit-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0);
+  box-shadow: 3px 4px 12px 0px rgba(0, 0, 0, 0);
 }
-.backPink {
-  background-color: #C71066;
+.cardB {
+  border-radius: 10px;
 }
-.textPink {
-  color: #C71066;
+.cardB:active{
+  border-radius: 10px;
+  width: 99%;
 }
-.borderPink {
+.cardB:hover{
+  border-radius: 10px;
+  width: 99%;
+}
 
-  border-color: #C71066 !important;
+.backLight {
+  background-color: #f2fbff;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #004b8c;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #004b8c;
+}
+
+::placeholder {
+  color: #004b8c;
+}
+
+.borderR {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-bottom-width: 1px !important;
+}
+.borderRe {
+  border-radius: 0;
+  border-color: #004b8c !important;
+  border-width: 2px !important;
 }
 </style>
