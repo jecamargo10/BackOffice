@@ -56,7 +56,9 @@ export default {
       } 
     },
     entryValue: {
-      default: null
+      default(){
+        return this.$store.state.entryValue
+      }
     },
     currentStage: {
       default: 3
@@ -80,10 +82,10 @@ export default {
   },
   computed: {
     thirdMessage: function(){
-      if(this.props.entryValue == null){
+      if(this.entryValue == null){
         return ""
       }else{
-        return `Valor de entrada: US$${this.props.entryValue}`
+        return `Valor de entrada: US$${this.entryValue}`
       }
     }
   }

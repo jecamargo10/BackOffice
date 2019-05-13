@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
     creditType: undefined,
     credit: undefined,
     carSelected: undefined,
-    entryValue: undefined,
+    entryValue: null,
   },
   mutations: {
     setCredit(state, value) {
