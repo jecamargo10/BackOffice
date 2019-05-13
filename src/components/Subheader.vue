@@ -34,6 +34,10 @@
           <p class="m-2" v-text="secondMessage"></p>
         </div>
         <div class="col-1"></div>
+        <div v-if="entryValue !== null" class="col-10 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
+          <p class="m-2" v-text="thirdMessage"></p>
+        </div>
+        <div class="col-1"></div>
       </div>
     </div>
   </section>
@@ -45,12 +49,15 @@ export default {
   props: {
     firstMessage: {
       default: 'Personalizar mi crédito'
-    }, 
+    },
     secondMessage: {
       default(){
         return `Crédito aprobado: US $${this.$store.state.amount}`
       } 
-    }, 
+    },
+    entryValue: {
+      default: null
+    },
     currentStage: {
       default: 3
     }
@@ -70,6 +77,15 @@ export default {
     //lo que pasa cuando se monta el HTML al browser
   },
   methods: {
+  },
+  computed: {
+    thirdMessage: function(){
+      if(this.props.entryValue == null){
+        return ""
+      }else{
+        return `Valor de entrada: US$${this.props.entryValue}`
+      }
+    }
   }
 };
 </script>

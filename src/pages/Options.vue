@@ -26,7 +26,7 @@
         <div class="col-1"></div>
       </div>
     </div>
-    <div @click="$router.push({ path: 'carselection' })" class="container-fluid mt-4">
+    <div @click="$router.push({ path: 'entry' })" class="container-fluid mt-4">
       <div class="row">
         <div class="col-1"></div>
         <div class="col p-0">
