@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: "subheader", //nombre con el cual se usa el componente
+  name: "subheader",
   props: {
     firstMessage: {
       default: 'Personalizar mi crédito'
