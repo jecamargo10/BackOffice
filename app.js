@@ -9,7 +9,8 @@ app.use(cors())
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
+
 app.use('/api/v1', router)
 app.use(express.static('dist'))
 const testFolder = './tests/';
@@ -99,13 +100,13 @@ router.get("/filtrarAutos", function(require,response){
     let presupuesto = require.query.presupuesto
     let marca = require.query.marca
     let categoria = require.query.categoria
-    
+
     if(marca == 'todas'){
         marca = ''
     }else{
         marca = ' and MARCA=\'' + marca + '\''
     }
-    
+
     if(categoria == '[]'){
         categoria = ''
     }else{
@@ -115,7 +116,7 @@ router.get("/filtrarAutos", function(require,response){
             categoria = categoria.replace(",", "' or CATEGORIA='");
         }
     }
-    
+
     let url = `https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/BG.VEHICULO?q=COSTO<=${presupuesto}${marca}${categoria}&fields=CATEGORIA,COLOR,COSTO,DESCRIPCION,LINEA,MARCA,MODELO`
     axios.get(url,{headers: HEADERS}).then(data => {
         if(data.data.items.length == 0){
@@ -161,7 +162,7 @@ router.get("/obtenerConcesionarios", function(require,response){
 router.post("/crearCredito", function(require,response){
     let url = 'https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/incidents'
     //FALTA: campo marca en concesionario (se había hablado sobre disponibilidad en todos los concesionarios)
-    
+
     let body = {
         "subject": "Credito Aprobado",
         "primaryContact": {
@@ -191,9 +192,9 @@ router.post("/crearCredito", function(require,response){
         }
     }
     console.log("--------------------------------------");
-    
+
     //console.log(JSON.parse(JSON.stringify(body)));
-    
+
     axios.post(url, body
     ,{headers: HEADERS}).then(data => {
         response.send(data.data)
