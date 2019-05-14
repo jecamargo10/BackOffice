@@ -41,7 +41,7 @@
                 <div class="row">
                   <div class="col-12 d-flex align-items-center">
                     <input
-                      v-model="currentConcessionaire"
+                      name="consecionario"
                       type="radio"
                       id="concesionario1"
                     >
@@ -52,7 +52,7 @@
                   </div>
                   <div class="col-12 d-flex align-items-center">
                     <input
-                      v-model="currentConcessionaire"
+                      name="consecionario"
                       type="radio"
                       id="concesionario2"
                     >
@@ -63,7 +63,7 @@
                   </div>
                   <div class="col-12 d-flex align-items-center">
                     <input
-                      v-model="currentConcessionaire"
+                      name="consecionario"
                       type="radio"
                       id="concesionario3"
                     >
