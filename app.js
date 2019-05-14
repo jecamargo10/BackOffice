@@ -34,6 +34,7 @@ if (!__dirname)
   app.get('*', function (req, res) {
   const index = path.join(__dirname, 'build', 'index.html');
   res.sendFile(index);
+    
 });
 /**
 
@@ -45,7 +46,6 @@ res.sendFile('dist/index.html', { root: __dirname });
 
 
 });*/
-
 
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOnNsZWF6eUNyZXN0KzI='};
 
@@ -94,6 +94,8 @@ router.get("/verificarUsuario", function(require,response){
             'data': "-1"
         })})
 })
+
+
 
 //recibe presupuesto, marca, categoria
 router.get("/filtrarAutos", function(require,response){
@@ -158,6 +160,8 @@ router.get("/obtenerConcesionarios", function(require,response){
         })})
 })
 
+
+
 //recibe usuario,monto,plazo,cuota,tipo,entrada,vehiculo,montoUsuario
 router.post("/crearCredito", function(require,response){
     let url = 'https://rnowgse00226-es.rightnowdemo.com/services/rest/connect/v1.3/incidents'
@@ -205,6 +209,8 @@ router.post("/crearCredito", function(require,response){
             'data': []
         })})
 })
+
+
 
 app.listen(port, function(){
     console.log('server started '+ port);
