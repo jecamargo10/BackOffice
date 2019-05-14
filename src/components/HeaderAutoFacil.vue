@@ -4,8 +4,8 @@
       <div class="row p-0">
         <div class="col-12 p-0">
           <div >
-            <b-navbar class="justify-content-center navColor" toggleable="md " type="light" variant="light">
-              <b-navbar-toggle class="toggleButton"  target="nav-text-collapse"></b-navbar-toggle>
+            <b-navbar class="justify-content-center navColor" toggleable="true" type="light" variant="light">
+              <b-navbar-toggle class="toggleButton" target="nav-text-collapse"></b-navbar-toggle>
 
               <b-navbar-brand>
                 <div class="imageBancoDiv ">

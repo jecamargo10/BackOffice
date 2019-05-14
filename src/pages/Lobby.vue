@@ -1,53 +1,56 @@
 <template>
   <section>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col p-0">
-          <div class="contenedor">
-            <img src="../assets/carP1.png" style="width:100vw; height:auto; top: -1px; position: relative;" alt="Fondo">
-          </div>
+      <div class="row justify-content-center">
+        <div class="col ondasFondo1"></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4 p-0">
+          <img src="../assets/carP1.png" style="width:100%; height:auto" alt="Fondo">
         </div>
+        <div class="col ondasFondo2"></div>
       </div>
     </div>
-
     <div class="container-fluid textColor">
-      <div class="row mt-5">
-        <div class="col-1"></div>
-        <div class="col p-0">
-          <div class="row mb-4">
-            <div class="col-1"></div>
-            <div class="col p-0"><h6>1. Solicita tu crédito</h6></div>
-            <div class="col p-0"><h6>2. Elige tu auto</h6></div>
-            <div class="col p-0"><h6>3. Paga y listo</h6></div>
-            <div class="col-1"></div>
-          </div>
-          <div class="row mt-3 mb-3">
-            <div class="col">
-              <h5>¡Tú auto te espera en el consesionario más cercano!</h5>
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4 p-0">
+          <div class="container-fluid">
+            <div class="row mb-4">
+              <div class="col-1"></div>
+              <div class="col p-0">
+                <p> <strong>1.</strong> Solicita tu crédito</p>
+              </div>
+              <div class="col p-0">
+                <p><strong>2.</strong> Elige tu auto</p>
+              </div>
+              <div class="col p-0">
+                <p><strong>3.</strong> Paga y listo</p>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row mt-3 mb-3">
+              <div class="col">
+                <h5>¡Tú auto te espera en el consesionario más cercano!</h5>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <div class="imgCarLobby">
+                  <img src="../assets/pointsCar.png" alt>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2 mb-5">
+              <div class="col-2"></div>
+              <div class="col p-0">
+                <button
+                  type="button"
+                  @click="routeRegistry"
+                  class="btn btn-block botBlue rounded-pill"
+                >¿Empezamos?</button>
+              </div>
+              <div class="col-2"></div>
             </div>
           </div>
-          <div class="row mb-4">
-            <div class="col">
-              <img src="../assets/pointsCar.png" alt="" width="45%">
-            </div>
-          </div>
-
         </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row mt-2 mb-5">
-        <div class="col-2"></div>
-        <div class="col p-0">
-          <button
-            type="button"
-            @click="routeRegistry"
-            class="btn btn-block botBlue rounded-pill"
-          >¿Empezamos?</button>
-        </div>
-        <div class="col-2"></div>
       </div>
     </div>
   </section>
@@ -76,6 +79,107 @@ export default {
 </script>
 
 <style scoped>
+.imgCarLobby{
+  max-width: 8em;
+}
+.imgCarLobby img{
+  width: 100%;
+  height: auto;
+}
+.ondasFondo1 {
+  background: rgba(75, 158, 202, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(75, 158, 202, 1) 0%,
+    rgba(85, 155, 199, 1) 32%,
+    rgba(110, 165, 201, 1) 37%,
+    rgba(115, 156, 192, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(75, 158, 202, 1)),
+    color-stop(32%, rgba(85, 155, 199, 1)),
+    color-stop(37%, rgba(110, 165, 201, 1)),
+    color-stop(100%, rgba(115, 156, 192, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(75, 158, 202, 1) 0%,
+    rgba(85, 155, 199, 1) 32%,
+    rgba(110, 165, 201, 1) 37%,
+    rgba(115, 156, 192, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(75, 158, 202, 1) 0%,
+    rgba(85, 155, 199, 1) 32%,
+    rgba(110, 165, 201, 1) 37%,
+    rgba(115, 156, 192, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(75, 158, 202, 1) 0%,
+    rgba(85, 155, 199, 1) 32%,
+    rgba(110, 165, 201, 1) 37%,
+    rgba(115, 156, 192, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(75, 158, 202, 1) 0%,
+    rgba(85, 155, 199, 1) 32%,
+    rgba(110, 165, 201, 1) 37%,
+    rgba(115, 156, 192, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b9eca', endColorstr='#739cc0', GradientType=0 );
+}
+.ondasFondo2 {
+  background: rgba(81, 197, 235, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(81, 197, 235, 1) 0%,
+    rgba(98, 204, 240, 1) 32%,
+    rgba(114, 208, 240, 1) 37%,
+    rgba(116, 209, 240, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(81, 197, 235, 1)),
+    color-stop(32%, rgba(98, 204, 240, 1)),
+    color-stop(37%, rgba(114, 208, 240, 1)),
+    color-stop(100%, rgba(116, 209, 240, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(81, 197, 235, 1) 0%,
+    rgba(98, 204, 240, 1) 32%,
+    rgba(114, 208, 240, 1) 37%,
+    rgba(116, 209, 240, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(81, 197, 235, 1) 0%,
+    rgba(98, 204, 240, 1) 32%,
+    rgba(114, 208, 240, 1) 37%,
+    rgba(116, 209, 240, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(81, 197, 235, 1) 0%,
+    rgba(98, 204, 240, 1) 32%,
+    rgba(114, 208, 240, 1) 37%,
+    rgba(116, 209, 240, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(81, 197, 235, 1) 0%,
+    rgba(98, 204, 240, 1) 32%,
+    rgba(114, 208, 240, 1) 37%,
+    rgba(116, 209, 240, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51c5eb', endColorstr='#74d1f0', GradientType=0 );
+}
 .contenedor {
   position: relative;
   display: inline-block;

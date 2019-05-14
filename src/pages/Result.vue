@@ -1,96 +1,107 @@
 <template>
   <section class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <div class="row mt-4 textColor">
-          <div class="col">
-            <h5>!Buenas noticias Santiago¡</h5>
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col">
-            <div class="contenedor">
-              <img src="../assets/card.png" class="sombra" width="100%">
-              <h3 class="text-light texto-abajo-izq">
-                <strong>US ${{this.$store.state.amount}}</strong>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-4 mb-4 pt-0">
-          <div class="col">
-            <div class="contenedor">
-              <img src="../assets/plazo.png" class="sombra cardB" alt width="100%">
-              <h4 class="texto-abajo-izq textColor">{{$store.state.monthlyPaymentQuantity}}</h4>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="contenedor">
-              <img src="../assets/cuota.png" class="sombra cardB" alt width="100%">
-              <h4 class="texto-abajo-izq textColor">${{this.$store.state.monthlyPayment}}</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col">
-            <h6 class="textColor">*Este crédito aplica en el 75% o menos para el costo de tu carro.</h6>
-          </div>
-          <div class="col-1"></div>
-        </div>
-
-        <div class="row mt-3 mb-4">
-          <div class="col-3"></div>
-          <div class="col">
-            <button
-              type="submit"
-              @click="pushSetting"
-              class="btn btn-outline btn-block btn-sm botBlueBord rounded-pill"
-            >Simular crédito</button>
-          </div>
-          <div class="col-3"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col backLight p-0">
-        <div class="form-row mx-auto pb-4">
-          <div class="col">
-            <h6
-              class="textColor mr-5 ml-5 pt-4"
-            >Déjanos tu email para confirmar esta aprobación y poder continuar</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mx-auto mt-4">
-      <div class="col">
-        <form @submit.prevent="nextStage">
-          <div class="form-row border-bottom borderR textColor mr-4 ml-4">
-            <div class="col-4 pl-5">
-              <img src="../assets/send.png" width="30em" height="auto">
-            </div>
-            <div class="col-8">
-              <input
-                v-model="emailInput"
-                required
-                type="email"
-                class="form-control border-0 textColor"
-                aria-describedby="addon-emailInput"
-                placeholder="Email"
-              >
-            </div>
-          </div>
-          <div class="row mt-5 mb-5">
-            <div class="col-2"></div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-7 col-lg-5 col-xl-4">
+        <div class="container-fluid">
+          <div class="row">
             <div class="col">
-              <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Continuar</button>
+              <div class="row mt-4 textColor">
+                <div class="col">
+                  <h5>!Buenas noticias Santiago¡</h5>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="contenedor">
+                    <img src="../assets/card.png" class="sombra" width="100%">
+                    <h3 class="text-light texto-abajo-izq">
+                      <strong>US ${{this.$store.state.amount}}</strong>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 mb-4 pt-0">
+                <div class="col">
+                  <div class="contenedor">
+                    <img src="../assets/plazo.png" class="sombra cardB" alt width="100%">
+                    <h4 class="texto-abajo-izq textColor">{{$store.state.monthlyPaymentQuantity}}</h4>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="contenedor">
+                    <img src="../assets/cuota.png" class="sombra cardB" alt width="100%">
+                    <h4 class="texto-abajo-izq textColor">${{this.$store.state.monthlyPayment}}</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col">
+                  <h6
+                    class="textColor"
+                  >*Este crédito aplica en el 75% o menos para el costo de tu carro.</h6>
+                </div>
+                <div class="col-1"></div>
+              </div>
+
+              <div class="row mt-3 mb-4">
+                <div class="col-3"></div>
+                <div class="col">
+                  <button
+                    type="submit"
+                    @click="pushSetting"
+                    class="btn btn-outline btn-block btn-sm botBlueBord rounded-pill"
+                  >Simular crédito</button>
+                </div>
+                <div class="col-3"></div>
+              </div>
             </div>
-            <div class="col-2"></div>
           </div>
-        </form>
+          <div class="row">
+            <div class="col backLight p-0">
+              <div class="form-row mx-auto pb-4">
+                <div class="col">
+                  <h6
+                    class="textColor mr-5 ml-5 pt-4"
+                  >Déjanos tu email para confirmar esta aprobación y poder continuar</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mx-auto mt-4">
+            <div class="col">
+              <form @submit.prevent="nextStage">
+                <div class="form-row border-bottom borderR textColor mr-4 ml-4">
+                  <div class="col-4 pl-5">
+                    <img src="../assets/send.png" width="30em" height="auto">
+                  </div>
+                  <div class="col-8">
+                    <input
+                      v-model="emailInput"
+                      required
+                      type="email"
+                      class="form-control border-0 textColor"
+                      aria-describedby="addon-emailInput"
+                      placeholder="Email"
+                    >
+                  </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                  <div class="col-2"></div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-outline btn-block botBlue rounded-pill"
+                    >Continuar</button>
+                  </div>
+                  <div class="col-2"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

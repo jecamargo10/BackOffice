@@ -1,38 +1,36 @@
 
 <template>
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col p-0">
-          <Subheader :currentStage="1" :firstMessage="null"></Subheader>
+  <section class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-7 col-md-4 col-lg-4 col-xl-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col p-0">
+              <Subheader :currentStage="1" :firstMessage="null"></Subheader>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col p-0">
-          <h4 class="textColor">¿Qué quieres hacer?</h4>
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-7">
+        <div class="container-fluid mt-4">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col p-0">
+              <h4 class="textColor mb-5">¿Qué quieres hacer?</h4>
+            </div>
+            <div class="col-1"></div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5 p-0">
+              <img src="../assets/iknow.png" class="cardB sombra" width="100%">
+            </div>
+            <div @click="$router.push({ path: 'entry' })" class="col-12 col-md-5 offset-md-1 p-0">
+              <img src="../assets/idknow.png" class="cardB sombra" width="100%">
+            </div>
+          </div>
         </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-    <div class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col p-0">
-          <img src="../assets/iknow.png" class="cardB sombra" width="100%">
-        </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-    <div @click="$router.push({ path: 'entry' })" class="container-fluid mt-4">
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col p-0">
-          <img src="../assets/idknow.png" class="cardB sombra" width="100%">
-        </div>
-        <div class="col-1"></div>
       </div>
     </div>
   </section>
@@ -137,11 +135,11 @@ i {
 .cardB {
   border-radius: 10px;
 }
-.cardB:active{
+.cardB:active {
   border-radius: 10px;
   width: 99%;
 }
-.cardB:hover{
+.cardB:hover {
   border-radius: 10px;
   width: 99%;
 }

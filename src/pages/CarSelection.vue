@@ -1,97 +1,105 @@
 <template>
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <Subheader :firstMessage="null" :currentStage="2"></Subheader>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 container-filters p-0">
-            <p class="text-center mt-4 font-size-x-large textColor">Elige tu carro</p>
-            <div class="form-group d-flex">
-              <select
-                v-model="currentBrand"
-                class="form-control text-blue-strong textColor"
-                id="carBrandInput"
-                @change="changeFilter"
-              >
-                <option value="KIA">KIA</option>
-                <option value="todas">Todas</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="d-flex mx-auto">
-            <div>
-              <div class="form-check form-check-inline checkCategory">
-                <div>
-                  <img src="../assets/auto.png" for="inlineCheckbox2" alt>
-                  <input
-                    v-model="currentCategory"
-                    class="form-check-input w-100"
-                    type="checkbox"
-                    id="inlineCheckbox1"
-                    value="Auto"
-                    @change="changeFilter"
-                  >
-                </div>
-              </div>
-              <div class="form-check form-check-inline checkCategory">
-                <div>
-                  <img src="../assets/suv.png" for="inlineCheckbox2" alt>
-                  <input
-                    v-model="currentCategory"
-                    class="form-check-input w-100"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="SUV"
-                    @change="changeFilter"
-                  >
-                </div>
-              </div>
-              <div class="form-check form-check-inline checkCategory">
-                <div>
-                  <img src="../assets/camioneta.png" for="inlineCheckbox2" alt>
-                  <input
-                    v-model="currentCategory"
-                    class="form-check-input w-100"
-                    type="checkbox"
-                    id="inlineCheckbox2"
-                    value="Camioneta"
-                    @change="changeFilter"
-                  >
-                </div>
-              </div>
+  <section class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-7 col-md-4 col-lg-4 col-xl-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col p-0">
+              <Subheader :firstMessage="null" :currentStage="2"></Subheader>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid">
-        <div class="form-row">
-          <div v-if="error !== null" class="col">
-            <div class="alert alert-danger" role="alert">
-              <div @click="closeError" class="position-absolute cursor-pointer rigth-0 top-0">X</div>
-              <p v-text="error"></p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-10 col-md-9 col-lg-9 col-xl-7">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 container-filters p-0">
+              <p class="text-center mt-4 font-size-x-large textColor">Elige tu carro</p>
+              <div class="form-group d-flex">
+                <select
+                  v-model="currentBrand"
+                  class="form-control text-blue-strong textColor"
+                  id="carBrandInput"
+                  @change="changeFilter"
+                >
+                  <option value="KIA">KIA</option>
+                  <option value="todas">Todas</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="d-flex mx-auto">
+              <div>
+                <div class="form-check form-check-inline checkCategory">
+                  <div>
+                    <img src="../assets/auto.png" for="inlineCheckbox2" alt>
+                    <input
+                      v-model="currentCategory"
+                      class="form-check-input w-100"
+                      type="checkbox"
+                      id="inlineCheckbox1"
+                      value="Auto"
+                      @change="changeFilter"
+                    >
+                  </div>
+                </div>
+                <div class="form-check form-check-inline checkCategory">
+                  <div>
+                    <img src="../assets/suv.png" for="inlineCheckbox2" alt>
+                    <input
+                      v-model="currentCategory"
+                      class="form-check-input w-100"
+                      type="checkbox"
+                      id="inlineCheckbox2"
+                      value="SUV"
+                      @change="changeFilter"
+                    >
+                  </div>
+                </div>
+                <div class="form-check form-check-inline checkCategory">
+                  <div>
+                    <img src="../assets/camioneta.png" for="inlineCheckbox2" alt>
+                    <input
+                      v-model="currentCategory"
+                      class="form-check-input w-100"
+                      type="checkbox"
+                      id="inlineCheckbox2"
+                      value="Camioneta"
+                      @change="changeFilter"
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 p-0">
-            <hr>
+        <div class="container-fluid">
+          <div class="form-row">
+            <div v-if="error !== null" class="col">
+              <div class="alert alert-danger" role="alert">
+                <div @click="closeError" class="position-absolute cursor-pointer rigth-0 top-0">X</div>
+                <p v-text="error"></p>
+              </div>
+            </div>
           </div>
-          <div v-for="car in cars" :key="car.id" class="col-6 p-2">
-            <div @click="selectCar(car)">
-              <card-car
-                :imageCar="car.COLOR.cars[0].url"
-                :minimunPrice="car.COSTO"
-                :titleCar="car.CATEGORIA+' '+car.MARCA + '   ' + car.MODELO+' '+car.LINEA"
-                class="cursor-pointer"
-              ></card-car>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 p-0">
+              <hr>
+            </div>
+            <div v-for="car in cars" :key="car.id" class="col-6 p-2">
+              <div @click="selectCar(car)">
+                <card-car
+                  :imageCar="car.COLOR.cars[0].url"
+                  :minimunPrice="car.COSTO"
+                  :titleCar="car.CATEGORIA+' '+car.MARCA + '   ' + car.MODELO+' '+car.LINEA"
+                  class="cursor-pointer"
+                ></card-car>
+              </div>
             </div>
           </div>
         </div>

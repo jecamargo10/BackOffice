@@ -1,38 +1,45 @@
 <template>
   <section>
     <div class="container-fluid">
-      <div class="row ">
+      <div class="row mb-3">
         <div v-if="firstMessage !== null" class="col-12 m-0 backBlue text-light">
           <p class="my-2 font-size-larger" v-text="firstMessage"></p>
         </div>
         <div v-if="currentStage !== null" class="col-12 m-0">
           <div class="d-flex justify-content-center my-2 container-stages">
             <div class="stages d-flex justify-content-between">
-              <div :class="{ 'botPink': currentStage === 1 }" class="d-flex align-items-center mr-3">
-                <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
-                  1
-                </div>
-                Solicitar
+              <div
+                :class="{ 'botPink': currentStage === 1 }"
+                class="d-flex align-items-center mr-3"
+              >
+                <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">1</div>Solicitar
               </div>
-              <div :class="{ 'botPink': currentStage === 2 }" class="d-flex align-items-center mr-3">
-                <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
-                  2
-                </div>
-                Elegir
+              <div
+                :class="{ 'botPink': currentStage === 2 }"
+                class="d-flex align-items-center mr-3"
+              >
+                <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">2</div>Elegir
               </div>
-              <div :class="{ 'botPink': currentStage === 3 }" class="d-flex align-items-center mr-3">
-                <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">
-                  3
-                </div>
-                Pagar
+              <div
+                :class="{ 'botPink': currentStage === 3 }"
+                class="d-flex align-items-center mr-3"
+              >
+                <div class="circle-stage mr-1 d-flex justify-content-center align-items-center">3</div>Pagar
               </div>
             </div>
           </div>
         </div>
-        <div v-if="secondMessage !== null" class="col-12 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
+        <div
+          v-if="secondMessage !== null"
+          class="col-12 mt-2 p-0 backBlue text-light rounded-pill sombra"
+          style="background-color:#00ACE4"
+        >
           <p class="m-2" v-text="secondMessage"></p>
         </div>
-        <div v-if="entryValue !== null" class="col-12 mt-2 p-0 backBlue text-light rounded-pill sombra" style="background-color:#00ACE4">
+        <div
+          v-if="currentStage === 2 || currentStage === 3"
+          class="col-12 mt-2 p-0"
+        >
           <p class="m-2" v-text="thirdMessage"></p>
         </div>
       </div>
@@ -45,16 +52,16 @@ export default {
   name: "subheader", //nombre con el cual se usa el componente
   props: {
     firstMessage: {
-      default: 'Personalizar mi crédito'
+      default: "Personalizar mi crédito"
     },
     secondMessage: {
-      default(){
-        return `Crédito aprobado: US $${this.$store.state.amount}`
-      } 
+      default() {
+        return `Crédito aprobado: US $${this.$store.state.amount}`;
+      }
     },
     entryValue: {
-      default(){
-        return this.$store.state.entryValue
+      default() {
+        return this.$store.state.entryValue;
       }
     },
     currentStage: {
@@ -64,25 +71,23 @@ export default {
   data() {
     //data reactiva del componente
     return {
-        counter: 45,
-        max: 100
+      counter: 45,
+      max: 100
     };
   },
   created() {
-    
     //lo que pasa cuando se crea el componente  aca se ponen la consulta a servicios
   },
   mounted() {
     //lo que pasa cuando se monta el HTML al browser
   },
-  methods: {
-  },
+  methods: {},
   computed: {
-    thirdMessage: function(){
-      if(this.entryValue == null){
-        return ""
-      }else{
-        return `Valor de entrada: US$${this.entryValue}`
+    thirdMessage: function() {
+      if (this.entryValue == null) {
+        return "";
+      } else {
+        return `Valor de entrada: US$${this.entryValue}`;
       }
     }
   }
@@ -90,29 +95,28 @@ export default {
 </script>
 
 <style scoped>
-.circle-stage{
+.circle-stage {
   border-radius: 50%;
   width: 2em;
   height: 2em;
   border-style: solid;
   border-width: thin;
 }
-.stage-active{
+.stage-active {
   border-color: green;
   color: green;
 }
-.stage-active::after{
+.stage-active::after {
   content: "";
-  width: .7em;
-  height: .7em;
+  width: 0.7em;
+  height: 0.7em;
   position: absolute;
-  bottom: -.7em;
+  bottom: -0.7em;
   z-index: 100;
-  border-width: .7em .7em 0;
+  border-width: 0.7em 0.7em 0;
   border-style: solid;
   border-color: #fff transparent transparent;
 }
-
 
 .botPink {
   background-color: white;
@@ -193,8 +197,8 @@ export default {
   border-bottom-width: 1px !important;
 }
 
-.btn-autofacil{
-  padding: .5em;
+.btn-autofacil {
+  padding: 0.5em;
   color: #fff;
   border: none;
   width: 90%;

@@ -51,4 +51,27 @@ export default {
 .bg-blue-ligth{
   background-color: #00ace4;
 }
+.col-0{
+  display: none;
+}
+@media (min-width: 576px){
+  .col-sm-0{
+    display: none;
+  }
+}
+@media (min-width: 768px){
+  .col-md-0{
+    display: none;
+  }
+}
+@media (min-width: 992px){
+  .col-lg-0{
+    display: none;
+  }
+}
+@media (min-width: 1200px){
+  .col-xl-0{
+    display: none;
+  }
+}
 </style>

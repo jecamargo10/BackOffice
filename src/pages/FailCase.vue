@@ -1,13 +1,12 @@
 <template>
   <section class="container-fluid">
     <div class="row">
-      <div class="col p-0">
+      <div class="col col-sm-0 p-0">
         <img src="../assets/ondas.png" width="100%" height="auto">
       </div>
     </div>
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="col">
+    <div class="row justify-content-center mt-5">
+      <div class="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-4">
         <div class="row mt-0">
           <div class="col">
             <img src="../assets/sad.png" alt="sad" width="60em" height="60em">
@@ -29,7 +28,6 @@
           <div class="form-row border-bottom borderR textColor mt-4">
             <div class="col">
               <input
-                v-model="ccInput"
                 required
                 type="text"
                 class="form-control border-0 textColor"
@@ -41,7 +39,6 @@
           <div class="form-row border-bottom borderR textColor mt-3">
             <div class="col">
               <input
-                v-model="ccInput"
                 required
                 type="text"
                 class="form-control border-0 textColor"
@@ -53,7 +50,6 @@
           <div class="form-row border-bottom borderR textColor mt-3">
             <div class="col">
               <input
-                v-model="ccInput"
                 required
                 type="email"
                 class="form-control border-0 textColor"
@@ -65,7 +61,6 @@
           <div class="form-row border-bottom borderR textColor mt-3">
             <div class="col">
               <input
-                v-model="ccInput"
                 required
                 type="number"
                 class="form-control border-0 textColor"
@@ -84,14 +79,11 @@
           </div>
         </form>
       </div>
-      <div class="col-1"></div>
     </div>
-    <div class="row mt-4 mb-5">
-      <div class="col-2"></div>
-      <div class="col p-0">
-        <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Enviar</button>
+    <div class="row justify-content-center mt-4 mb-5">
+      <div class="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-4 p-0 d-flex justify-content-center">
+        <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill py-3">Enviar</button>
       </div>
-      <div class="col-2"></div>
     </div>
   </section>
 </template>
@@ -120,6 +112,7 @@ export default {
 .botBlue {
   background-color: #e91c72;
   color: white;
+  max-width: 20em;
 }
 .botBlue:hover {
   background-color: white;

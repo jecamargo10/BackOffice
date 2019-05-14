@@ -2,12 +2,12 @@
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div class="col p-0">
+        <div class="col p-0 col-sm-0">
           <img src="../assets/ondas.png" width="100%" height="auto">
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
       <div class="row d-flex align-items-center mb-2">
         <div class="col">
           <img src="../assets/key.png" width="50em" height="auto">
@@ -24,9 +24,8 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row mt-5">
-        <div class="col-1"></div>
-        <div class="col p-0">
+      <div class="row justify-content-center mt-5">
+        <div class="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-4 p-0">
           <form @submit.prevent="routeResult">
             <div class="form-row border-bottom borderR textColor">
               <div class="col-2">
@@ -108,13 +107,12 @@
             <div class="form-row mt-4 mb-5">
               <div class="col-2"></div>
               <div class="col p-0">
-                <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill">Solicitar</button>
+                <button type="submit" class="btn btn-outline btn-block botBlue rounded-pill py-3">Solicitar</button>
               </div>
               <div class="col-2"></div>
             </div>
           </form>
         </div>
-        <div class="col-1"></div>
       </div>
     </div>
   </section>
