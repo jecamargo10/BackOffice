@@ -44,7 +44,6 @@ app.get('/', function(req, res){
 //res.sendFile('./dist/index.html');
 res.sendFile('dist/index.html', { root: __dirname });
 
-
 });*/
 
 const HEADERS = {'Authorization': 'Basic QWRtaW4xOnNsZWF6eUNyZXN0KzI='};
